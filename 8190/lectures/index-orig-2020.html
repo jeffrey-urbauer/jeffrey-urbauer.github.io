@@ -1,0 +1,513 @@
+<html>
+<head>
+<link  rel="StyleSheet" href="../classstyles.css" type="text/css">
+<title>Biomolecular NMR (Spring 2017)</title>
+<meta http-equiv="Content-Type" content="text/html;">
+<script language="JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])?args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) { img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr) for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+
+function MM_preloadImages() { //v3.0
+ var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+   var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+   if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+//-->
+</script>
+</head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../images/home_green.png','../images/notices_green.png','../images/lectures_green.png','../images/links_green.png','../images/problemSets_green.png','../images/labs_green.png','../images/GTtext_green.png','../images/GSUtext_green.png','../images/UGAtext_green.png','../images/syllabus_green.png');">
+<center>
+<div id="bkgrnd">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td width="50%" height="146" background="../images/background_lhs.png"></td>
+    <td width="50%" height="146" background="../images/background_rhs.png"></td>
+</tr>
+</table>
+</div>
+<div id="foregrnd">
+<table border="0" cellpadding="0" cellspacing="0" width="850">
+  <tr>
+   <td><img src="../images/spacer.gif" width="26" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="24" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="24" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="83" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="1" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="23" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="1" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="23" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="1" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="41" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="24" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="24" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="131" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="145" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="18" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="113" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="18" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="39" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="70" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="9" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="12" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+   <td><img src="../images/spacer.gif" width="1" height="1" border="0" alt="" bgcolor="#CCCCCC"></td>
+  </tr>
+
+  <tr>
+   <td colspan="21"><img name="topslice_graphic" src="../images/topslice.png" width="850" height="9" border="0" alt=""></td>
+   <td><img src="../images/spacer.gif" width="1" height="9" border="0" alt=""></td>
+  </tr>
+  <tr>
+   <td rowspan="10"><img name="lhs_slice_graphic" src="../images/lhs_slice.png" width="26" height="136" border="0" alt=""></td>
+   <td colspan="4"><a href="../index.html" onMouseOut="MM_nbGroup('out');" onMouseOver="MM_nbGroup('over','home_graphics','../images/home_green.png');"><img name="home_graphics" src="../images/home_blue.png" width="132" height="24" border="0" alt="Course Home Page"></a></td>
+   <td colspan="5"><a href="../notices/index.html" onMouseOut="MM_nbGroup('out');" onMouseOver="MM_nbGroup('over','notices_graphics','../images/notices_green.png');"><img name="notices_graphics" src="images/notices_blue.png" width="89" height="24" border="0" alt="Course Notices: Check Regularly!"></a></td>
+   <td rowspan="2" colspan="11"><img name="rhs2_slice_graphic" src="../images/rhs2_slice.png" width="603" height="30" border="0" alt=""></td>
+   <td><img src="../images/spacer.gif" width="1" height="24" border="0" alt=""></td>
+  </tr>
+  <tr>
+   <td colspan="9"><img name="navUnder1_graphic" src="../images/navUnder1.png" width="221" height="6" border="0" alt=""></td>
+   <td><img src="../images/spacer.gif" width="1" height="6" border="0" alt=""></td>
+  </tr>
+  <tr>
+   <td rowspan="8"><img name="lhs2_slice_graphic" src="../images/lhs2_slice.png" width="24" height="106" border="0" alt=""></td>
+   <td colspan="5"><img name="lectures_graphics" src="../images/lectures_gray.png" width="132" height="24" border="0" alt="Lecture Schedule and Notes"></td>
+   <td colspan="4"><a href="../links/index.html" onMouseOut="MM_nbGroup('out');" onMouseOver="MM_nbGroup('over','links_graphics','../images/links_green.png');"><img name="links_graphics" src="../images/links_blue.png" width="89" height="24" border="0" alt="Web Sites of Interest"></a></td>
+   <td rowspan="2" colspan="10"><img name="rhs3_slice_graphic" src="../images/rhs3_slice.png" width="579" height="30" border="0" alt=""></td>
+   <td><img src="../images/spacer.gif" width="1" height="24" border="0" alt=""></td>
+  </tr>
+  <tr>
+   <td colspan="9"><img name="navUnder2_graphic" src="../images/navUnder2.png" width="221" height="6" border="0" alt=""></td>
+   <td><img src="../images/spacer.gif" width="1" height="6" border="0" alt=""></td>
+  </tr>
+  <tr>
+   <td rowspan="6"><img name="lhs3_slice_graphic" src="../images/lhs3_slice.png" width="24" height="76" border="0" alt=""></td>
+   <td colspan="6"><a href="../problemsets/index.html" onMouseOut="MM_nbGroup('out');" onMouseOver="MM_nbGroup('over','problemSets_graphics','../images/problemSets_green.png');"><img name="problemSets_graphics" src="../images/problemSets_blue.png" width="132" height="24" border="0" alt="Problem Sets and Exams"></a></td>
+   <td colspan="3"><a href="../labs/index.html" onMouseOut="MM_nbGroup('out');" onMouseOver="MM_nbGroup('over','labs_graphics','../images/labs_green.png');"><img src="../images/labs_blue.png" alt="Friday Lab Sessions" name="labs_graphics" width="89" height="24" border="0"></a></td>
+   <td rowspan="2" colspan="9"><img name="rhs4_slice_graphic" src="../images/rhs4_slice.png" width="555" height="37" border="0" alt=""></td>
+   <td><img src="../images/spacer.gif" width="1" height="24" border="0" alt=""></td>
+  </tr>
+  <tr>
+   <td rowspan="5" colspan="9"><img name="underNav_graphic" src="../images/underNav.png" width="221" height="52" border="0" alt=""></td>
+   <td><img src="../images/spacer.gif" width="1" height="13" border="0" alt=""></td>
+  </tr>
+  <tr>
+   <td rowspan="4"><img name="midBlock_graphic" src="../images/midBlock.png" width="131" height="39" border="0" alt=""></td>
+   <td><a href="http://www.gatech.edu" target="_blank" onMouseOut="MM_swapImgRestore();" onMouseOver="MM_swapImage('realbanner_fulltop_sliced_r8_c14','','../images/GTtext_green.png',1);"><img name="realbanner_fulltop_sliced_r8_c14" src="../images/GTtext_black.png" width="145" height="11" border="0" alt="Georgia Tech Home Page"></a></td>
+   <td rowspan="4"><img name="betweenGTandGSU_graphic" src="../images/betweenGTandGSU.png" width="18" height="39" border="0" alt=""></td>
+   <td><a href="http://www.gsu.edu" target="_blank" onMouseOut="MM_swapImgRestore();" onMouseOver="MM_swapImage('realbanner_fulltop_sliced_r8_c16','','../images/GSUtext_green.png',1);"><img name="realbanner_fulltop_sliced_r8_c16" src="../images/GSUtext_black.png" width="113" height="11" border="0" alt="Georgia State Home Page"></a></td>
+   <td rowspan="4"><img name="betweenGSUandUGA_graphic" src="../images/betweenGSUandUGA.png" width="18" height="39" border="0" alt=""></td>
+   <td colspan="3"><a href="http://www.uga.edu" target="_blank" onMouseOut="MM_swapImgRestore();" onMouseOver="MM_swapImage('realbanner_fulltop_sliced_r8_c18','','../images/UGAtext_green.png',1);"><img name="realbanner_fulltop_sliced_r8_c18" src="../images/UGAtext_black.png" width="118" height="11" border="0" alt="University of Georgia Home Page"></a></td>
+   <td rowspan="4"><img name="bottom_rhs_graphic" src="../images/bottom_rhs.png" width="12" height="39" border="0" alt=""></td>
+   <td><img src="../images/spacer.gif" width="1" height="11" border="0" alt=""></td>
+  </tr>
+  <tr>
+   <td rowspan="3"><img name="underGT_graphic" src="../images/underGT.png" width="145" height="28" border="0" alt=""></td>
+   <td rowspan="3" width="113" height="28">&nbsp;</td>
+   <td colspan="3"><img name="sliverUnderUGA_graphic" src="../images/sliverUnderUGA.png" width="118" height="9" border="0" alt=""></td>
+   <td><img src="../images/spacer.gif" width="1" height="9" border="0" alt=""></td>
+  </tr>
+  <tr>
+   <td rowspan="2"><img name="leftOfSyllabusLink_graphic" src="../images/leftOfSyllabusLink.png" width="39" height="19" border="0" alt=""></td>
+   <td><!--<a href="../nmr_14_syllabus_revised_4.pdf" target="_blank" onMouseOut="MM_swapImgRestore();" onMouseOver="MM_swapImage('realbanner_fulltop_sliced_r10_c19','','../images/syllabus_green.png',1);"><img name="realbanner_fulltop_sliced_r10_c19" src="../images/syllabus_red.png" width="70" height="14" border="0" alt="Course Syllabus"></a>--></td>
+   <td rowspan="2"><img name="rightOfSyllabusLink_graphic" src="../images/rightOfSyllabusLink.png" width="9" height="19" border="0" alt=""></td>
+   <td><img src="../images/spacer.gif" width="1" height="14" border="0" alt=""></td>
+  </tr>
+  <tr>
+   <td><img name="underSyllabusLink_graphic" src="../images/underSyllabusLink.png" width="70" height="5" border="0" alt=""></td>
+   <td><img src="../images/spacer.gif" width="1" height="5" border="0" alt=""></td>
+  </tr>
+</table>
+<br><br>
+<table width="800" border="0" cellspacing="10" bordercolor="#FFFFFF" bgcolor="#FFFFFF" class="big">
+      <tr>
+         <td colspan="4" class="style6c" align="center">Lecture Schedule</td>
+      </tr>
+      <tr>
+           <td colspan="4" align="center">
+              <a href="https://us.bbcollab.com/guest/fa209a294fd04d4498d5d9c872e98075">Blackboard Collaborate Ultra Classroom</a>
+              : Biomolecular NMR Spectroscopy - Spring 2020</td>
+      </tr>
+      <tr><td>&nbsp;</td>
+	       <td>&nbsp;</td>
+	       <td>&nbsp;</td>
+	       <td>&nbsp;</td></tr>
+       <tr><td><b>Date</b></td>
+           <td><b>Instructor</b></td>
+           <td><b>Topic</b></td><td><b>Suggested Reading</b></td></tr>
+	   <tr><td>&nbsp;</td>
+	       <td>&nbsp;</td>
+	       <td>&nbsp;</td>
+	       <td class="regular"><font size="2" face="Arial, Helvetica, sans-serif">L &ndash; Levitt &nbsp;&nbsp;
+               C &ndash; Cavanagh &nbsp;&nbsp; K &ndash; Keeler</font></td>
+	   </tr>
+       <tr><td colspan="4"><strong><font face="Arial, Helvetica, sans-serif">I. Introduction</font></strong><br><br></td>
+       </tr>
+
+       <tr valign="top">
+         <td>M 1/9</td>
+	       <td>Urbauer</td>
+		   <td><a href="pdfs/NMR_intro_2017.pdf">A. Magnetic properties of nuclei and electrons - precession</a><br>
+                       [<a href="video/BioNMR2017_0109.mp4">video of lecture</a>]</td>
+           <td>5 &ndash; 38 L</td>
+	   </tr>
+      <tr valign="top">
+         <td>W 1/11</td>
+           <td>Urbauer</td>
+           <td><a href="pdfs/Bloch_eq_2017.pdf">B. RF pulses and spin relaxation - Bloch equations</a><br>
+               (<a href="video/precession.mpg">precession video</a>) [<a href="video/BioNMR2017_0111.mp4">video of lecturei</a>]</td>
+           <td>39 &ndash; 50 L, 653  L</td>
+       </tr>
+       <tr><td>M 1/16</td>
+	       <td>&nbsp;</td>
+	       <td>MLK Jr. Holiday (no class)</td>
+	       <td>&nbsp;</td></tr>
+
+       <tr><td>&nbsp;</td>
+	       <td>&nbsp;</td>
+	       <td>&nbsp;</td>
+	       <td>&nbsp;</td></tr>
+
+      <tr>
+       <tr><td colspan="4"><b><font face="Arial, Helvetica, sans-serif">II. Instrumentation</font></b></td>
+       </tr>
+                     
+       <tr valign="top">
+         <td>W 1/18</td>
+           <td>Urbauer</td>
+           <td><a href="pdfs/NMR_Inst_2017.pdf">A. Instrumental considerations - a look at probes</a><br>
+         [<a href="video/BioNMR2017_0118.mp4">video of lecture</a>]</td>
+	   <td>65 &ndash; 76 L</td>
+	   </tr>
+	   <tr valign="top">
+	     <td>M 1/23</td>
+           <td>Urbauer</td>
+           <td><a href="pdfs/FT_and_processing_2017.pdf">B. Fourier transform methods and data processing</a><br>
+               [<a href="video/BioNMR2017_0123.mp4">video of lecture</a>]</td>
+           <td>85 &ndash; 102 L, 78 &ndash; 101 K</td>
+       </tr>
+	   <tr><td>&nbsp;</td>
+	       <td>&nbsp;</td>
+	       <td>&nbsp;</td>
+	       <td>&nbsp;</td></tr>
+	   <tr>
+	     <td colspan="4"><font face="Arial, Helvetica, sans-serif"><b>III. NMR Observables &ndash; Classical and Quantum Descriptions</b></font></td>
+	   </tr>
+       <tr valign="top">
+         <td>W 1/25</td>
+           <td>Urbauer</td>
+           <td><a href="pdfs/Scalar_Coupling_2017.pdf">A. Scalar Couplings</a><br>
+               [<a href="video/BioNMR2017_0125.mp4">video of lecture</a>]</td>
+           <td>217 &ndash; 223 L</td>
+
+       </tr>
+           <tr valign="top">
+             <td>M 1/30</td>
+           <td>Urbauer</td>
+           <td><a href="pdfs/Scalar_Coupling_2017.pdf">A. Scalar Couplings (cont'd)</a><br>
+               [<a href="video/BioNMR2017_0130.mp4">video of lecture</a>]</td>
+           <td>195 &ndash; 206 L</td>
+           </tr>
+
+       </tr>
+	   <tr valign="top">
+	     <td>W 2/1</td>
+           <td>Urbauer</td>
+           <td><a href="pdfs/Origin_of_Chemical_Shifts_2017.pdf">B. Chemical Shifts</a><br>
+               [<a href="video/BioNMR2017_0201.mp4">video of lecture</a>]</td>
+           <td>195 &ndash; 206 L</td>
+	   </tr>
+
+
+
+	   <tr valign="top">
+	     <td>M 2/6</td>
+           <td>Urbauer</td>
+           <td><a href="pdfs/Quantum_intro_2017.pdf">C. Intro to a QM description of NMR</a><br>
+               [<a href="video/BioNMR2017_0206.mp4">video of lecture</a>]</td>
+           <td>171 &ndash; 194 L, 23 &ndash; 46 K, 105 &ndash; 126 K</td>
+	   </tr>
+
+
+
+	   <tr valign="top">
+	     <td>W 2/8</td>
+           <td>Urbauer</td>
+           <td><a href="pdfs/Quantum_intro_2017.pdf">C. Intro to a QM description of NMR (cont'd)</a><br>
+               [<a href="video/BioNMR2017_0208.mp4">video of lecture</a>]</td>
+           <td>615 &ndash; 623 L</td>
+       </tr>
+
+           <tr valign="top">
+             <td>M 2/13</td>
+           <td>Urbauer</td>
+           <td><a href="pdfs/Second_Order_Spectra_2017.pdf">D. Applications to second order spectra</a><br>
+               [<a href="video/BioNMR2017_0213.mp4">video of lecture</a>]</td>
+           <td>381 &ndash; 405 L, 139 &ndash; 182 K</td>
+       </tr>
+
+
+	   <tr><td>&nbsp;</td>
+	       <td>&nbsp;</td>
+	       <td>&nbsp;</td>
+	       <td>&nbsp;</td>
+       </tr>
+	   <tr><td colspan="4"><font face="Arial, Helvetica, sans-serif"><b>IV. Density Matrices and Product Operator Formalism</b></font></td>
+	   </tr>
+
+       <tr valign="top">
+           <td>W 2/15</td>
+           <td>Urbauer</td>
+           <td><a href="pdfs/Density_Matrix_2017.pdf">A. Density Matrix - Evolution and interpretation</a><br>
+               [<a href="video/BioNMR2017_0215.mp4">video of lecture</a>]</td>
+           <td>259 &ndash; 289 L, 369 &ndash; 381 L, 126 &ndash; 137 K</td>
+       </tr>
+
+       <tr valign="top">
+           <td>M 2/20</td>
+           <td>Urbauer</td>
+           <td><a href="pdfs/Density_Matrix_2017.pdf">A. Density Matrix - Evolution and interpretation (cont'd)</a><br>
+               [<a href="video/BioNMR2017_0215.mp4">video of lecture</a>]</td>
+           <td>259 &ndash; 289 L, 369 &ndash; 381 L, 126 &ndash; 137 K</td>
+       </tr>
+
+	   <tr valign="top">
+	     <td>W 2/22</td>
+           <td>Urbauer</td>
+           <td><a href="pdfs/Product_Operators_2017.pdf">B. Density matrix in product operator form</a><br>
+               [<a href="video/BioNMR2017_0222.mp4">video of lecture</a>]</td>
+           <td>381 &ndash; 405 L, 139 &ndash; 182 K</td>
+       </tr>
+
+           <tr valign="top">
+             <td>M 2/27</td>
+           <td>Urbauer</td>
+           <td><a href="pdfs/Product_Operators_2017.pdf">B. Density matrix in product operator form (cont'd)</a><br>
+               [<a href="video/BioNMR2017_0227.mp4">video of lecture</a>]</td>
+           <td>381 &ndash; 405 L, 139 &ndash; 182 K</td>
+       </tr>
+
+	   <tr valign="top">
+	     <td>W 3/1</td>
+         <td>Urbauer</td>
+         <td><a href="pdfs/2D_Heteronuclear_Coherence_2017.pdf">C. 2D Heteronuclear Correlation</a><br>
+             [<a href="video/BioNMR2017_0301.mp4">video of lecture</a>]</td>
+         <td>105 &ndash; 113 L, 436 &ndash; 443 L, 410 &ndash; 447 C</td>
+       </tr>
+
+       <tr valign="top">
+	       <td>M 3/6</td>
+	       <td>Urbauer</td>
+	       <td><a href="pdfs/cosy_tocsy_2017.pdf">D. COSY, TOCSY</a><br>
+               [<a href="video/BioNMR2017_0306.mp4">video of lecture</a>]</td>
+	       <td>409 &ndash; 418 L, 492 &ndash; 506 L</td>
+       </tr>
+
+	   <tr><td>&nbsp;</td>
+	       <td>&nbsp;</td>
+	       <td>&nbsp;</td>
+	       <td>&nbsp;</td></tr>
+	   <tr>
+           <td colspan="4"><font face="Arial, Helvetica, sans-serif"><b>V. Basic Pulse Sequences</b></font></td></tr>
+
+	   <tr valign="top">
+	     <td>W 3/8</td>
+           <td>Urbauer</td>
+           <td><a href="pdfs/3D_and_Field_gradients_2017.pdf">A. Pulse field gradients and extensions to 3D</a><br>
+               [<a href="video/BioNMR2017_0308.mp4">video of lecture</a>]</td>
+           <td>649 &ndash; 652 L, 114 L</td>
+	   </tr>
+
+           <tr valign="top">
+             <td>M 3/13</td>
+           <td>Urbauer</td>
+           <td><a href="pdfs/3D_and_Field_gradients_2017.pdf">A. Pulse field gradients and extensions to 3D (cont'd)</a><br>
+               [<a href="video/BioNMR2017_0313.mp4">video of lecture</a>]</td>
+           <td>649 &ndash; 652 L, 114 L</td>
+           </tr>
+
+	   <tr valign="top">
+	     <td>W 3/15</td>
+           <td>Urbauer</td>
+           <td><a href="pdfs/triple_resonance_2017.pdf">B. Triple resonance experiments for proteins</a><br>
+               [<a href="video/BioNMR2017_0313_2.mp4">video of lecture</a>]</td>
+           <td>468 &ndash; 530 C</td>
+       </tr>
+
+	   <tr valign="top">
+	     <td>W 3/15</td>
+           <td>Urbauer</td>
+           <td><a href="pdfs/sequential_assignment_2017.pdf">C. Sequential assignment strategies in proteins</a><br>
+               [<a href="video/BioNMR2017_0313_3.mp4">video of lecture</a>]</td>
+           <td>533 &ndash; 543 C</td>
+       </tr>
+
+           <tr><td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td></tr>
+           <tr>
+       
+	   <tr>
+	     <td colspan="4"><b>VI. Applications I</b></td></tr>
+
+	   <tr valign="top">
+	     <td>M 3/20</td>
+         <td>Edison</td>
+         <td><a href="pdfs/Metabolomics_1a.pdf">A1. Metabolomics Ia</a><br>
+             <a href="pdfs/Metabolomics_1b.pdf">A2. Metabolomics Ib</a><br>
+             [<a href="video/BioNMR2017_0320_1.mp4">video of lecture, Ia</a>]<br>
+             [<a href="video/BioNMR2017_0320_2.mp4">video of lecture, Ib</a>]</td>
+         <td>&nbsp;</td>
+       </tr>
+
+           <tr valign="top">
+             <td>M 3/22</td>
+         <td>Edison</td>
+         <td><a href="pdfs/Metabolomics_2a.pdf">B1. Metabolomics IIa</a><br>
+             <a href="pdfs/Metabolomics_2b.pdf">B2. Metabolomics IIb</a><br>
+             [<a href="video/BioNMR2017_0322_1.mp4">video of lecture, IIa</a>]<br>
+             [<a href="video/BioNMR2017_0322_2.mp4">video of lecture, IIb</a>]</td>
+         <td>&nbsp;</td>
+       </tr>
+
+
+       <tr valign="top">
+         <td>M 3/27</td>
+         <td>Yang</td>
+         <td><a href="pdfs/ChemicalExchange_2017.pdf">C. Chemical Exchange and Diffusion<a/><br>
+             [<a href="video/BioNMR2017_0327.mp4">video of lecture<a/>]</td>
+         <td>515 &ndash; 524 L</td>
+       </tr>
+       <tr valign="top">
+         <td>W 3/29</td>
+         <td>Yang</td>
+         <td><a href="pdfs/protein_folding_amide_exchange.pdf">D. Protein Folding and Amide Exchange</a><br>
+             [<a href="video/BioNMR2017_0329.mp4">video of lecture</a>]</td>
+         <td>&nbsp;</td>
+       </tr>
+       <tr valign="top">
+          <td>M 4/3</td>
+          <td>Roberts</td>
+          <td><a href="pdfs/Drug_Discovery_I.pdf">E. Drug Discovery I</a><br>
+              [<a href="video/BioNMR2017_0403.mp4">video of lecture</a>]</td>
+          <td>&nbsp;</td>
+       </tr>
+       <tr valign="top">
+          <td>W 4/5</td>
+          <td>Roberts</td>
+          <td><a href="pdfs/Drug_Discovery_II.pdf">F. Drug Discovery II<a/><br>
+              [<a href="video/BioNMR2017_0405.mp4">video of lecture</a>]</td>
+          <td>&nbsp;</td>
+       </tr>
+       <tr valign="top">
+          <td>M 4/10</td>
+          <td>Yang</td>
+          <td><a href="pdfs/Magnetic_Resonance_Imaging_2017.pdf">G. Imaging (MRI)</a><br>
+              [<a href="video/BioNMR2017_0410.mp4">video of lecture</a>]</td>
+          <td>309 &ndash; 315 L</td>
+       </tr>
+       <tr valign="top">
+          <td>W 4/12</td>
+          <td>Urbauer</td>
+          <td><a href="pdfs/spin_relaxation_NOEs_2017.pdf">H. Spin Relaxation and NOEs</a><br>
+              [<a href="video/BioNMR2017_0412.mp4">video of lecture</a>]</td>
+          <td>584 &ndash; 593 L, 306 &ndash; 308 L</td>
+       </tr>
+       <tr valign="top">
+         <td>M 4/17</td>
+         <td>Urbauer</td>
+         <td><a href="pdfs/spin_relaxation_in_proteins_2017.pdf">I. Spin Relaxation in Proteins I</a><br>
+             [<a href="video/BioNMR2017_0417.mp4">video of lecture</a>]</td>
+         <td>543 &ndash; 554 C</td>
+       </tr>
+       <tr valign="top">
+         <td>W 4/19</td>
+           <td>Urbauer</td>
+           <td><a href="pdfs/spin_relaxation_in_proteins_2017.pdf">J. Spin Relaxation in Proteins II</a><br>
+               [<a href="video/BioNMR2017_0419.mp4">video of lecture</a>]</td>
+           <td>211 &ndash; 217 L</td>
+       </tr>
+
+       <tr valign="top">
+         <td>F 4/21</td>
+           <td>Urbauer</td>
+           <td><a href="pdfs/RDCs_2017.pdf">K. Residual Dipolar Couplings</a><br>
+               [<a href="video/BioNMR2017_0421.mp4">video of lecture</a>]</td>
+           <td>211 &ndash; 217 L</td>
+       </tr>
+
+       <tr valign="top">
+         <td>M 4/24</td>
+           <td>Germann</td>
+           <td><a href="pdfs/NMR_of_nucleic_acids_1.pdf">L. NMR of RNA and DNA I</a><br>
+               [<a href="video/BioNMR2017_0424.mp4">video of lecture</a>]</td>
+           <td>&nbsp;</td>
+       </tr>
+       <tr valign="top">
+         <td>M 4/26</td>
+           <td>Germann</td>
+           <td><a href="pdfs/NMR_of_nucleic_acids_2.pdf">M. NMR of RNA and DNA II</a><br>
+               <a href="pdfs/CATGCATG.pdf">in class exercise material</a><br>
+               [<a href="video/BioNMR2017_0426.mp4">video of lecture</a>]</td>
+           <td>&nbsp;</td>
+       </tr>
+       <tr><td>&nbsp;</td>
+           <td>&nbsp;</td>
+           <td>&nbsp;</td>
+           <td>&nbsp;</td>
+       </tr>
+      <tr>
+         <td>M 5/1</td>
+           <td>&nbsp;</td>
+           <td><strong>FINAL EXAM (8:00 - 11:00) UGA</strong></td>
+           <td>&nbsp;</td>
+       </tr>
+</table></div>
+</center>
+</body>
+</html>
+

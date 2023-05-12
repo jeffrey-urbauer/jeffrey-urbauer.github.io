@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US" class="no-js">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US" class="no-js">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8) ]><!-->
+<html lang="en-US" class="no-js">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQIEVlVWARAHVlJXBgYBXg=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+	<meta name="viewport" content="initial-scale=1,width=device-width,height=device-height" />
+
+        
+<meta property="og:site_name" content="PenguinRandomhouse.com"/>
+<meta property="fb:app_id" content="356679881167712"/>
+<meta property="twitter:card" content="14360757:summary"/>
+<meta property="twitter:site" content="@penguinrandomhouse"/>
+<meta property="twitter:text:title" content="Penguin Random House"/>
+<title>How Democracies Die by Steven Levitsky, Daniel Ziblatt | PenguinRandomHouse.com</title>
+<meta itemprop="name" content="How Democracies Die by Steven Levitsky, Daniel Ziblatt | PenguinRandomHouse.com"/>
+<meta property="og:title" content="How Democracies Die by Steven Levitsky, Daniel Ziblatt | PenguinRandomHouse.com"/>
+<meta name="twitter:text:title" content="How Democracies Die by Steven Levitsky, Daniel Ziblatt | PenguinRandomHouse.com"/>
+<meta property="fb:pages" content="13673457388"/>
+<meta name="description" content="A bracing, revelatory look at the demise of liberal democracies around the world&amp;mdash;and a road map for rescuing our own  &amp;#160;  Donald Trump&amp;rsquo;s..."/>
+<meta itemprop="description" content="A bracing, revelatory look at the demise of liberal democracies around the world&amp;mdash;and a road map for rescuing our own  &amp;#160;  Donald Trump&amp;rsquo;s presidency has raised a question that many of us..."/>
+<meta property="og:description" content="A bracing, revelatory look at the demise of liberal democracies around the world&amp;mdash;and a road map for rescuing our own  &amp;#160;  Donald Trump&amp;rsquo;s presidency has raised a question that many of us..."/>
+<meta name="twitter:text:description" content="A bracing, revelatory look at the demise of liberal democracies around the world&amp;mdash;and a road map for rescuing our own  &amp;#160;  Donald Trump&amp;rsquo;s presidency has raised a question that..."/>
+<meta property="og:url" content="https://www.penguinrandomhouse.com/books/562246/how-democracies-die-by-steven-levitsky-and-daniel-ziblatt/9781524762933"/>
+<meta itemprop="image" content="https://images.penguinrandomhouse.com/cover/9781524762933"/>
+<meta property="og:image" content="https://images.penguinrandomhouse.com/cover/9781524762933"/>
+<meta name="twitter:image" content="https://images.penguinrandomhouse.com/cover/9781524762933"/>
+<meta itemprop="price" content="26"/>
+<meta itemprop="priceCurrency" content="USD"/>
+<meta property="og:price:currency" content="USD"/>
+<meta property="og:price:amount" content="26"/>
+<meta property="og:type" content="book"/>
+<meta name="twitter:url" content="https://www.penguinrandomhouse.com/books/562246/how-democracies-die-by-steven-levitsky-and-daniel-ziblatt/9781524762933#excerpt"/>
+<meta name="twitter:url:preview" content="https://www.penguinrandomhouse.com/books/562246/how-democracies-die-by-steven-levitsky-and-daniel-ziblatt/9781524762933#excerpt"/>
+<meta name="twitter:text:isbn" content="9781524762933"/>
+<meta name="twitter:text:cta" content="Start reading"/>
+<meta name="Tealium" content="Tealium meta values" data-book-title="How Democracies Die" data-book-authors="Steven Levitsky, Daniel Ziblatt" data-book-isbn="9781524762933" data-book-imprint="Crown" data-book-division="" data-book-format="Hardcover" data-page-type="product"/>
+
+	
+	<!--[if lt IE 9]>
+	<script src="https://www.penguinrandomhouse.com/wp-content/themes/penguinrandomhouse/js/ie.min.js"></script>
+	<![endif]-->
+	<!--[if IE 9]>
+		<link rel='stylesheet' id='global-ie9-css' href='/wp-content/themes/penguinrandomhouse/css/ie9.min.css' type='text/css' media='all' />
+	<![endif]-->
+
+  <script>
+  var images_url_pattern = "https:\/\/images.penguinrandomhouse.com%s",  images_url_buckets = 1;
+ var series_images_url_dir = "https:\/\/assets.penguinrandomhouse.com\/series-images\/", readdown_images_url_dir = "https:\/\/assets.penguinrandomhouse.com\/the-read-down-images\/", category_images_url_dir = "https:\/\/assets.penguinrandomhouse.com\/category-images\/";
+</script>
+
+        <style> html.fouc-factor{ opacity:0; filter:alpha(opacity=0); } </style>
+	
+	<script> var htmlClass = document.getElementsByTagName( "html" )[0].getAttribute( "class" ); document.getElementsByTagName( "html" )[0].setAttribute( "class", htmlClass.replace( /no-js/, "fouc-factor" ) ); </script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"https:\/\/www.penguinrandomhouse.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.5.3"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='twentyfourteen-style-css'  href='https://www.penguinrandomhouse.com/wp-content/themes/penguinrandomhouse/style.css?ver=cb20171221011838' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyfourteen-ie-css'  href='https://www.penguinrandomhouse.com/wp-content/themes/penguinrandomhouse/css/ie.css?ver=cb20171221011838' type='text/css' media='all' />
+<![endif]-->
+<link rel='https://api.w.org/' href='https://www.penguinrandomhouse.com/wp-json/' />
+<link rel="alternate" type="application/json+oembed" href="https://www.penguinrandomhouse.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.penguinrandomhouse.com%2Fbooks%2F562246%2Fhow-democracies-die-by-steven-levitsky-and-daniel-ziblatt%2F9781524762933" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.penguinrandomhouse.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.penguinrandomhouse.com%2Fbooks%2F562246%2Fhow-democracies-die-by-steven-levitsky-and-daniel-ziblatt%2F9781524762933&#038;format=xml" />
+<link rel='canonical' href='https://www.penguinrandomhouse.com/books/562246/how-democracies-die-by-steven-levitsky-and-daniel-ziblatt/9781524762933/' />
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<!-- WP_Route:  content_product_details_4_1_2_0 --><script>var GLOBAL_routeUrl = 'https://www.penguinrandomhouse.com/books/562246/how-democracies-die-by-steven-levitsky-and-daniel-ziblatt/9781524762933/';</script>
+	<link rel="stylesheet" href="https://www.penguinrandomhouse.com/wp-content/themes/penguinrandomhouse/css/product.min.css?vers=cb20171221011838" media="all" />
+<script><!-- 
+	var GLOBAL_newslettersSignupObject = {"acquisition_code":"PRH_BOOKPAGE_STATIC_ONGOING","workId":"562246"};
+ 
+--></script>		<script type="text/javascript" src="//cdn.optimizely.com/js/3147651132.js"></script>
+	<noscript><link rel='stylesheet' id='no-js-global-css' href='/wp-content/themes/penguinrandomhouse/styles-nojs.min.css' type='text/css' media='all' /></noscript>
+    <link rel='stylesheet' id='global-print-css' href='/wp-content/themes/penguinrandomhouse/styles-print.min.css' type='text/css' media='print' />
+</head>
+
+<body class="single single-wp_router_page postid-5 group-blog masthead-fixed full-width singular">
+	<!-- Start Tealium tag -->
+	<script type="text/javascript">
+        
+var utag_data={"page_name":"How Democracies Die by Steven Levitsky, Daniel Ziblatt | PenguinRandomHouse.com","code_release_version":"cb20171221011838","product_list_price":[26],"product_isbn":[9781524762933],"product_title":["How Democracies Die"],"product_author":["Steven Levitsky | Daniel Ziblatt"],"product_author_id":["2159127 | 2155391"],"retailer_link_present":"yes","page_type":"Product Detail Page","product_imprint":["Crown"],"product_format":["Hardcover"],"product_work_id":["562246"],"product_category":["Domestic Politics | History | Nonfiction | Politics"],"product_division":["Crown\/Archetype"]};
+	</script>
+	    <script type="text/javascript">
+		(function(a,b,c,d){
+		a='//tags.tiqcdn.com/utag/random/rhcorp-prh/prod/utag.js';
+		b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+		a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+		})();
+	</script>
+	<!-- / End Tealium tag -->
+		<a href="/books-of-the-moment-sampler/" class="ribbon-offr"><div class="promo-strip">Get a FREE <i>Books of the Moment</i>&nbsp; sampler!</div></a>
+	<div id="exit_int_post">
+		<div class="before_link">Before you go...</div>
+		<div class="line1">Check Out These</div>		<div class="line2">21 Books You’ve Been Meaning to Read</div>		<a href="/the-read-down/21-books-youve-been-meaning-to-read/" class="ei_link">See the List</a>	</div>
+	
+	<div class="container">
+	  <div class="row">
+
+            
+	    <header class="main-header">
+
+	      <!-- Start Mobile Header -->
+	      <div class="mobile hidden-sm hidden-md hidden-lg">
+		<div class="mobile-nav notransition" id="mobile-nav">
+                  <form role="search" method="get" class="mobile-search-form" action="/search/site">
+                    <div class="search-box" id="mobile-searchbox">
+		      <div class="search-controls">
+			<input id="search-box" type="search" class="search-field" placeholder="SEARCH" value="" name="q" autocomplete="off" data-original-title="" title="">
+			<input type="submit" class="search-submit" value="">
+		      </div>
+                    </div>
+                  </form>
+
+                  <a href="/" class="logo"><img src="https://www.penguinrandomhouse.com/wp-content/themes/penguinrandomhouse/images/penguin-random-house-logo-square.png" alt="Penguin Random House" height="30" border="0"/></a>
+
+		  		  <a href="https://cart.penguinrandomhouse.com/cart.php" class="cart">
+		    <i class="fa fa-shopping-cart"></i>
+		    <div class="circle">
+		      <div class="item-count">2</div>
+		    </div>
+		  </a>
+		  		</div>
+	      </div>
+	      <!-- / End Mobile Header -->
+
+			<!-- Start Desktop Header -->
+			<div class="desktop container">
+				<div class="row">
+	  				<div class="logo hidden-xs"><a href="/"><img src="https://www.penguinrandomhouse.com/wp-content/themes/penguinrandomhouse/images/prh-logo.png" alt="Penguin Random House" /></a></div>
+					<div id="toolbar-nav" class="toolbar-nav">
+						<div id="social-nav" class="social">
+							<div class="connect">Connect With Us</div>
+							<ul>
+							<li><a class="sprite social facebook" href="https://www.facebook.com/PenguinRandomHouse" target="_blank"><span>Facebook</span></a></li><li><a class="sprite social twitter" href="https://twitter.com/penguinrandom" target="_blank"><span>Twitter</span></a></li><li><a class="sprite social google-plus" href="https://plus.google.com/+PenguinRandomHouse/posts" target="_blank"><span>Google+</span></a></li><li><a class="sprite social tumblr" href="http://penguinrandomhouse.tumblr.com" target="_blank"><span>Tumblr</span></a></li><li><a class="sprite social pinterest" href="http://pinterest.com/penguinrandom/" target="_blank"><span>Pinterest</span></a></li><li><a class="sprite social instagram" href="http://instagram.com/penguinrandomhouse" target="_blank"><span>Instagram</span></a></li>							</ul>
+						</div>
+																		<div class="cart hidden-xs">
+							<a href="https://cart.penguinrandomhouse.com/cart.php">Cart: <i class="fa fa-shopping-cart"></i></a>
+							<span class="item-count">12</span>
+						</div>
+											</div>
+				</div>
+				<div class="main-nav">
+					<nav id="main-nav" role="navigation">
+						<ul>
+                           <li><a class="nav-books" href="/books">Books</a></li><li><a class="nav-authors" href="/authors">Authors</a></li><li><a class="nav-blog" href="/series">Series</a></li><li><a class="nav-aboutus" href="/about-us">About Us</a></li>								<li class="search-box">
+									<form id="seachformglobal" role="search" method="get" class="search-form" action="/search/site">
+		<div class="search-controls">
+			<input id="search-box" type="search" class="search-field" placeholder="SEARCH BY TITLE, AUTHOR, OR KEYWORD" value="" name="q" autocomplete="off" />
+			<input type="submit" class="search-submit" value="&#xf002;" />
+		</div>
+	</form>								</li>
+							</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- / End Desktop Header -->
+		</header>
+	</div>
+	</div> <!-- container END -->
+
+	<!-- Start Main Page Wrap -->
+	<div id="main" class="page-wrap notransition">
+		<!-- Start Mobile Sidebar -->
+		<div class="side-nav notransition" id="side-nav">
+			<img class="logo" src="https://www.penguinrandomhouse.com/wp-content/themes/penguinrandomhouse/images/prh-logo-sm.png" width="100" height="49" border="0" alt="Penguin Random House">
+		</div>
+		<!-- / End Mobile Sidebar -->
+		<div class="mq-view"></div>
+<!-- moving also-by-author NONE -->
+<!--html from front end -->
+<!-- product info top -->
+<a name="#home" id="home"></a>
+<div id="tmpl-indc" class="tmpl-product" data-id="9781524762933,9781524762957,9780525587958"></div>
+
+<div class="inner-facade">
+  <div class="extendwrap" id="newsletter-mobile-wrap">
+    <div class="container">
+      <div class="col-xs-1 col-sm-0 col-md-0 col-lg-0"></div>
+      <div class="main-content col-xs-14 col-sm-16 col-md-16 col-lg-16">
+	<!-- newsletter -->
+<div id="newsletter-wrap-mobile" class="grayab">
+<div class="slot newsletter-signup product" ></div></div>
+<!-- /newsletter -->
+      </div>
+      <div class="col-xs-1 col-sm-0 col-md-0 col-lg-0"></div>
+    </div>
+  </div>
+</div>
+
+<div class="inner-facade">
+  <div class="container">
+    <!-- Start Scaffolding -->
+    <div class="scaffolding row">
+      <div class="col-xs-1 col-sm-0 col-md-0 col-lg-0"></div>
+            <div class="main-content col-xs-14 col-sm-16 col-md-16 col-lg-16">
+                <div class="product-header clearfix">
+
+                    <div class="slot product-jacket">
+                      <div class="book-detail">
+                        <div class="cover-wrapper">
+                          <div class="enlrgWrap">
+                            <i class="fa fa-arrows-alt excerpt-link enlarge" aria-hidden="true"></i>
+                          </div>
+                          <div class="bs-seal">Best Seller</div>
+			  <img src="https://images.penguinrandomhouse.com/cover/9781524762933" id="coverFormat" class="cover img-responsive" alt="How Democracies Die by Steven Levitsky and Daniel Ziblatt" />
+                        </div><!-- /.cover-wrapper -->
+            		
+						<div class="product-format-mobile curr-ttl-mobile isbn-related show 9781524762933 dsktop-links">
+		        			  <button type="button" class="btn buy2 preorder 9781524762933" rel="popover">Pre-Order</button>
+						</div>
+
+			<div style="clear:both"></div>
+
+			
+			<p class="excerpt-link isbn-related show 9781524762933 dsktop-links">
+
+			      <a href="#" data-workid="" data-isbn="9781524762933" data-title="How Democracies Die" data-author="Steven Levitsky and Daniel Ziblatt" class="insight">Look Inside</a>
+			</p>
+			
+						<div class="product-format-mobile curr-ttl-mobile isbn-related hidden 9781524762957 dsktop-links">
+		        			  <button type="button" class="btn buy2 preorder 9781524762957" rel="popover">Pre-Order</button>
+						</div>
+
+			<div style="clear:both"></div>
+
+						<div class="product-format-mobile curr-ttl-mobile isbn-related hidden 9780525587958 dsktop-links">
+		        			  <button type="button" class="btn buy2 preorder 9780525587958" rel="popover">Pre-Order</button>
+						</div>
+
+			<div style="clear:both"></div>
+
+			                      </div>
+                    </div>
+
+                    <div class="slot product-title">
+                      <div class="panel-body">
+                        <h1>How Democracies Die</h1>
+                <h2 class="contributors isbn-related 9781524762933 show dsktop-links">By <span class="ws-nw role-A"><b class="on-tour">Steven Levitsky<a href="/authors/2159127/steven-levitsky#events"><div class="tour-icon">On Tour</div></a></b></span> and <span class="ws-nw role-A"><b class="on-tour">Daniel Ziblatt<a href="/authors/2155391/daniel-ziblatt#events"><div class="tour-icon">On Tour</div></a></b></span><br/></h2><h2 class="contributors isbn-related 9781524762933 show mbl-links">By <span class="ws-nw role-A">Steven Levitsky<div class="tour-icon">On Tour</div></span> and <span class="ws-nw role-A">Daniel Ziblatt<div class="tour-icon">On Tour</div></span><br/></h2><h2 class="contributors isbn-related 9781524762957 dsktop-links">By <span class="ws-nw role-A"><b class="on-tour">Steven Levitsky<a href="/authors/2159127/steven-levitsky#events"><div class="tour-icon">On Tour</div></a></b></span> and <span class="ws-nw role-A"><b class="on-tour">Daniel Ziblatt<a href="/authors/2155391/daniel-ziblatt#events"><div class="tour-icon">On Tour</div></a></b></span><br/></h2><h2 class="contributors isbn-related 9781524762957 mbl-links">By <span class="ws-nw role-A">Steven Levitsky<div class="tour-icon">On Tour</div></span> and <span class="ws-nw role-A">Daniel Ziblatt<div class="tour-icon">On Tour</div></span><br/></h2><h2 class="contributors isbn-related 9780525587958 dsktop-links">By <span class="ws-nw role-A"><b class="on-tour">Steven Levitsky<a href="/authors/2159127/steven-levitsky#events"><div class="tour-icon">On Tour</div></a></b></span> and <span class="ws-nw role-A"><b class="on-tour">Daniel Ziblatt<a href="/authors/2155391/daniel-ziblatt#events"><div class="tour-icon">On Tour</div></a></b></span><br/>Read by <span class="ws-nw role-4">Fred Sanders</span><br/></h2><h2 class="contributors isbn-related 9780525587958 mbl-links">By <span class="ws-nw role-A">Steven Levitsky<div class="tour-icon">On Tour</div></span> and <span class="ws-nw role-A">Daniel Ziblatt<div class="tour-icon">On Tour</div></span><br/>Read by <span class="ws-nw role-4">Fred Sanders</span><br/></h2><h4 class="category isbn-related 9781524762933">Category: <a href="/books/domestic-politics">Domestic Politics</a> | <a href="/books/history">History</a></h4><h4 class="category isbn-related 9781524762957">Category: <a href="/books/domestic-politics">Domestic Politics</a> | <a href="/books/history">History</a></h4><h4 class="category isbn-related 9780525587958">Category: <a href="/books/domestic-politics">Domestic Politics</a> | <a href="/books/history">History</a> | <a href="/books/audiobooks">Audiobooks</a></h4>
+                        <div class="product-format-mobile curr-ttl-mobile isbn-related show 9781524762933 mbl-links">
+		        
+                        </div>
+
+                        <div style="clear:both"></div>
+
+			    
+			<p class="excerpt-link isbn-related show 9781524762933 mbl-links">
+			  <a href="#" data-workid="" data-isbn="9781524762933" data-title="How Democracies Die" data-author="Steven Levitsky and Daniel Ziblatt" class="insight">Look Inside</a>			</p>
+
+                        <div class="product-format-mobile curr-ttl-mobile isbn-related  9781524762957 mbl-links">
+		        
+                        </div>
+
+                        <div style="clear:both"></div>
+
+			    
+			<p class="excerpt-link isbn-related  9781524762957 mbl-links">
+			  			</p>
+
+                        <div class="product-format-mobile curr-ttl-mobile isbn-related  9780525587958 mbl-links">
+		        
+                        </div>
+
+                        <div style="clear:both"></div>
+
+			    
+			<p class="excerpt-link isbn-related  9780525587958 mbl-links">
+			  			</p>
+
+		      </div>
+                    </div>
+
+
+
+
+                    <div class="slot product-format">
+                      <div class="product-format-tblt">
+			                            <div class="curr-ttl-mobile active isbn-related show 9781524762933">
+                            <!-- this is for the active isbn set by PHP -->
+                            <a href="#">Hardcover</a>
+			                             <span class="us-price">$26.00</span>
+			 			    <p class="title-details">
+                	      <span>			                                     <span class="ws-nw">Jan 16, 2018</span>
+                                                             <span class="ws-nw">| 320 Pages</span> 
+                                                                                                               <!--<span class="ws-nw">| 5-1/2 x 8-1/4</span>-->
+                            			                                                              <!--<span class="ws-nw">| ISBN 9781524762933</span>-->
+                                                  			 					<button type="button" class="btn buy2 preorder 9781524762933" rel="popover">Pre-Order</button>
+			 								</p>
+                            </div>
+						                          <div class="curr-ttl-mobile active isbn-related  9781524762957">
+                            <!-- this is for the active isbn set by PHP -->
+                            <a href="#">Ebook</a>
+			                             <span class="us-price">$12.99</span>
+			 			    <p class="title-details">
+                	      <span>			                                     <span class="ws-nw">Jan 16, 2018</span>
+                                                             <span class="ws-nw">| 320 Pages</span> 
+                                                                              			                                                              <!--<span class="ws-nw">| ISBN 9781524762957</span>-->
+                                                  			 					<button type="button" class="btn buy2 preorder 9781524762957" rel="popover">Pre-Order</button>
+			 								</p>
+                            </div>
+						                          <div class="curr-ttl-mobile active isbn-related  9780525587958">
+                            <!-- this is for the active isbn set by PHP -->
+                            <a href="#">Audiobook Download</a>
+			                             <span class="us-price">$20.00</span>
+			 			    <p class="title-details">
+                	      <span>			                                     <span class="ws-nw">Jan 16, 2018</span>
+                                                                                      <span class="ws-nw">| 505 Minutes</span> 
+                                                     			                                                              <!--<span class="ws-nw">| ISBN 9780525587958</span>-->
+                                                  			 					<button type="button" class="btn buy2 preorder 9780525587958" rel="popover">Pre-Order</button>
+			 								</p>
+                            </div>
+												</div>
+
+
+
+		     						<div class="product-format-mobile-link_wrap">
+	                        <div class="product-format-mobile-link-div">
+	                        	<a href="javascript:;" class="product-format-mobile-link">All Formats<div class="pl_mn_format">+</div></a>
+	                        	<div class="mobile-formats-div">
+	                        		<div class="mobile-formats">
+	                            		<ul class="mobile-inner"></ul>
+	                            	</div>
+	                        	</div>
+	                     	</div>
+                     	</div>
+		     
+		    <div id="mobileList">
+							<div class="activeBookRow">
+					<div class="bookRow active" data-original-title="" title="" insight="" primaryauthors="Steven Levitsky|Daniel Ziblatt" primaryauthids="2159127|2155391" best-seller=""
+						        merchandise="false"  isbn="9781524762933" format="HC" format-name="Hardcover" categories="" imprint="Crown" division="Crown/Archetype" price="26.00">
+						<div class="imageDiv">
+							<img src="https://images.penguinrandomhouse.com/cover/9781524762933" class="mblCover img-responsive" alt="How Democracies Die by Steven Levitsky and Daniel Ziblatt" />
+						</div>
+						<div class="dataDiv">
+							<div class="frmtName">Hardcover</div>
+							<div class="frmtInfo">Jan 16, 2018 | 320 Pages</div>
+						</div>
+						<div class="buyDiv">
+																						<button type="button" class="btn buy2 preorder 9781524762933" rel="popover">Pre-Order <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+													</div>
+					</div>
+					<div class="bookBuyLinkList" style="display:none"></div>
+				</div>
+								<div class="bookList" style="display:none;">
+								<div class="bookRow" data-original-title="" title="" insight="" primaryauthors="Steven Levitsky|Daniel Ziblatt" primaryauthids="2159127|2155391" best-seller=""
+					        merchandise="false"  isbn="9781524762957" format="EL" format-name="Ebook" categories="" imprint="Crown" division="Crown/Archetype" price="12.99">
+						<div class="imageDiv">
+							<img src="https://images.penguinrandomhouse.com/cover/9781524762957" class="mblCover img-responsive" alt="How Democracies Die by Steven Levitsky and Daniel Ziblatt" />
+						</div>
+						<div class="dataDiv">
+							<div class="frmtName">Ebook</div>
+							<div class="frmtInfo">Jan 16, 2018 | 320 Pages</div>
+						</div>
+						<div class="buyDiv">
+																						<button type="button" class="btn buy2 preorder 9781524762957" rel="popover">Pre-Order <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+													</div>
+					</div>
+								<div class="bookRow" data-original-title="" title="" insight="" primaryauthors="Steven Levitsky|Daniel Ziblatt" primaryauthids="2159127|2155391" best-seller=""
+					        merchandise="false"  isbn="9780525587958" format="DN" format-name="Audiobook Download" categories="" imprint="Random House Audio" division="Audio" price="20.00">
+						<div class="imageDiv">
+							<img src="https://images.penguinrandomhouse.com/cover/9780525587958" class="mblCover img-responsive" alt="How Democracies Die by Steven Levitsky and Daniel Ziblatt" />
+						</div>
+						<div class="dataDiv">
+							<div class="frmtName">Audiobook Download</div>
+							<div class="frmtInfo">Jan 16, 2018 | 505 Minutes</div>
+						</div>
+						<div class="buyDiv">
+																						<button type="button" class="btn buy2 preorder 9780525587958" rel="popover">Pre-Order <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+													</div>
+					</div>
+							</div>
+				<div class="format-selection see-button">
+					<span class="format-cta">See All Formats</span>
+					<span class="format-count">(2)</span>
+					<span class="format-display-symbol">+</span>
+				</div>
+						</div>
+
+
+                        <div class="panel-group" id="accordion">
+									<div class="panel">
+							    <div class="panel-heading selected">
+	                              <h4 class="panel-title">
+	                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+					  					Hardcover <span class="countDiv0"></span>
+					  					<div class="pl_mn_format">&#8211;</div>
+	                                </a>
+	                              </h4>
+	                            </div>
+	                            <div id="collapse1" class="panel-collapse collapse in">
+                              	      <div class="panel-body">
+		                        <ul class="ttl-data">
+					  					  <li class="active">
+					    <a href="#9781524762933" class="isbnttl" rel="popover" data-original-title="" title="" insight="" primaryauthors="Steven Levitsky|Daniel Ziblatt" primaryauthids="2159127|2155391" best-seller=""
+					        merchandise="false"  isbn="9781524762933" format="HC" format-name="Hardcover" categories="Domestic Politics | History | Nonfiction | Politics" imprint="Crown" division="Crown/Archetype" price="26.00">Hardcover</a>
+					       																<button type="button" class="btn buy2 preorder 9781524762933" rel="popover">Pre-Order</button>
+												       	<span class="us-price">$26.00</span>							
+							<p class="title-details">
+															<span class="ws-nw">Jan 16, 2018</span>
+															<span class="ws-nw">| 320 Pages</span> 
+																													<!--<span class="ws-nw">| </span>-->
+																													<!--<span class="ws-nw">| ISBN 9781524762933</span>-->
+														</p></li>
+                                       </ul>
+                                     </div>
+                                   </div>
+                                 </div>
+							<div class="panel">
+							    <div class="panel-heading">
+	                              <h4 class="panel-title">
+	                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+					  					Ebook <span class="countDiv1"></span>
+					  					<div class="pl_mn_format">+</div>
+	                                </a>
+	                              </h4>
+	                            </div>
+	                            <div id="collapse2" class="panel-collapse collapse">
+                              	      <div class="panel-body">
+		                        <ul class="ttl-data">
+					  					  <li class="">
+					    <a href="#9781524762957" class="isbnttl" rel="popover" data-original-title="" title="" insight="" primaryauthors="Steven Levitsky|Daniel Ziblatt" primaryauthids="2159127|2155391" best-seller=""
+					        merchandise="false"  isbn="9781524762957" format="EL" format-name="Ebook" categories="Domestic Politics | History | Nonfiction | Politics" imprint="Crown" division="Crown/Archetype" price="12.99">Ebook</a>
+					       																<button type="button" class="btn buy2 preorder 9781524762957" rel="popover">Pre-Order</button>
+												       	<span class="us-price">$12.99</span>							
+							<p class="title-details">
+															<span class="ws-nw">Jan 16, 2018</span>
+															<span class="ws-nw">| 320 Pages</span> 
+																																											<!--<span class="ws-nw">| ISBN 9781524762957</span>-->
+														</p></li>
+                                       </ul>
+                                     </div>
+                                   </div>
+                                 </div>
+							<div class="panel">
+							    <div class="panel-heading">
+	                              <h4 class="panel-title">
+	                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+					  					Audio <span class="countDiv2"></span>
+					  					<div class="pl_mn_format">+</div>
+	                                </a>
+	                              </h4>
+	                            </div>
+	                            <div id="collapse3" class="panel-collapse collapse">
+                              	      <div class="panel-body">
+		                        <ul class="ttl-data">
+					  					  <li class="">
+					    <a href="#9780525587958" class="isbnttl" rel="popover" data-original-title="" title="" insight="" primaryauthors="Steven Levitsky|Daniel Ziblatt" primaryauthids="2159127|2155391" best-seller=""
+					        merchandise="false"  isbn="9780525587958" format="DN" format-name="Audio" categories="Domestic Politics | History | Nonfiction | Politics | Audiobooks" imprint="Random House Audio" division="Audio" price="20.00">Audiobook Download</a>
+					       																<button type="button" class="btn buy2 preorder 9780525587958" rel="popover">Pre-Order</button>
+												       	<span class="us-price">$20.00</span>							
+							<p class="title-details">
+															<span class="ws-nw">Jan 16, 2018</span>
+																						<span class="ws-nw">| 505 Minutes</span> 
+																																				<!--<span class="ws-nw">| ISBN 9780525587958</span>-->
+														</p></li>
+                                       </ul>
+                                     </div>
+                                   </div>
+                                 </div>
+                        </div>
+                    </div>
+                </div>
+                
+                				<div class="default-retailer">
+                	<h4 class="buy">Buy the Audiobook Download:</h4>
+                	<ul>         
+                    	<li><a href="http://links.penguinrandomhouse.com/type/affiliate/isbn/9780525587958/siteId/301/retailerid/3/trackingcode/PRHEFFDF5A7F1" target="_blank">Apple</a></li><li><a href="http://links.penguinrandomhouse.com/type/affiliate/isbn/9780525587958/siteId/301/retailerid/15/trackingcode/PRHEFFDF5A7F1" target="_blank">Audible</a></li><li><a href="http://links.penguinrandomhouse.com/type/affiliate/isbn/9780525587958/siteId/301/retailerid/16/trackingcode/PRHEFFDF5A7F1" target="_blank">downpour</a></li><li><a href="http://links.penguinrandomhouse.com/type/affiliate/isbn/9780525587958/siteId/301/retailerid/17/trackingcode/PRHEFFDF5A7F1" target="_blank">eMusic</a></li><li><a href="http://links.penguinrandomhouse.com/type/affiliate/isbn/9780525587958/siteId/301/retailerid/18/trackingcode/PRHEFFDF5A7F1" target="_blank">audiobooks.com</a></li>                    </ul>
+                </div>
+                                
+            </div> <!-- main-content -->
+            <div class="col-xs-1 col-sm-0 col-md-0 col-lg-0"></div>
+        </div> <!-- scaffolding row -->
+    </div> <!-- container -->
+</div> <!-- inner-facade END -->
+<!-- end product info top -->
+<!-- buy options -->     
+ <div class="sticky-buy">
+   <div id="buy-options">
+     <ul>
+		            <li class="isbn-related 9781524762933 last">
+             <form action="https://cart.penguinrandomhouse.com/cart.php" method="post">
+               <img src="https://www.penguinrandomhouse.com/wp-content/themes/penguinrandomhouse/images/logo.gif" class="logo" /><button type="submit" class="btn buy">Add to Cart</button>
+               <input id="itemISBN" type="hidden" name="itemISBN" value="9781524762933" />
+               <input id="itemQuantity" type="hidden" name="itemQuantity" value="1" />
+               <input id="siteName" type="hidden" name="siteName" value="prh" />
+               <input id="referringSite" type="hidden" name="referringSite" value="prh" />
+               <input id="siteReturnURL" type="hidden" name="siteReturnURL" value="https://www.penguinrandomhouse.com/books/562246/how-democracies-die-by-steven-levitsky-and-daniel-ziblatt/9781524762933" />
+               <input id="itemReturnURL" type="hidden" name="itemReturnURL" value="https://www.penguinrandomhouse.com/books/562246/how-democracies-die-by-steven-levitsky-and-daniel-ziblatt/9781524762933" />
+             </form>
+           </li>
+			     </ul>
+   </div>
+ </div>
+<!-- end buy options -->
+
+<!-- product info bottom -->        
+<div class="container">
+  <div class="scaffolding row">
+    <div class="col-xs-1 col-sm-0 col-md-0 col-lg-0"></div>
+    <div class="main-content col-xs-14 col-sm-16 col-md-16 col-lg-16">
+
+      <!-- Left rail above carousels -->
+      <div id="left-rail-top" class="product-body clearfix">
+
+	<!-- run thru the $mobileContent array until you hit carousels -->
+
+	<div id="mobile-about-the-book"><!-- about the book -->
+
+<a name="#aboutthebook" id="aboutthebook"></a>
+<div class="slot product-about 9781524762933 isbn-related seemoreenable show">
+  <section class="overview">
+    <h4 class="slot-header">About <span>How Democracies Die</span></h4>
+        <p><b>A bracing, revelatory look at the demise of liberal democracies around the world&mdash;and a road map for rescuing our own</b><br> &#160;<br> Donald Trump&rsquo;s presidency has raised a question that many of us never thought we&rsquo;d be asking: Is our democracy in danger? Harvard professors Steven Levitsky and Daniel Ziblatt have spent more than twenty years studying the breakdown of democracies in Europe and Latin America, and they believe the answer is yes. Democracy no longer ends with a bang&mdash;in a revolution or military coup&mdash;but with a whimper: the slow, steady weakening of critical institutions, such as the judiciary and the press, and the gradual erosion of long-standing political norms. The good news is that there are several exit ramps on the road to authoritarianism. The bad news is that, by electing Trump, we have already passed the first one. <br><br> Drawing on decades of research and a wide range of historical and global examples, from 1930s Europe to contemporary Hungary, Turkey, and Venezuela, to the American South during Jim Crow, Levitsky and Ziblatt show how democracies die&mdash;and how ours can be saved.</p>  </section>
+</div>
+
+
+<a name="#aboutthebook" id="aboutthebook"></a>
+<div class="slot product-about 9781524762957 isbn-related seemoreenable">
+  <section class="overview">
+    <h4 class="slot-header">About <span>How Democracies Die</span></h4>
+        <p><b>A bracing, revelatory look at the demise of liberal democracies around the world&mdash;and a road map for rescuing our own</b><br> &#160;<br> Donald Trump&rsquo;s presidency has raised a question that many of us never thought we&rsquo;d be asking: Is our democracy in danger? Harvard professors Steven Levitsky and Daniel Ziblatt have spent more than twenty years studying the breakdown of democracies in Europe and Latin America, and they believe the answer is yes. Democracy no longer ends with a bang&mdash;in a revolution or military coup&mdash;but with a whimper: the slow, steady weakening of critical institutions, such as the judiciary and the press, and the gradual erosion of long-standing political norms. The good news is that there are several exit ramps on the road to authoritarianism. The bad news is that, by electing Trump, we have already passed the first one. <br><br> Drawing on decades of research and a wide range of historical and global examples, from 1930s Europe to contemporary Hungary, Turkey, and Venezuela, to the American South during Jim Crow, Levitsky and Ziblatt show how democracies die&mdash;and how ours can be saved.</p>  </section>
+</div>
+
+
+<a name="#aboutthebook" id="aboutthebook"></a>
+<div class="slot product-about 9780525587958 isbn-related seemoreenable">
+  <section class="overview">
+    <h4 class="slot-header">About <span>How Democracies Die</span></h4>
+        <p><b>For readers of <i>On Tyranny</i> and <i>Why Nations Fail</i>, a bracing look at the demise of liberal democracies around the world&#8211;and a roadmap for rescuing our own</b><br><br>Donald Trump&#8217;s presidency has raised a question that many of us never thought we&#8217;d be asking: Is our democracy in danger? Harvard professors Steven Levitsky and Daniel Ziblatt have spent two decades studying the breakdown of democracies in Europe and Latin America, and they believe the answer is yes. Democracy no longer ends with a bang&#8211;in a revolution or military coup&#8211;but with a whimper: the slow, steady weakening of critical institutions, such as the judiciary and the press, and the gradual erosion of longstanding political norms. The good news is that there are many exit ramps on the road to authoritarianism. The bad news is that, by electing Trump, we may have already passed the first one.<br>&nbsp;&nbsp;&nbsp;&nbsp; Drawing on decades of research and a wide range of historical and global examples, from 1930s Europe to contemporary Hungary, Turkey, and Venezuela, Levitsky and Ziblatt show how democracies die&#8211;and how ours can be saved.</p>  </section>
+</div>
+
+<!-- /about the book -->
+</div><div id="mobile-also-in-series"><!-- Also in series -->
+
+<!-- div id="also-in-series-mobile" -->
+  <a name="#alsoinseries" id="alsoinseries"></a>
+
+
+<!-- checking NONE -->
+
+<!-- checking NONE -->
+
+<!-- checking NONE -->
+    <!-- / Also in series -->
+
+</div><div id="mobile-also-by-author"><!-- Also by author -->
+<!-- / Also by author -->
+</div><div id="mobile-author-spotlights"><!-- author spotlights -->
+<!-- /author spotlights -->
+</div><div id="mobile-second-product-detail">                  <!-- 2nd prod detail -->
+                  <a name="#productdetails" id="productdetails"></a>
+          <div class="slot scnd-prod-detail">
+                <div class="product-author-also-by" id="scnd-detail">
+                    <h4 class="slot-header">Product Details</h4>
+               </div>
+		                                     <p class="clearfix isbn-related 9781524762933">
+			 								       Hardcover								       			   | $26.00									     <br />
+								       			 Published by Crown<br />
+										  <span class="ws-nw">Jan 16, 2018</span>
+																														   <span class="ws-nw">| 320 Pages</span>
+																																																																	    			   <span class="ws-nw">| 5-1/2 x 8-1/4</span>
+										       																															   			   <span class="ws-nw">| ISBN 9781524762933</span>
+											                                </p>
+				                                    <p class="clearfix isbn-related 9781524762957">
+			 								       Ebook								       			   | $12.99									     <br />
+								       			 Published by Crown<br />
+										  <span class="ws-nw">Jan 16, 2018</span>
+																														   <span class="ws-nw">| 320 Pages</span>
+																																																																	    																															   			   <span class="ws-nw">| ISBN 9781524762957</span>
+											                                </p>
+				                                    <p class="clearfix isbn-related 9780525587958">
+			 								       Audiobook Download								       			   | $20.00									     <br />
+								       			 Published by Random House Audio<br />
+										  <span class="ws-nw">Jan 16, 2018</span>
+																																																									   <span class="ws-nw">| 505 Minutes</span>
+											 																											    																															   			   <span class="ws-nw">| ISBN 9780525587958</span>
+											                                </p>
+				               </div>
+              <!-- / 2nd prod detail -->
+</div>
+      </div>
+      <!-- / Left rail above carousels -->
+
+      <script>
+        var rightRailList = {"NONE":["also-by-author","author-spotlights","related-links","audio-extras","related-articles","second-product-detail"]};
+      </script>
+
+      <!-- Right Rail above carousels - visible on desktop -->
+      <div id="right-rail-top" class="right-rail">
+      </div>
+      <!-- / Right Rail -->
+
+      <!-- Carousels??? -->
+      <div class="product-body clearfix">
+	       <!-- people who read -->
+              <!-- / people who read -->
+	       <!-- recommended for you products -->
+       <div class="slot product-recommended selected-for-you loading">
+         <h4 class="slot-header">Inspired by Your Browsing History</h4>
+       </div>
+       <!-- / recommended products -->
+	       <!-- Also in [category] -->
+              <div class="slot product-recommended">
+	    <h4 class="slot-header">Also in Domestic Politics</h4>
+         <section class="carousel recommended">
+												 <a class="control left" href="javascript:;"><span class="arrow">&lsaquo;</span></a>
+																					     <a class="control right" href="javascript:;"><span class="arrow">&rsaquo;</span></a>
+
+           <div class="viewport">
+              <div class="slider">
+																															                  <div class="item">
+                  <div class="img">
+                    <a href="/books/191691/inventing-america-by-garry-wills"><img alt="Inventing America" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780525435976?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/191691/inventing-america-by-garry-wills" title="Inventing America">Inventing America</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/33353/garry-wills" title="Garry Wills">Garry Wills</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/534994/a-world-in-disarray-by-richard-haass"><img alt="A World in Disarray" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780399562389?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/534994/a-world-in-disarray-by-richard-haass" title="A World in Disarray">A World in Disarray</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/2133622/richard-haass" title="Richard Haass">Richard Haass</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/553235/asap-us-government-and-politics-a-quick-review-study-guide-for-the-ap-exam-by-the-princeton-review"><img alt="ASAP U.S. Government &amp; Politics: A Quick-Review Study Guide for the AP Exam" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781524757663?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/553235/asap-us-government-and-politics-a-quick-review-study-guide-for-the-ap-exam-by-the-princeton-review" title="ASAP U.S. Government &amp; Politics: A Quick-Review Study Guide for the AP Exam">ASAP U.S. Government &#038; Politics: A Quick-Review Study Guide for the AP Exam</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/57038/princeton-review" title="Princeton Review">Princeton Review</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/311183/the-man-who-knew-by-sebastian-mallaby"><img alt="The Man Who Knew" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780143111092?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/311183/the-man-who-knew-by-sebastian-mallaby" title="The Man Who Knew">The Man Who Knew</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/18786/sebastian-mallaby" title="Sebastian Mallaby">Sebastian Mallaby</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/540719/corbyn-by-richard-seymour"><img alt="Corbyn" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781786632999?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/540719/corbyn-by-richard-seymour" title="Corbyn">Corbyn</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/182672/richard-seymour" title="Richard Seymour">Richard Seymour</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/559624/bullets-into-bells-by-introduction-by-colum-mccann-edited-by-brian-clements-alexandra-teague-anddean-rader"><img alt="Bullets into Bells" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780807025581?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/559624/bullets-into-bells-by-introduction-by-colum-mccann-edited-by-brian-clements-alexandra-teague-anddean-rader" title="Bullets into Bells">Bullets into Bells</a>
+                 </div>
+																																				<div class="contributor"></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/235752/creating-freedom-by-raoul-martinez"><img alt="Creating Freedom" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780804170512?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/235752/creating-freedom-by-raoul-martinez" title="Creating Freedom">Creating Freedom</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/187270/raoul-martinez" title="Raoul Martinez">Raoul Martinez</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/566132/collusion-by-luke-harding"><img alt="Collusion" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780525562511?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/566132/collusion-by-luke-harding" title="Collusion">Collusion</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/223447/luke-harding" title="Luke Harding">Luke Harding</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/533258/how-will-capitalism-end-by-wolfgang-streeck"><img alt="How Will Capitalism End?" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781786632982?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/533258/how-will-capitalism-end-by-wolfgang-streeck" title="How Will Capitalism End?">How Will Capitalism End?</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/220900/wolfgang-streeck" title="Wolfgang Streeck">Wolfgang Streeck</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/551107/the-making-of-donald-trump-by-david-cay-johnston"><img alt="The Making of Donald Trump" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781612196879?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/551107/the-making-of-donald-trump-by-david-cay-johnston" title="The Making of Donald Trump">The Making of Donald Trump</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/2145097/david-cay-johnston" title="David Cay Johnston">David Cay Johnston</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/561967/the-new-poverty-by-stephen-armstrong"><img alt="The New Poverty" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781786634634?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/561967/the-new-poverty-by-stephen-armstrong" title="The New Poverty">The New Poverty</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/2155152/stephen-armstrong" title="Stephen Armstrong">Stephen Armstrong</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/533296/tear-gas-by-anna-feigenbaum"><img alt="Tear Gas" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781784780265?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/533296/tear-gas-by-anna-feigenbaum" title="Tear Gas">Tear Gas</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/2114807/anna-feigenbaum" title="Anna Feigenbaum">Anna Feigenbaum</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/536119/playing-with-fire-by-lawrence-odonnell"><img alt="Playing with Fire" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780399563140?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/536119/playing-with-fire-by-lawrence-odonnell" title="Playing with Fire">Playing with Fire</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/55000/lawrence-odonnell" title="Lawrence O'Donnell">Lawrence O&#8217;Donnell</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/555106/the-last-girl-by-nadia-murad"><img alt="The Last Girl" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781524760434?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/555106/the-last-girl-by-nadia-murad" title="The Last Girl">The Last Girl</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/2148083/nadia-murad" title="Nadia Murad">Nadia Murad</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/559627/you-cant-spell-america-without-me-by-alec-baldwin-and-kurt-andersen"><img alt="You Can't Spell America Without Me" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780525521990?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/559627/you-cant-spell-america-without-me-by-alec-baldwin-and-kurt-andersen" title="You Can't Spell America Without Me">You Can&#8217;t Spell America Without Me</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/571/kurt-andersen" title="Kurt Andersen">Kurt Andersen</a> and <a href="/authors/234212/alec-baldwin" title="Alec Baldwin">Alec Baldwin</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/556888/friends-divided-by-gordon-s-wood"><img alt="Friends Divided" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780735224711?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/556888/friends-divided-by-gordon-s-wood" title="Friends Divided">Friends Divided</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/33651/gordon-s-wood" title="Gordon S. Wood">Gordon S. Wood</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/564452/the-truth-matters-by-bruce-bartlett"><img alt="The Truth Matters" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780399581168?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/564452/the-truth-matters-by-bruce-bartlett" title="The Truth Matters">The Truth Matters</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/70564/bruce-bartlett" title="Bruce Bartlett">Bruce Bartlett</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/550746/american-radical-by-tamer-elnoury-with-kevin-maurer"><img alt="American Radical" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781101986158?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/550746/american-radical-by-tamer-elnoury-with-kevin-maurer" title="American Radical">American Radical</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/93909/kevin-maurer" title="Kevin Maurer">Kevin Maurer</a> and <a href="/authors/2159058/tamer-elnoury" title="Tamer Elnoury">Tamer Elnoury</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/232836/the-least-of-all-possible-evils-by-eyal-weizman"><img alt="The Least of All Possible Evils" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781786632739?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/232836/the-least-of-all-possible-evils-by-eyal-weizman" title="The Least of All Possible Evils">The Least of All Possible Evils</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/182727/eyal-weizman" title="Eyal Weizman">Eyal Weizman</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/557144/alt-america-by-david-neiwert"><img alt="Alt-America" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781786634238?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/557144/alt-america-by-david-neiwert" title="Alt-America">Alt-America</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/2149605/david-neiwert" title="David Neiwert">David Neiwert</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/564314/trump-is-fcking-crazy-by-keith-olbermann"><img alt="Trump is F*cking Crazy" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780525533863?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/564314/trump-is-fcking-crazy-by-keith-olbermann" title="Trump is F*cking Crazy">Trump is F*cking Crazy</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/76908/keith-olbermann" title="Keith Olbermann">Keith Olbermann</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/232808/clr-james-by-paul-buhle"><img alt="C.L.R. James" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781786634535?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/232808/clr-james-by-paul-buhle" title="C.L.R. James">C.L.R. James</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/182703/paul-buhle" title="Paul Buhle">Paul Buhle</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/540844/violent-borders-by-reece-jones"><img alt="Violent Borders" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781784784744?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/540844/violent-borders-by-reece-jones" title="Violent Borders">Violent Borders</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/2138201/reece-jones" title="Reece Jones">Reece Jones</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/540919/leviathan-by-thomas-hobbes-introduction-and-notes-by-christopher-brooke"><img alt="Leviathan" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780141395098?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/540919/leviathan-by-thomas-hobbes-introduction-and-notes-by-christopher-brooke" title="Leviathan">Leviathan</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/37196/thomas-hobbes" title="Thomas Hobbes">Thomas Hobbes</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/544012/age-of-folly-by-lewis-h-lapham"><img alt="Age of Folly" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781786630445?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/544012/age-of-folly-by-lewis-h-lapham" title="Age of Folly">Age of Folly</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/2146803/lewis-h-lapham" title="Lewis H. Lapham">Lewis H. Lapham</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/549075/the-end-of-policing-by-alex-s-vitale"><img alt="The End of Policing" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781784782894?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/549075/the-end-of-policing-by-alex-s-vitale" title="The End of Policing">The End of Policing</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/2172300/alex-s-vitale" title="Alex S. Vitale">Alex S. Vitale</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/561176/beyond-the-messy-truth-by-van-jones"><img alt="Beyond the Messy Truth" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780399180026?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/561176/beyond-the-messy-truth-by-van-jones" title="Beyond the Messy Truth">Beyond the Messy Truth</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/2154288/van-jones" title="Van Jones">Van Jones</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/550170/we-were-eight-years-in-power-by-ta-nehisi-coates"><img alt="We Were Eight Years in Power" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780399590566?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/550170/we-were-eight-years-in-power-by-ta-nehisi-coates" title="We Were Eight Years in Power">We Were Eight Years in Power</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/84186/ta-nehisi-coates" title="Ta-Nehisi Coates">Ta-Nehisi Coates</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/563410/collected-works-volume-1-by-v-i-lenin"><img alt="Collected Works, Volume 1" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781786634856?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/563410/collected-works-volume-1-by-v-i-lenin" title="Collected Works, Volume 1">Collected Works, Volume 1</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/2156378/v-i-lenin" title="V. I. Lenin">V. I. Lenin</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/566469/scalia-speaks-by-antonin-scalia-edited-by-christopher-j-scalia-and-edward-whelan"><img alt="Scalia Speaks" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780525573326?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/566469/scalia-speaks-by-antonin-scalia-edited-by-christopher-j-scalia-and-edward-whelan" title="Scalia Speaks">Scalia Speaks</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/2159301/antonin-scalia" title="Antonin Scalia">Antonin Scalia</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/225247/the-rise-of-athens-by-anthony-everitt"><img alt="The Rise of Athens" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780812984989?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/225247/the-rise-of-athens-by-anthony-everitt" title="The Rise of Athens">The Rise of Athens</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/8297/anthony-everitt" title="Anthony Everitt">Anthony Everitt</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/554130/out-of-the-wreckage-by-george-monbiot"><img alt="Out of the Wreckage" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781786632883?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/554130/out-of-the-wreckage-by-george-monbiot" title="Out of the Wreckage">Out of the Wreckage</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/2114779/george-monbiot" title="George Monbiot">George Monbiot</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/558543/daring-democracy-by-frances-moore-lappe-and-adam-eichen"><img alt="Daring Democracy" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780807023815?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/558543/daring-democracy-by-frances-moore-lappe-and-adam-eichen" title="Daring Democracy">Daring Democracy</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/2152186/frances-moore-lappe" title="Frances Moore Lappe">Frances Moore Lappe</a> and <a href="/authors/2152192/adam-eichen" title="Adam Eichen">Adam Eichen</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/544595/isis-the-terror-nation-by-loretta-napoleoni"><img alt="ISIS: The Terror Nation" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781609807252?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/544595/isis-the-terror-nation-by-loretta-napoleoni" title="ISIS: The Terror Nation">ISIS: The Terror Nation</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/145524/loretta-napoleoni" title="Loretta Napoleoni">Loretta Napoleoni</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/561369/nincompoopolis-by-douglas-murphy"><img alt="Nincompoopolis" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781910924570?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/561369/nincompoopolis-by-douglas-murphy" title="Nincompoopolis">Nincompoopolis</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/2154468/douglas-murphy" title="Douglas Murphy">Douglas Murphy</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/247738/makers-and-takers-by-rana-foroohar"><img alt="Makers and Takers" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780553447255?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/247738/makers-and-takers-by-rana-foroohar" title="Makers and Takers">Makers and Takers</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/226128/rana-foroohar" title="Rana Foroohar">Rana Foroohar</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/565064/a-citizens-guide-to-impeachment-by-barbara-radnofsky"><img alt="A Citizen's Guide to Impeachment" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781612197050?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/565064/a-citizens-guide-to-impeachment-by-barbara-radnofsky" title="A Citizen's Guide to Impeachment">A Citizen&#8217;s Guide to Impeachment</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/2168011/barbara-a-radnofsky" title="Barbara A. Radnofsky">Barbara A. Radnofsky</a> and <a href="/authors/2157815/barbara-radnofsky" title="Barbara Radnofsky">Barbara Radnofsky</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/212290/the-genius-of-judaism-by-bernard-henri-levy"><img alt="The Genius of Judaism" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780812982510?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/212290/the-genius-of-judaism-by-bernard-henri-levy" title="The Genius of Judaism">The Genius of Judaism</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/2026694/bernard-henri-levy" title="Bernard-Henri Lévy">Bernard-Henri Lévy</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/241363/weapons-of-math-destruction-by-cathy-oneil"><img alt="Weapons of Math Destruction" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780553418835?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/241363/weapons-of-math-destruction-by-cathy-oneil" title="Weapons of Math Destruction">Weapons of Math Destruction</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/223157/cathy-oneil" title="Cathy O'Neil">Cathy O&#8217;Neil</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/557921/the-mind-of-the-islamic-state-by-robert-manne"><img alt="The Mind of the Islamic State" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781633883710?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/557921/the-mind-of-the-islamic-state-by-robert-manne" title="The Mind of the Islamic State">The Mind of the Islamic State</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/2150454/robert-manne" title="Robert Manne">Robert Manne</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/234196/human-rights-and-the-uses-of-history-by-samuel-moyn"><img alt="Human Rights and the Uses of History" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781781689004?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/234196/human-rights-and-the-uses-of-history-by-samuel-moyn" title="Human Rights and the Uses of History">Human Rights and the Uses of History</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/184691/samuel-moyn" title="Samuel Moyn">Samuel Moyn</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/553117/victoria-and-abdul-movie-tie-in-by-shrabani-basu"><img alt="Victoria &amp; Abdul (Movie Tie-in)" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780525434412?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/553117/victoria-and-abdul-movie-tie-in-by-shrabani-basu" title="Victoria &amp; Abdul (Movie Tie-in)">Victoria &#038; Abdul (Movie Tie-in)</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/2137766/shrabani-basu" title="Shrabani Basu">Shrabani Basu</a></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/566547/inside-this-place-not-of-it-by-ayelet-waldman-and-robin-levi"><img alt="Inside This Place, Not of It" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781786632852?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/566547/inside-this-place-not-of-it-by-ayelet-waldman-and-robin-levi" title="Inside This Place, Not of It">Inside This Place, Not of It</a>
+                 </div>
+																																				<div class="contributor"></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/566548/surviving-justice-by-dave-eggers-and-lola-vollen"><img alt="Surviving Justice" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9781786632869?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/566548/surviving-justice-by-dave-eggers-and-lola-vollen" title="Surviving Justice">Surviving Justice</a>
+                 </div>
+																																				<div class="contributor"></div>
+                </div>
+																																				                <div class="item">
+                  <div class="img">
+                    <a href="/books/221724/eyes-on-the-street-by-robert-kanigel"><img alt="Eyes on the Street" src="/wp-content/themes/penguinrandomhouse/images/tmp.gif" data-src="https://images.penguinrandomhouse.com/cover/9780345803337?height=284&amp;alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+                 </div>
+                 <div class="title">
+																																				<a href="/books/221724/eyes-on-the-street-by-robert-kanigel" title="Eyes on the Street">Eyes on the Street</a>
+                 </div>
+																																				<div class="contributor"><a href="/authors/83886/robert-kanigel" title="Robert Kanigel">Robert Kanigel</a></div>
+                </div>
+																																				             </div> <!-- slider -->
+           </div> <!-- viewport -->
+         </section>
+       </div>
+		        <!-- / Also in [category] -->
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- product extended carousel -->
+<div class="extendwrap">
+
+	<div id="newsletter-wrap-desktop" class="grayab">
+</div>
+
+	
+	<div class="extended-carousel hide" id="extended-recommended-carousel-div">
+		<div class="line-div"></div>
+		<div class="container"><h4 class="slot-header">Inspired by Your Browsing History</h4></div>
+		<div id="extended-recommended-carousel" class="extended-carousel-div loading"></div>
+	</div>
+
+		<div class="extended-carousel" id="extended-alsoin-carousel-div">
+		<div class="line-div"></div>
+		<div class="container"><h4 class="slot-header">Also in Domestic Politics</h4></div>
+		<div id="extended-read-carousel" class="extended-carousel-div loading">
+					<div class="item" ttl="Inventing America" url="/books/191691/inventing-america-by-garry-wills">
+				<div class="img">
+					<a href="/books/191691/inventing-america-by-garry-wills"><img alt="Inventing America" src="https://images.penguinrandomhouse.com/cover/9780525435976?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="A World in Disarray" url="/books/534994/a-world-in-disarray-by-richard-haass">
+				<div class="img">
+					<a href="/books/534994/a-world-in-disarray-by-richard-haass"><img alt="A World in Disarray" src="https://images.penguinrandomhouse.com/cover/9780399562389?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="ASAP U.S. Government &amp; Politics: A Quick-Review Study Guide for the AP Exam" url="/books/553235/asap-us-government-and-politics-a-quick-review-study-guide-for-the-ap-exam-by-the-princeton-review">
+				<div class="img">
+					<a href="/books/553235/asap-us-government-and-politics-a-quick-review-study-guide-for-the-ap-exam-by-the-princeton-review"><img alt="ASAP U.S. Government &amp; Politics: A Quick-Review Study Guide for the AP Exam" src="https://images.penguinrandomhouse.com/cover/9781524757663?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="The Man Who Knew" url="/books/311183/the-man-who-knew-by-sebastian-mallaby">
+				<div class="img">
+					<a href="/books/311183/the-man-who-knew-by-sebastian-mallaby"><img alt="The Man Who Knew" src="https://images.penguinrandomhouse.com/cover/9780143111092?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Corbyn" url="/books/540719/corbyn-by-richard-seymour">
+				<div class="img">
+					<a href="/books/540719/corbyn-by-richard-seymour"><img alt="Corbyn" src="https://images.penguinrandomhouse.com/cover/9781786632999?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Bullets into Bells" url="/books/559624/bullets-into-bells-by-introduction-by-colum-mccann-edited-by-brian-clements-alexandra-teague-anddean-rader">
+				<div class="img">
+					<a href="/books/559624/bullets-into-bells-by-introduction-by-colum-mccann-edited-by-brian-clements-alexandra-teague-anddean-rader"><img alt="Bullets into Bells" src="https://images.penguinrandomhouse.com/cover/9780807025581?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Creating Freedom" url="/books/235752/creating-freedom-by-raoul-martinez">
+				<div class="img">
+					<a href="/books/235752/creating-freedom-by-raoul-martinez"><img alt="Creating Freedom" src="https://images.penguinrandomhouse.com/cover/9780804170512?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Collusion" url="/books/566132/collusion-by-luke-harding">
+				<div class="img">
+					<a href="/books/566132/collusion-by-luke-harding"><img alt="Collusion" src="https://images.penguinrandomhouse.com/cover/9780525562511?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="How Will Capitalism End?" url="/books/533258/how-will-capitalism-end-by-wolfgang-streeck">
+				<div class="img">
+					<a href="/books/533258/how-will-capitalism-end-by-wolfgang-streeck"><img alt="How Will Capitalism End?" src="https://images.penguinrandomhouse.com/cover/9781786632982?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="The Making of Donald Trump" url="/books/551107/the-making-of-donald-trump-by-david-cay-johnston">
+				<div class="img">
+					<a href="/books/551107/the-making-of-donald-trump-by-david-cay-johnston"><img alt="The Making of Donald Trump" src="https://images.penguinrandomhouse.com/cover/9781612196879?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="The New Poverty" url="/books/561967/the-new-poverty-by-stephen-armstrong">
+				<div class="img">
+					<a href="/books/561967/the-new-poverty-by-stephen-armstrong"><img alt="The New Poverty" src="https://images.penguinrandomhouse.com/cover/9781786634634?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Tear Gas" url="/books/533296/tear-gas-by-anna-feigenbaum">
+				<div class="img">
+					<a href="/books/533296/tear-gas-by-anna-feigenbaum"><img alt="Tear Gas" src="https://images.penguinrandomhouse.com/cover/9781784780265?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Playing with Fire" url="/books/536119/playing-with-fire-by-lawrence-odonnell">
+				<div class="img">
+					<a href="/books/536119/playing-with-fire-by-lawrence-odonnell"><img alt="Playing with Fire" src="https://images.penguinrandomhouse.com/cover/9780399563140?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="The Last Girl" url="/books/555106/the-last-girl-by-nadia-murad">
+				<div class="img">
+					<a href="/books/555106/the-last-girl-by-nadia-murad"><img alt="The Last Girl" src="https://images.penguinrandomhouse.com/cover/9781524760434?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="You Can't Spell America Without Me" url="/books/559627/you-cant-spell-america-without-me-by-alec-baldwin-and-kurt-andersen">
+				<div class="img">
+					<a href="/books/559627/you-cant-spell-america-without-me-by-alec-baldwin-and-kurt-andersen"><img alt="You Can't Spell America Without Me" src="https://images.penguinrandomhouse.com/cover/9780525521990?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Friends Divided" url="/books/556888/friends-divided-by-gordon-s-wood">
+				<div class="img">
+					<a href="/books/556888/friends-divided-by-gordon-s-wood"><img alt="Friends Divided" src="https://images.penguinrandomhouse.com/cover/9780735224711?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="The Truth Matters" url="/books/564452/the-truth-matters-by-bruce-bartlett">
+				<div class="img">
+					<a href="/books/564452/the-truth-matters-by-bruce-bartlett"><img alt="The Truth Matters" src="https://images.penguinrandomhouse.com/cover/9780399581168?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="American Radical" url="/books/550746/american-radical-by-tamer-elnoury-with-kevin-maurer">
+				<div class="img">
+					<a href="/books/550746/american-radical-by-tamer-elnoury-with-kevin-maurer"><img alt="American Radical" src="https://images.penguinrandomhouse.com/cover/9781101986158?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="The Least of All Possible Evils" url="/books/232836/the-least-of-all-possible-evils-by-eyal-weizman">
+				<div class="img">
+					<a href="/books/232836/the-least-of-all-possible-evils-by-eyal-weizman"><img alt="The Least of All Possible Evils" src="https://images.penguinrandomhouse.com/cover/9781786632739?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Alt-America" url="/books/557144/alt-america-by-david-neiwert">
+				<div class="img">
+					<a href="/books/557144/alt-america-by-david-neiwert"><img alt="Alt-America" src="https://images.penguinrandomhouse.com/cover/9781786634238?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Trump is F*cking Crazy" url="/books/564314/trump-is-fcking-crazy-by-keith-olbermann">
+				<div class="img">
+					<a href="/books/564314/trump-is-fcking-crazy-by-keith-olbermann"><img alt="Trump is F*cking Crazy" src="https://images.penguinrandomhouse.com/cover/9780525533863?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="C.L.R. James" url="/books/232808/clr-james-by-paul-buhle">
+				<div class="img">
+					<a href="/books/232808/clr-james-by-paul-buhle"><img alt="C.L.R. James" src="https://images.penguinrandomhouse.com/cover/9781786634535?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Violent Borders" url="/books/540844/violent-borders-by-reece-jones">
+				<div class="img">
+					<a href="/books/540844/violent-borders-by-reece-jones"><img alt="Violent Borders" src="https://images.penguinrandomhouse.com/cover/9781784784744?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Leviathan" url="/books/540919/leviathan-by-thomas-hobbes-introduction-and-notes-by-christopher-brooke">
+				<div class="img">
+					<a href="/books/540919/leviathan-by-thomas-hobbes-introduction-and-notes-by-christopher-brooke"><img alt="Leviathan" src="https://images.penguinrandomhouse.com/cover/9780141395098?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Age of Folly" url="/books/544012/age-of-folly-by-lewis-h-lapham">
+				<div class="img">
+					<a href="/books/544012/age-of-folly-by-lewis-h-lapham"><img alt="Age of Folly" src="https://images.penguinrandomhouse.com/cover/9781786630445?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="The End of Policing" url="/books/549075/the-end-of-policing-by-alex-s-vitale">
+				<div class="img">
+					<a href="/books/549075/the-end-of-policing-by-alex-s-vitale"><img alt="The End of Policing" src="https://images.penguinrandomhouse.com/cover/9781784782894?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Beyond the Messy Truth" url="/books/561176/beyond-the-messy-truth-by-van-jones">
+				<div class="img">
+					<a href="/books/561176/beyond-the-messy-truth-by-van-jones"><img alt="Beyond the Messy Truth" src="https://images.penguinrandomhouse.com/cover/9780399180026?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="We Were Eight Years in Power" url="/books/550170/we-were-eight-years-in-power-by-ta-nehisi-coates">
+				<div class="img">
+					<a href="/books/550170/we-were-eight-years-in-power-by-ta-nehisi-coates"><img alt="We Were Eight Years in Power" src="https://images.penguinrandomhouse.com/cover/9780399590566?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Collected Works, Volume 1" url="/books/563410/collected-works-volume-1-by-v-i-lenin">
+				<div class="img">
+					<a href="/books/563410/collected-works-volume-1-by-v-i-lenin"><img alt="Collected Works, Volume 1" src="https://images.penguinrandomhouse.com/cover/9781786634856?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Scalia Speaks" url="/books/566469/scalia-speaks-by-antonin-scalia-edited-by-christopher-j-scalia-and-edward-whelan">
+				<div class="img">
+					<a href="/books/566469/scalia-speaks-by-antonin-scalia-edited-by-christopher-j-scalia-and-edward-whelan"><img alt="Scalia Speaks" src="https://images.penguinrandomhouse.com/cover/9780525573326?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="The Rise of Athens" url="/books/225247/the-rise-of-athens-by-anthony-everitt">
+				<div class="img">
+					<a href="/books/225247/the-rise-of-athens-by-anthony-everitt"><img alt="The Rise of Athens" src="https://images.penguinrandomhouse.com/cover/9780812984989?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Out of the Wreckage" url="/books/554130/out-of-the-wreckage-by-george-monbiot">
+				<div class="img">
+					<a href="/books/554130/out-of-the-wreckage-by-george-monbiot"><img alt="Out of the Wreckage" src="https://images.penguinrandomhouse.com/cover/9781786632883?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Daring Democracy" url="/books/558543/daring-democracy-by-frances-moore-lappe-and-adam-eichen">
+				<div class="img">
+					<a href="/books/558543/daring-democracy-by-frances-moore-lappe-and-adam-eichen"><img alt="Daring Democracy" src="https://images.penguinrandomhouse.com/cover/9780807023815?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="ISIS: The Terror Nation" url="/books/544595/isis-the-terror-nation-by-loretta-napoleoni">
+				<div class="img">
+					<a href="/books/544595/isis-the-terror-nation-by-loretta-napoleoni"><img alt="ISIS: The Terror Nation" src="https://images.penguinrandomhouse.com/cover/9781609807252?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Nincompoopolis" url="/books/561369/nincompoopolis-by-douglas-murphy">
+				<div class="img">
+					<a href="/books/561369/nincompoopolis-by-douglas-murphy"><img alt="Nincompoopolis" src="https://images.penguinrandomhouse.com/cover/9781910924570?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Makers and Takers" url="/books/247738/makers-and-takers-by-rana-foroohar">
+				<div class="img">
+					<a href="/books/247738/makers-and-takers-by-rana-foroohar"><img alt="Makers and Takers" src="https://images.penguinrandomhouse.com/cover/9780553447255?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="A Citizen's Guide to Impeachment" url="/books/565064/a-citizens-guide-to-impeachment-by-barbara-radnofsky">
+				<div class="img">
+					<a href="/books/565064/a-citizens-guide-to-impeachment-by-barbara-radnofsky"><img alt="A Citizen's Guide to Impeachment" src="https://images.penguinrandomhouse.com/cover/9781612197050?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="The Genius of Judaism" url="/books/212290/the-genius-of-judaism-by-bernard-henri-levy">
+				<div class="img">
+					<a href="/books/212290/the-genius-of-judaism-by-bernard-henri-levy"><img alt="The Genius of Judaism" src="https://images.penguinrandomhouse.com/cover/9780812982510?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Weapons of Math Destruction" url="/books/241363/weapons-of-math-destruction-by-cathy-oneil">
+				<div class="img">
+					<a href="/books/241363/weapons-of-math-destruction-by-cathy-oneil"><img alt="Weapons of Math Destruction" src="https://images.penguinrandomhouse.com/cover/9780553418835?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="The Mind of the Islamic State" url="/books/557921/the-mind-of-the-islamic-state-by-robert-manne">
+				<div class="img">
+					<a href="/books/557921/the-mind-of-the-islamic-state-by-robert-manne"><img alt="The Mind of the Islamic State" src="https://images.penguinrandomhouse.com/cover/9781633883710?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Human Rights and the Uses of History" url="/books/234196/human-rights-and-the-uses-of-history-by-samuel-moyn">
+				<div class="img">
+					<a href="/books/234196/human-rights-and-the-uses-of-history-by-samuel-moyn"><img alt="Human Rights and the Uses of History" src="https://images.penguinrandomhouse.com/cover/9781781689004?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Victoria &amp; Abdul (Movie Tie-in)" url="/books/553117/victoria-and-abdul-movie-tie-in-by-shrabani-basu">
+				<div class="img">
+					<a href="/books/553117/victoria-and-abdul-movie-tie-in-by-shrabani-basu"><img alt="Victoria &amp; Abdul (Movie Tie-in)" src="https://images.penguinrandomhouse.com/cover/9780525434412?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Inside This Place, Not of It" url="/books/566547/inside-this-place-not-of-it-by-ayelet-waldman-and-robin-levi">
+				<div class="img">
+					<a href="/books/566547/inside-this-place-not-of-it-by-ayelet-waldman-and-robin-levi"><img alt="Inside This Place, Not of It" src="https://images.penguinrandomhouse.com/cover/9781786632852?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Surviving Justice" url="/books/566548/surviving-justice-by-dave-eggers-and-lola-vollen">
+				<div class="img">
+					<a href="/books/566548/surviving-justice-by-dave-eggers-and-lola-vollen"><img alt="Surviving Justice" src="https://images.penguinrandomhouse.com/cover/9781786632869?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+					<div class="item" ttl="Eyes on the Street" url="/books/221724/eyes-on-the-street-by-robert-kanigel">
+				<div class="img">
+					<a href="/books/221724/eyes-on-the-street-by-robert-kanigel"><img alt="Eyes on the Street" src="https://images.penguinrandomhouse.com/cover/9780345803337?alt=cover_coming_soon.jpg" class="deferred-view img-responsive"></a>
+				</div>
+			</div>
+				</div>
+	</div>
+	</div>
+<!-- end product extended carousel -->
+
+<div class="container">
+  <div class="scaffolding row">
+    <div class="col-xs-1 col-sm-0 col-md-0 col-lg-0"></div>
+    <div class="main-content col-xs-14 col-sm-16 col-md-16 col-lg-16">
+
+      <!-- Left rail below carousels -->
+      <div id="left-rail-bottom" class="product-body clearfix">
+	<!-- praise -->
+<div id="mobile-praise"><!-- praises -->
+<a name="#praise" id="praise"></a>
+<div class="slot product-praise seemoreenable">
+  <h4 class="slot-header">Praise</h4>
+  <p class="clearfix">
+    &ldquo;Chilling&hellip; A provocative analysis of the parallels between Donald Trump&#8217;s ascent and the fall of other democracies.&rdquo;<br> &mdash;<b><i>Kirkus Reviews</i></b><br><br>&#8220;Steven Levitsky and Daniel Ziblatt have offered a brilliant diagnosis of the most important issue facing our world: Can democracy survive? With clinical precision and an extraordinary grasp of history, they point to the warning signs of decay and define the obligations of those who would preserve free government. If there is an urgent book for you to read at this moment, it is <i>How Democracies Die.&#8221;</i><br> &mdash;<b>E.J. Dionne Jr.</b>, co-author of <i>One Nation After Trump</i><br> &#160;<br>&#8220;Levitsky and Ziblatt are leading scholars of democracy in other parts of the world, who with great energy and integrity now apply their expertise to the current problems of the United States. The reader feels the intellectual excitement, and also the political warning, as the authors draw the connections from their own vast knowledge to the chaos that we experience each day.&#8221;<br> &mdash;<b>Timothy Snyder</b>, author of <i>On Tyranny </i><br> <i>&#160;</i><br>&ldquo;We live in perilous times. Anyone who is concerned about the future of American democracy should read this brisk, accessible book. Anyone who is&#160;<i>not</i>&#160;concerned should definitely read it.&rdquo;&#160;<br><b>&mdash;Daron Acemoglu</b>,&#160;co-author of&#160;<i>Why Nations Fail</i><br><br>&#8220;All Americans who care about the future of their country should read this magisterial, compelling book, which sweeps across the globe and through history to analyze how democracies die. The result is an unforgettable framework for diagnosing the state of affairs here at home and our prospects for recovery.&#8221;<br> &mdash;<b>Danielle Allen</b>, author of <i>Our Declaration</i> and <i>Cuz<br></i><br> <i>&#160;</i>&#8220;Two years ago, a book like this could not have been written: two leading political scientists who are expert in the breakdown of democracy in other parts of the world using that knowledge to inform Americans of the dangers their democracy faces today. We owe the authors a debt of thanks for bringing their deep understanding to bear on the central political issue of the day.&#8221;<br> <b>&mdash;Francis Fukuyama</b>, author of <i>Political Order and Political Decay</i><br> &#160;<br>&#8220;In this brilliant historical synthesis, Levitsky and Ziblatt show how the actions of elected leaders around the world have paved the road to democratic failure, and why the United States is now vulnerable to this same downward spiral. This book should be widely and urgently read as a clarion call to restore the shared beliefs and practices&mdash;beyond our formal constitution&mdash;that constitute the essential &lsquo;guardrails&rsquo; for preserving democracy.&#8221;<br> &mdash;<b>Larry Diamond</b>, author of <i>The Spirit of Democracy</i>  </p>
+</div>
+<!-- /praises -->
+</div><!-- book-awards -->
+<div id="mobile-book-awards"><!-- book awards -->
+<!-- /book awards -->
+</div><!-- video-related-links -->
+<div id="mobile-video-related-links">        <!-- video related links -->
+	        <!-- /video related links -->
+</div><!-- author-qa -->
+<div id="mobile-author-qa">        <!-- author Q & A's -->
+                                          <a name="#authorqa" id="authorqa"></a>
+                      <div class="slot product-author-qa seemoreenable">
+                        <h4 class="slot-header">Author Q&amp;A</h4>
+                        <p class="clearfix"><b>&#160;</b><br> <b>A conversation with Steven Levitsky and Daniel Ziblatt, authors of</b><br> <b>HOW DEMOCRACIES DIE</b><br><br> <b>After studying the death of democracy in other countries for twenty years, was there a particular moment that made you realize you needed to turn your attention toward the United States?</b><br> <b>&#160;</b><br> In 2015, we both began to get this eerily creeping feeling that we had seen this movie before. At first it was just small echoes&mdash;hearing candidates accusing rivals of being disloyal, railing against the media, or working crowds into a frenzy by encouraging violence. Throughout the 2015&ndash;16 presidential primary season, we were worried and talked to each other a lot about these echoes. But for both of us, a big turning point came when Donald Trump won the nomination. The Republican Party establishment appeared utterly helpless in the face of a demagogue&rsquo;s insurgency. In our minds, something pernicious was afoot. This same dynamic had taken place in Europe between the two World Wars&mdash;when demagogues had taken over political parties that had been mainstream&mdash;and similar things had also happened in Latin America, when establishment politicians made deals with outside insurgents, thinking they could be contained. We know that this sort of hostile takeover, whether allowed by the establishment out of opportunism, cowardice, or fear, is a precursor to bad things. And when, in the last days of the 2016 presidential campaign, candidate Donald Trump refused to promise he would abide by the results of the election, we realized we were in dangerous new terrain.<br> <b>&#160;</b><br> <b>&#160;</b><br> <b>You write about the challenge that democracies face in the dual imperatives of choosing a popular candidate and keeping out extremist demagogues. How should American parties balance those goals?&#160;&#160;</b><br> <b>&#160;</b><br> This is an important issue. We are fervent advocates of democracy, but we don&rsquo;t think parties have to select their candidates in any particular way for a political system to be democratic. In most of the world&rsquo;s established democracies, including the United States for most of its history, party insiders play a big role in choosing candidates. The so-called smoke-filled room of the previous century, while at first glance offensive to democratic sensibilities, had a virtue: It actually did a remarkably good job of keeping extremist demagogues off party tickets. Whether in America&rsquo;s past or in other stable democracies today, party leaders are risk averse: They seek candidates who will win, and this usually means keeping demagogues far from power. Of course, the smoke-filled room has reason to be criticized for being an elite affair. This is a recurring tension at the heart of democracy: Sustaining a democracy may require keeping the selection of candidates&mdash;before democratic competition begins&mdash;partly in the hands of party leaders. This may be a somewhat controversial view, but we believe the long-term viability of democracy may require combining popular input with party leaders&rsquo; gatekeeping when it comes to the selection of party candidates.<br> <b>&#160;</b><br> <b>&#160;</b><br> <b>The United States has had popular demagogues before in figures such as Charles Lindbergh, Joseph McCarthy, and George Wallace, yet none were able to become president. What was different in America in 2016 that allowed a populist outsider to succeed in doing so?</b><br> <b>&#160;</b><br> These are all great examples of how gatekeeping used to work. Before 1972, in the United States, elected officials within the parties supplemented and could even veto what a party&rsquo;s base wanted. This is why party conventions were so important in the past: Party leaders made deals at the conventions, and insider-backed candidates were almost always selected. It was a kind of &ldquo;peer review&rdquo; process in which those who knew the candidates best helped to pick the nominees. The 1968 Democratic National Convention marked a big turning point, as a reform of the Democratic Party&rsquo;s organization made state primaries binding. This shifted power, for better or worse, to the party rank and file.<br> &#160;<br> &#160;<br> <b>What about our society has changed that makes party gatekeepers no longer effective?</b><br> &#160;<br> A perfect storm of factors combined to dramatically open up the nomination process, and the effects have not always been great. Even with the post-1972 primary system, many analysts talked of an &ldquo;invisible primary&rdquo; in which party leaders still exerted lots of influence on the selection of candidates. This insider-dominated system still favored party insiders&mdash;from Walter Mondale to John Kerry to George W. Bush&mdash;who usually won against outsider challengers. But over the past several years, this system has been in decline. Party gatekeepers have become shells of what they once were for two main reasons. One is a dramatic increase in the availability of outside money, something that loosened party leaders&rsquo; grip on power in both parties. The other was the explosion of alternative media, particularly cable news and social media. Now, with enough money and media access, candidates can skirt the invisible primary. The Republican Party, even more than the Democrats, has been deeply affected by both of these trends, leaving it ineffective as a gatekeeper. The chance that an outsider would someday make it through to win the nomination has always been there; in 2016, the conditions were in place to make it happen.<br> <b>&#160;</b><br> <b>&#160;</b><br> <b>You have developed a litmus test to help identify autocrats before they come to power. What are the four behavioral warning signs that comprise the test, and how many of them did Trump test positive for, even before his inauguration? </b><br> <b>&#160;</b><br> The idea is that certain politicians, in effect, show their cards before they even come into office. Their authoritarian inclinations are revealed by testing positive on what the eminent political scientist Juan Linz called a &ldquo;litmus test.&rdquo; We further developed this framework and propose four warning signs that all citizens of a democracy should look for in a political leader as he or she runs for office. If a candidate tests positive on any part of this test, we should be nervous. The first indicator is if a politician, in words or practice, appears to reject the democratic rules of the game; the second is whether they deny the legitimacy of their opponents; and the third is whether they appear to tolerate or encourage violence. Finally, we should also be alarmed if a politician expresses a willingness to curtail the civil liberties of their opponents, including the media. In some countries, you see candidates like this quite often; thankfully, it is much rarer in the United States. With the exception of Richard Nixon, no major-party presidential candidate met even one of these four criteria over the last century. Donald Trump, when running for office, tested positive on all four indicators.<br> <b>&#160;</b><br> <b>&#160;</b><br> <b>Aren&rsquo;t demagogues &ldquo;all talk&rdquo;? Why should we worry about extremist rhetoric or outbursts on Twitter? </b><br> <b>&#160;</b><br> There are several reasons why we believe words should be taken seriously. First, in our studies of demagogues around the world, words <i>are</i> usually followed by action. In Peru, when candidate Alberto Fujimori was running for office, he railed against elites; when he came into office, he acted on his fury. Hugo Ch&aacute;vez did the same thing in Venezuela. Further, words reflect and shape unwritten rules of behavior. When broken taboos lead to great electoral success, norms shatter and other demagogic politicians are tempted to imitate norm breakers. Norm breaking can be dangerously contagious. When a politician receives applause when threatening the press, other like-minded politicians are encouraged to do the same. In this way, a political system, sustained by shared standards of what is acceptable, can begin to deteriorate. But this is not the end of it. As language becomes more extreme, the opponents of demagogues grow frightened and feel compelled to respond in kind. A tit-for-tat extremism can be unleashed. The results are not good.<br> <b>&#160;</b><br> <b>&#160;</b><br> <b>The U.S. Constitution is one of the most revered and imitated documents in modern history. Isn&rsquo;t our democracy safe as long as it remains in place? </b><br> <b>&#160;</b><br> We have to remember something critically important about our Constitution: At the end of the day, it is only a piece of paper. It is not self-enforcing. As with all written rules, the Constitution&rsquo;s effectiveness has worked well in our history not just because of the words written into parchment, but also because politicians and citizens have usually acted in ways that support the words. There has been a lot of talk about norms and norm breaking since Donald Trump came into office. But for all the talk, commentators often have difficulty focusing on which norms matter the most for our democracy. We think two norms in particular carry a lot of weight in the American political system. The first is &ldquo;mutual toleration&rdquo;&mdash;not treating political rivals as existential enemies, but rather as fellow loyal Americans. The second is &ldquo;forbearance,&rdquo; or restraint&mdash;by which we mean that leaders don&rsquo;t &ldquo;play politics to the max,&rdquo; using all the legal power you have a right to in order to destroy your rivals. Think of this example: From a strictly legal perspective, it is amazingly easy to impeach a president, requiring only a simple majority in the House. To remove a president requires a two-thirds vote in the Senate. But this action has been rare in American politics, which is a good thing: If every time we disagreed with a president we tried to impeach him, American democracy wouldn&rsquo;t have lasted as long as it has. But the rarity of the use of the impeachment tool is not a function of the Constitution, or because the Constitution makes it difficult; it is because American politicians have long held a norm to act with forbearance in this domain&mdash;to use this incredibly powerful weapon only under exceptional circumstances. There are times when impeachment might be called for. But given the relatively low constitutional threshold, the only thing preventing impeachment from becoming a regular and highly disruptive tool of politics&mdash;which, by the way, it has become in other countries&mdash;is not the written Constitution but a shared norm of restraint. What frightens us today is that there are signs that forbearance is decaying.&#160; <br> <b>&#160;</b><br> <b>&#160;</b><br> <b>We have become accustomed to reading about democratic decline in other parts of the world, but you argue that America experienced its own form of democratic collapse in the post&ndash;Civil War Reconstruction Era. Can you explain?&#160; </b><br> <b>&#160;</b><br> The United States first experienced a democratic breakdown of sorts during the Civil War. Our democracy&mdash;imperfect as it was at the time&mdash;was, in effect, entirely suspended in a third of the country during the war, and after the war many Southern states were placed under military rule. Following Reconstruction, the U.S. South underwent one of the most dramatic instances of de-democratization in history. After the 1867 Reconstruction Act and the Fifteenth Amendment barred suffrage restrictions based on race, African Americans suddenly constituted a majority or near-majority of the voting population throughout most of the former Confederacy. African Americans registered and voted in large numbers. In 1880, for example, black turnout surpassed 65 percent in much of the South. But over the next two decades, every Southern state adopted laws&mdash;such as poll taxes and literacy requirements&mdash;aimed at disenfranchising African Americans. By 1912, black turnout in the South had plummeted to under 2 percent. African Americans were thoroughly disenfranchised, an extraordinarily antidemocratic act. And because black citizens were overwhelmingly Republican, their disenfranchisement wiped out the Republicans&rsquo; electoral base in the South, which allowed the Democrats to establish single-party rule. In other words, the U.S. South descended into authoritarianism in the late nineteenth century&mdash;and remained authoritarian for nearly a century.&#160;&#160; <br> <b>&#160;</b><br> <b>&#160;</b><br> <b>When did &ldquo;politics as warfare&rdquo; begin in earnest in the United States?</b><br> <b>&#160;</b><br> It has been a gradual spiral, worsening over time. But &ldquo;politics as warfare&rdquo; seemed to take off after Newt Gingrich replaced Bob Michel as the House Republican leader in the early 1990s&mdash;and then the Gingrich-led Republicans won control of the House in 1995. Under Gingrich and his allies, House Republicans adopted a &ldquo;win at any cost&rdquo; mentality, embracing the use of tactics such as government shutdowns and even presidential impeachment as partisan weapons.<br> <b>&#160;</b><br> <b>&#160;</b><br> <b>You argue that racial and religious realignment and growing economic inequality are the major forces driving the extreme political polarization in America. Can you explain? </b>&#160;<br> &#160;<br> Scholars have shown a long-standing relationship&mdash;dating back to the nineteenth century&mdash;between income inequality and polarization. The dramatic increase in inequality since the 1970s, together with the absence of serious campaign finance regulation, is clearly one of the factors pulling the Republicans to the right. But a dramatic change has also taken place in our party system. The American electorate has grown much more diverse since the 1960s: African Americans finally gained full voting rights in the South, and immigration expanded America&rsquo;s Latino and Asian American communities. So the nonwhite share of the electorate grew dramatically. Most of these new voters became Democrats, while Southern whites fled the Democratic Party for the Republicans. At the same time, evangelical Christians flocked to the GOP starting in the 1980s. So whereas half a century ago the Democrats and Republicans were both white and Protestant, the parties are now divided by race and religion. This is a big deal. Partisan differences aren&rsquo;t focused just on taxes and spending anymore; they now encompass our identities and culture. And, crucially, the Republican Party has become the political home for white Protestants&mdash;a majority ethnic group in decline. This is the underlying source of the party&rsquo;s radicalization. White Protestants, who long sat atop the American social pyramid, are losing their dominant status in the face of growing diversity and racial equality. Many feel that their country is being taken away from them, which, together with disappearing economic opportunities, fuels the anger and extremism we see in movements such as the Tea Party. This, and the unraveling of the party leadership&rsquo;s control over its own base, has tragically pushed the GOP toward extremism.<br> &#160;<br> &#160;<br> <b>In HOW DEMOCRACIES DIE, you discuss the various ways that elected authoritarians seek to consolidate power. How many of them has Trump attempted?&#160; </b><br> <b>&#160;</b><br> Looking around the world, we identified three strategies that elected authoritarians commonly use, and were dismayed to discover that Trump has tried all of them. The first is capturing the referees, which means gaining control over the courts and key investigative, regulatory, and law enforcement agencies. The second is sidelining key players&mdash;such as media owners, wealthy businesspeople, opposition politicians, or prominent cultural figures&mdash;who could rally public opposition. This is done by either buying them off or by using &ldquo;legal&rdquo; measures such as tax audits or corruption investigations to bully them into silence. The third is trying to rewrite the rules of the game&mdash;for example, constitutional and electoral rules&mdash;to permanently weaken or disadvantage opponents. Trump has implemented all three strategies: His firing of James Comey is an example of the first; his attacks on the media are an example of the second; and the campaign to impose tougher restrictions on voter registration is an example of the third. But so far most of his threats haven&rsquo;t been carried out; he&rsquo;s been thwarted by the courts or local governments.<br> <b>Is there a foreign leader, past or present, who you feel has particular similarities to Donald Trump?&#160;&#160;</b><br> <b>&#160;</b><br> No one is quite like Trump. He uniquely combines three important features: First, he is a wealthy political outsider, like Berlusconi in Italy and Thaksin in Thailand; second, he has clear authoritarian instincts, like Correa in Ecuador or Erdo&#287;an in Turkey; and third, in terms of personal character, he is deeply unfit for office. Few other leaders combine all three of these traits.&#160; &#160;<br> &#160;<br> &#160;<br> <b>What is the most antidemocratic initiative yet undertaken by the Trump administration?</b><br> <b>&#160;</b><br> Probably<b> </b>the<b> </b>creation of the Presidential Advisory Commission on Election Integrity. The Commission is based on a myth: that electoral fraud is widespread in the United States. Its early activities suggest that its objective is vote suppression via the purge of voter rolls and the promotion of strict voter ID laws. A campaign to make it harder for people to register and vote strikes at the heart of democracy and is a shameful throwback to the days when poll taxes, literacy tests, and other measures were used to disenfranchise millions of African Americans throughout the South. Strict voter ID laws have been shown to disproportionately affect low-income and minority voters, who are overwhelmingly Democratic, so they tilt the playing field in favor of the GOP. This is a dangerous initiative.<br> &#160;<br> &#160;<br> <b>What does democracy&rsquo;s fate during the remainder of Trump&rsquo;s presidency depend on?</b><br> <b>&#160;</b><br> It depends first of all on the behavior of Republicans. Most Republican leaders seem to know that Trump is grossly unfit for office; they could have acted forcefully to prevent his election but chose not to. Now Republicans control both houses of Congress. They could use that majority to pass his legislative agenda and shield him from investigation or impeachment, or they could use it to check his power and, if necessary, remove him. So far, outside of a small handful of GOP politicians, most of them retiring, few Republicans have been willing to state publicly what most of them surely know: the Emperor has no clothes. Fear and opportunism have prevailed over the defense of our country and its democratic institutions. What happens also depends, of course, on Democrats&rsquo; ability to forge broader coalitions to win elections. The surest way to contain the damage inflicted by the current administration is for the opposition party to win elections in 2018 and 2020.<br> &#160;<br> &#160;<br> <b>What do you see as the greatest danger facing American democracy today? </b><br> &#160;<br> Our greatest fear is a crisis such as a major war or terrorist attack, as crises create openings for authoritarians. Security crises almost always boost public support for presidents, often dramatically, and institutional checks&mdash;from Congress or the judiciary&mdash;tend to be temporarily suspended. That leaves presidents a lot of room to maneuver&mdash;look at FDR after Pearl Harbor, or Bush after 9/11. Unlike autocrats from Hitler to Putin to Erdogan, our previous presidents have exercised considerable restraint and have <i>not</i> so fully exploited crises for authoritarian ends. Trump has never displayed that kind of restraint. We fear that if President Trump were to confront a major war or terrorist attack, he would take advantage of it to attack opponents and restrict civil liberties.<br> &#160;<br> &#160;<br> <b>You note that President Trump isn&rsquo;t the first to assault the basic norms of politics; why, then, do you see his actions as especially dangerous?</b><br> <b>&#160;</b><br> All presidents violate norms; that&rsquo;s common, and even healthy. Societies change, and presidential norms must change with them. Jimmy Carter broke an established norm when he left his limo and walked in the street during his inaugural parade. Populists like Trump get elected because they convince voters that they are not &ldquo;establishment types,&rdquo; and norm breaking is a way of delivering on this promise. But Trump&rsquo;s norm breaking is not healthy for our democracy. For one, he is a serial norm breaker. In violating so many norms so frequently and so egregiously, he has expanded the bounds of acceptable political behavior. Behavior that was once considered unthinkable in American politics is becoming commonplace. Perhaps even more important, Trump is attacking fundamental norms: ones that directly affect our democracy, such as respecting the press, respecting election results, and not lying to the public. It&rsquo;s okay to be the first president in decades not to have a pet, but Trump is violating foundational practices, and that is undermining public trust in our institutions&mdash;not to mention in democracy itself.<br> &#160;<br> &#160;<br> <b>You offer North Carolina as an example of what politics without guardrails looks like. Why? </b><br> &#160;<br> North Carolina is in some ways a microcosm of the country. It is a former red state that, due to urban growth and an increasingly diverse population, has turned purple. Faced with the prospect of losing its dominance, the Republican Party has radicalized in North Carolina, just as it has nationally. Indeed, the state GOP has sought to avoid defeat &ldquo;by any means necessary,&rdquo; including radical gerrymandering, voter suppression, court packing, and, after losing the governorship in 2016, a last-minute legislative session that passed a series of measures to weaken incoming governor Roy Cooper&rsquo;s power. These sorts of institutional shenanigans seem to have become a permanent feature of North Carolina&rsquo;s politics, which at times makes it look a bit like Ecuador, Peru, or other fragile democracies. We fear that this may be the direction in which national politics is heading.<br> <b>&#160;</b><br> <b>&#160;</b><br> <b>What actions can ordinary Americans take to help fix our democratic crisis?</b><br> <b>&#160;</b><br> The answer is not for Democrats to &ldquo;fight like Republicans,&rdquo; as some commentators have suggested; that would only reinforce and accelerate the decline of our democratic norms. The opposition to Trump must fight vigorously, but in defense of rights and institutions. Peaceful protest is useful, but, ultimately, the most important channels are likely to be institutional&mdash;the courts, state governments, and, of course, elections. So mobilizing the vote in 2018 and 2020 is essential.<br> &#160;<br> But there is something else that ordinary Americans must do: Try to build broader coalitions in defense of democracy. To ensure democracy&rsquo;s survival, we must build alliances that extend beyond traditional party lines. For liberals, this means forging perhaps uncomfortable alliances&mdash;with right-of-center businesspeople, evangelical Christians, and dissident conservatives, among others. A blue-state coalition is simply not enough. This is often hard work, and it involves compromise. But an awful lot is at stake.<br> &#160;<br> &#160;<br> &#160;</p>
+                      </div>
+                            <!-- /author Q & A's -->
+</div><!-- essays -->
+<div id="mobile-essays">                <!-- author essays -->
+		                <!-- / author essays -->
+</div><!-- slideshow -->
+<div id="mobile-slideshow">                <!-- slideshow promo images and slideshow related links -->
+                                <!-- / slideshow promo images and slideshow related links -->
+</div><!-- table-of-contents -->
+<div id="mobile-table-of-contents">        <!-- table of contents -->
+	        <!-- /table of contents -->
+</div><!-- related-links -->
+<div id="mobile-related-links">                <!-- Related Links -->
+		                <!-- / Related Links -->
+</div><!-- audio-extras -->
+<div id="mobile-audio-extras">                <!-- audio extras -->
+		                   <!-- / audio extras -->
+</div><!-- related-articles -->
+<div id="mobile-related-articles"><!-- Related Articles -->
+<!-- Asynchronous Loading Required:  PRHCS-31 - AC #9 -->
+<div id="product-articles-wrap-mobile">
+  <a name="#relatedarticles" id="relatedarticles"></a>
+  <div class="slot product-articles product-related articles" data-work="feedTagValue:9781524762933^20 OR title_workid:562246^10 OR author_authorId:2159127 OR author_authorId:2155391 OR author_authorid_display_group:/2159127\:[AI].*/^9 OR author_authorid_display_group:/2155391\:[AI].*/^9">
+    <h2 class="slot-header">Related Articles</h2>
+  </div>
+</div>
+<!-- / Related Articles -->
+</div><!-- filler -->
+<div id="mobile-filler"><!-- filler -->
+<div class="slot product-filler seemoreenable">
+    Looking for More Great Reads?<br />
+<a href="/2017-spring-fiction-sampler/" target="_blank">Download our Spring Fiction Sampler Now</a></div>
+<!-- /filler -->
+</div>      </div>
+      <!-- / Left rail below carousels -->
+
+      <!-- Right Rail below carousels -->
+      <div id="right-rail-bottom" class="right-rail">
+      </div>
+      <!-- / Right Rail -->
+
+    </div>
+  </div>
+</div>
+
+<!-- / End Main Content -->
+
+<div class="modal fade product-image" id="modal-product-image" style="display:none;">
+  <div class="modal-dialog product-image">
+    <div class="modal-content">
+      <div class="modal-header product-image">
+        <button type="button" class="close" data-dismiss="modal">
+	  <span class="fa fa-times">&nbsp;</span>
+        <span class="sr-only">Close</span></button>
+      </div>
+
+      <div class="modal-body">
+        <img>
+        <div class="btn product-image download"><span class="fa fa-download"></span>Download Hi Res</div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- excerpts -->
+
+
+<script>
+
+var excerpt_embed_html_list = [];
+var excerpt_text_list = [];
+
+</script>
+
+<div class="modal fade" id="modal-excerpt">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+        <span class="fa fa-times">&nbsp;</span>
+        <span class="sr-only">Close</span></button>
+
+          <div class="book">
+            <div class="cover">
+            	<img src />
+            </div>
+            <div class="book-meta">
+            	<div class="book-name">How Democracies Die</div>
+		                <h2 class="contributors"><span class="ws-nw">
+                    		</span></h2>
+
+		<div class="buttons">
+                    <button type="button" class="btn buy2" rel="popover">Buy</button>
+		</div>
+            
+		<h4 class="isbn-related 9781524762933">Category: <a href="/books/domestic-politics">Domestic Politics</a> | <a href="/books/history">History</a></h4><h4 class="isbn-related 9781524762957">Category: <a href="/books/domestic-politics">Domestic Politics</a> | <a href="/books/history">History</a></h4><h4 class="isbn-related 9780525587958">Category: <a href="/books/domestic-politics">Domestic Politics</a> | <a href="/books/history">History</a> | <a href="/books/audiobooks">Audiobooks</a></h4>
+        <!-- newsletter -->
+        <div id="excerpt-newsletter-wrap-desktop">
+          <div class="slot newsletter-signup excerpt" acq-code="PRH_EXCERPT_STATIC_ONGOING" workid="562246"></div>        </div>
+
+        <!-- MOBILE EXCERPT SUBSCRIBE MOVED TO SECOND PARAGRAPH OF EXCERPT ITSELF -->
+
+        <!-- /newsletter -->
+
+            </div>
+
+          </div>
+      </div>
+      <div class="modal-body scrolling"></div>
+      
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade embedded" id="modal-excerpt-embedded">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+	  <span class="fa fa-times">&nbsp;</span>
+          <span class="sr-only">Close</span>
+	</button>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer"></div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- End Scaffolding -->
+<!-- container END -->
+<!-- end product info bottom -->
+
+<script type="text/javascript">
+var specific_to_signup = {"specific_to_type":"product","signup":{"type":"pref","id":"\/domestic-politics"},"message":"Get our Nonfiction recommendations and more delivered right to your inbox"};
+</script>
+  <!-- Start sticky arrow -->
+  <a href="#top" id="stickyarrow"><span>Back to Top</span></a>
+  <!-- / End sticky arrow -->
+		
+  <div class="inner-facade-footer">
+    <!-- Start Footer -->
+    <footer class="footer-wrap">
+      <div class="container">
+	<div class="row">
+          <div class="main-footer clearfix">
+            <ul class="footer-links">
+              <span class="dsktop-right">
+		<li>Connect</li>
+		<p class="sgn-mssg">Sign up for news about books, authors, and more from Penguin Random House</p>
+		<button type="button" class="btn share" rel="popover" title=""><i class="fa fa-envelope"></i> Stay in touch</button>
+		<ul class="socialft">
+                                <li><a class="fttr social facebook" href="https://www.facebook.com/PenguinRandomHouse" target="_blank"><i class="fa fa-facebook"></i></a></li><li><a class="fttr social twitter" href="https://twitter.com/penguinrandom" target="_blank"><i class="fa fa-twitter"></i></a></li><li><a class="fttr social google-plus" href="https://plus.google.com/+PenguinRandomHouse/posts" target="_blank"><i class="fa fa-google-plus"></i></a></li><li><a class="fttr social tumblr" href="http://penguinrandomhouse.tumblr.com" target="_blank"><i class="fa fa-tumblr"></i></a></li><li><a class="fttr social pinterest" href="http://pinterest.com/penguinrandom/" target="_blank"><i class="fa fa-pinterest-p"></i></a></li><li><a class="fttr social instagram" href="http://instagram.com/penguinrandomhouse" target="_blank"><i class="fa fa-instagram"></i></a></li>		</ul>
+              </span>
+              <span>
+                                                                	<li>About</li>
+                                                                	<li><a href="/about-us/news/" title="" rel="nofollow">News</a></li>
+                                                                	<li><a href="http://careers.penguinrandomhouse.com/" title="" target="_blank" rel="nofollow">Careers</a></li>
+                                                                	<li><a href="/about-us/contact-us/" title="" rel="nofollow">Contact Us</a></li>
+                                                                	<li><a href="/faqs/" title="" rel="nofollow">FAQ</a></li>
+                                                                	<li><a href="/preferences" title="" rel="nofollow">Email Preferences</a></li>
+                                                                	<li><a href="/terms" title="" rel="nofollow">Terms of Use</a></li>
+                                                                	<li><a href="/privacy" title="" rel="nofollow">Privacy Policy</a></li>
+                                	      </span>
+              <span>	
+								                                	<li>Resources</li>
+                                                                	<li><a href="/faqs/#shopping" title="" rel="nofollow">Shopping & Shipping FAQ</a></li>
+                                                                	<li><a href="http://www.penguinrandomhouse.biz/educators/" title="" target="_blank" rel="nofollow">For Educators</a></li>
+                                                                	<li><a href="http://www.penguinrandomhouse.biz/" title="" rel="nofollow">penguinrandomhouse.biz</a></li>
+                                                                	<li><a href="/media-queries/" title="" rel="nofollow">Media Queries</a></li>
+                                                                	<li><a href="http://www.penguinrandomhouse.biz/rights/" title="" target="_blank" rel="nofollow">Subrights</a></li>
+                                                                	<li><a href="https://permissions.penguinrandomhouse.com/" title="" target="_blank" rel="nofollow">Permissions</a></li>
+                                                                	<li><a href="http://www.prhspeakers.com/" title="" target="_blank" rel="nofollow">Speakers Bureau</a></li>
+                                              </span>
+              <span class="dsktop-left">
+		<li><a href="/"><div class="footer-logo"></div></a></li>
+		<li><a href="http://global.penguinrandomhouse.com" target="_blank">global.penguinrandomhouse.com</a></li>
+		<li class="ft-cr">© 2018 Penguin Random House</li>
+              </span>
+            </ul>
+          </div>
+	</div>
+      </div>
+    </footer>
+    <!-- / End  Footer -->
+
+    <footer class="mobile">
+      <div class="bottom-tabs">
+	<div class="tab-holder">
+	  <div class="tab"><a href="/books" class="active">Books</a></div>
+	  <div class="tab"><a href="/series">Series</a></div>
+	  <div class="tab tab-wide"><a href="/authors">Authors</a></div>
+	  <div class="tab tab-wide"><a href="/about-us"><nobr>About Us</nobr></a></div>
+	</div>
+      </div>
+    </footer>
+
+  </div> <!-- inner-facade END -->
+  <div class="container">
+    <p class="footer-bttm-links-visit">Visit other sites in the Penguin Random House Network</p>
+    <div class="footer-bttm-links">
+
+          <div>
+	<a href="http://www.booksforbetterliving.com/" title="" class="footer-bttm-link" target="" rel="nofollow">
+                    <img src="https://assets.penguinrandomhouse.com/wp-content/uploads/2015/06/01075641/books-2.jpg" alt="">
+          	</a>
+	<h4>Books for Better Living</h4>
+	Inspiration for the best you      </div>
+         <div>
+	<a href="http://www.readbrightly.com/?ref=822975591A1E" title="" class="footer-bttm-link" target="_blank" rel="nofollow">
+                    <img src="https://assets.penguinrandomhouse.com/wp-content/uploads/2015/04/01075801/thumbnail.png" alt="">
+          	</a>
+	<h4>Brightly</h4>
+	Raise kids who love to read
+      </div>
+         <div>
+	<a href="http://www.tastecooking.com/?ref=E8C77968C21F" title="TASTE img" class="footer-bttm-link" target="_blank" rel="nofollow">
+                    <img src="https://assets.penguinrandomhouse.com/wp-content/uploads/2017/03/03173807/tastelogo1.png" alt="TASTE img">
+          	</a>
+	<h4>TASTE</h4>
+	An online magazine for today’s home cook
+      </div>
+         <div>
+	<a href="http://www.signature-reads.com/?ref=E40ED6C7794C" title="" class="footer-bttm-link" target="_blank" rel="nofollow">
+                    <img src="https://assets.penguinrandomhouse.com/wp-content/uploads/2016/01/01075111/sign1.png" alt="">
+          	</a>
+	<h4>Signature</h4>
+	Making Well-Read Sense of the World      </div>
+         <div>
+	<a href="http://www.litflash.com/" title="" class="footer-bttm-link" target="" rel="nofollow">
+                    <img src="https://assets.penguinrandomhouse.com/wp-content/uploads/2016/08/01074758/litflashlogo68x68.jpg" alt="">
+          	</a>
+	<h4>LitFlash</h4>
+	The eBooks you want at the lowest prices      </div>
+         <div>
+	<a href="http://readitforward.com" title="" class="footer-bttm-link" target="" rel="nofollow">
+                    <img src="https://assets.penguinrandomhouse.com/wp-content/uploads/2016/05/01074912/riflogonew.jpg" alt="">
+          	</a>
+	<h4>Read it Forward</h4>
+	Read it first. Pass it on!      </div>
+         <div>
+	<a href="http://www.firsttoread.com/?ref=AC30300CF2D7" title="First to Read" class="footer-bttm-link" target="_blank" rel="nofollow">
+                    <img src="https://assets.penguinrandomhouse.com/wp-content/uploads/2014/09/01075817/btm_nav_firstread.jpg" alt="First to Read">
+          	</a>
+	<h4>First to Read</h4>
+	Early access to Penguin Random House’s hottest new titles      </div>
+         <div>
+	<a href="http://www.unboundworlds.com?ref=PRHA889C6496229" title="Unbound Worlds" class="footer-bttm-link" target="_blank" rel="nofollow">
+                    <img src="https://assets.penguinrandomhouse.com/wp-content/uploads/2016/09/13122953/UW-PRH-footer-68x68.jpg" alt="Unbound Worlds">
+          	</a>
+	<h4>Unbound Worlds</h4>
+	Exploring the science fiction and fantasy universe      </div>
+   
+    </div>
+  </div>
+
+</div>
+
+<div id="ftr-signup" style="display:none;">
+  <span class="close"></span>
+  <p class="hdr">Stay in Touch</p>
+  <form name="newsletter-subform" class="ftr-newsletter-subform" id="ftr-newsletter-subform" action="/ajax/newsletters-sub">
+    <input type="hidden" name="acquisition_code" value="PRH_FOOTER_STATIC_ONGOING">
+    <input class="newsletter-pref" type="hidden" name="general" id="news-pref1" value="true">
+    <div class="email-wrap-div">
+      <input type="email" autocomplete="off" title="Email address" name="_email" value="" placeholder="Enter Email" class="email-box" id="newsletter-email-box">
+      <button class="btn subscribe">Sign up</button>
+    </div>
+    <div class="fielderr _email hidden">Please enter a valid email address</div>
+    <div class="fielderr processing hidden">We are experiencing technical difficulties.  Please try again later.</div>
+    <p class="terms">By clicking Sign Up, I acknowledge that I have read and agree to Penguin Random House's <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms of Use</a>.</p>
+  </form>
+</div>
+<!-- / End Main Page Wrap -->
+    
+<script>var blankPageFix = setTimeout(function(){ try{ var htmlClass = document.getElementsByTagName( "html" )[0].getAttribute( "class" );	if( htmlClass.indexOf( "fouc-factor" ) > -1 ){ document.getElementsByTagName( "html" )[0].setAttribute( "class", htmlClass.replace( /fouc-factor/, "" ) ); }} catch( e ) { document.getElementsByTagName( "html" )[0].setAttribute( "class", htmlClass.replace( /fouc-factor/, "" ) ); }}, 3000 );</script>
+
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js?ver=1.11.1'></script>
+<script type='text/javascript' src='https://www.penguinrandomhouse.com/wp-includes/js/wp-embed.min.js?ver=4.5.3'></script>
+<script type='text/javascript' src='https://www.penguinrandomhouse.com/wp-content/themes/penguinrandomhouse/js/global.min.js?ver=cb20171221011838'></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"aff351d92f","applicationID":"72351768","transactionName":"M1ADMhNUD0FSARBfWgoaIAUVXA5cHBIFUVBJWBcF","queueTime":0,"applicationTime":633,"atts":"HxcARFtOHE8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

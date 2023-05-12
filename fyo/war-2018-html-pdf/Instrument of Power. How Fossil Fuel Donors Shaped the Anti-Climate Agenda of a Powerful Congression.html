@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]>    <html class="lt-ie9 no-js"  lang="en" dir="ltr"> <![endif]-->
+<!--[if gte IE 9]><!--> <html class="no-js"  lang="en" dir="ltr"  prefix="og: http://ogp.me/ns#
+ article: http://ogp.me/ns/article#
+ book: http://ogp.me/ns/book#
+ profile: http://ogp.me/ns/profile#
+ video: http://ogp.me/ns/video#
+ product: http://ogp.me/ns/product#
+ content: http://purl.org/rss/1.0/modules/content/
+ dc: http://purl.org/dc/terms/
+ foaf: http://xmlns.com/foaf/0.1/
+ rdfs: http://www.w3.org/2000/01/rdf-schema#
+ sioc: http://rdfs.org/sioc/ns#
+ sioct: http://rdfs.org/sioc/types#
+ skos: http://www.w3.org/2004/02/skos/core#
+ xsd: http://www.w3.org/2001/XMLSchema#
+"> <!--<![endif]-->
+  <head>
+    <meta property="fb:pages" content="245371732167183" />
+    <!--[if IE]><![endif]-->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://insideclimatenews.org/sites/default/files/solve_favicon_2.jpg" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta property="og:url" content="https://insideclimatenews.org/news/05122017/lamar-smith-congress-climate-change-fossil-fuel-industry-house-science-committee" />
+<link rel="amphtml" href="https://insideclimatenews.org/news/05122017/lamar-smith-congress-climate-change-fossil-fuel-industry-house-science-committee?amp" />
+<meta name="description" content="Rep. Lamar Smith has led a strategic attack on climate science using the committee he chairs. Back in Texas, his constituents face the effects of global warming." />
+<link rel="canonical" href="https://insideclimatenews.org/news/05122017/lamar-smith-congress-climate-change-fossil-fuel-industry-house-science-committee" />
+<link rel="shortlink" href="https://insideclimatenews.org/node/47976" />
+<meta http-equiv="content-language" content="en-US" />
+<meta property="og:site_name" content="InsideClimate News" />
+<meta property="og:title" content="How Fossil Fuel Donors Shaped the Anti-Climate Agenda of a Powerful Congressional Committee" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://insideclimatenews.org/news/05122017/lamar-smith-congress-climate-change-fossil-fuel-industry-house-science-committee" />
+<meta property="og:description" content="Rep. Lamar Smith has led a strategic attack on climate science using the committee he chairs. Back in Texas, his constituents face the effects of global warming." />
+<meta property="og:updated_time" content="2017-12-07T07:55:26-05:00" />
+<meta property="og:image" content="https://insideclimatenews.org/sites/default/files/styles/opengraph_large/public/ChokeHoldVmocknotext%20%281%29.png?itok=PIFPANlj" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1058" />
+<meta property="og:image:height" content="551" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="How Fossil Fuel Donors Shaped the Anti-Climate Agenda of a Powerful Congressional Committee" />
+<meta name="twitter:url" content="https://insideclimatenews.org/news/05122017/lamar-smith-congress-climate-change-fossil-fuel-industry-house-science-committee" />
+<meta name="twitter:description" content="Rep. Lamar Smith has led a strategic attack on climate science using the committee he chairs. Back in Texas, his constituents face the effects of global warming." />
+<meta name="twitter:image" content="https://insideclimatenews.org/sites/default/files/styles/twitter_card_large/public/ChokeHoldVmocknotext%20%281%29.png?itok=e08DWw8s" />
+<meta name="twitter:image:width" content="1200" />
+<meta name="twitter:image:height" content="600" />
+<meta property="article:published_time" content="2017-12-05T03:00:00-05:00" />
+<meta property="article:modified_time" content="2017-12-07T07:55:26-05:00" />
+<meta itemprop="name" content="Instrument of Power: How Fossil Fuel Donors Shaped the Anti-Climate Agenda of a Powerful Congressional Committee" />
+<meta itemprop="description" content="FREDERICKSBURG, Texas—It’s midway through fall, and cold has yet to settle over the Eckhardt family orchard. So, Diane Eckhardt waits with rising apprehension.Cold is the switch that triggers the growing sequence that by summer has limbs sagging with ripe, juicy peaches. The reliable chill season in Texas Hill Country allowed Eckhardt’s grandfather, Otto, to start the family business here in the 1930s." />
+    <title>Instrument of Power: How Fossil Fuel Donors Shaped the Anti-Climate Agenda of a Powerful Congressional Committee  | InsideClimate News</title>
+
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic%7CPlayfair+Display:400,700%7CMontserrat" type="text/css" media="all">
+    <link rel="stylesheet" href="https://insideclimatenews.org/sites/default/files/advagg_css/css__npb_0-ZSNxQSayal4ZsgCfh5OOc-HUqJ2UNOdDfbayU__h7LRniw6ymyBOiADCGyPfb5eYVbNKUhrgn6hb6p_P8Y__Xs02u3Ohl30Q-hjB53KKmboz4yojueFw4v_4yYYfTFo.css" />
+<link rel="stylesheet" href="https://insideclimatenews.org/sites/default/files/advagg_css/css__gwvI9K-ABZqYCctw-8TI44npNlp2IjXWtMHdn23hs-s__ctTjemPpmTEG3xUwc-icDLd6R0UXfDBm96rhMk6x3D8__Xs02u3Ohl30Q-hjB53KKmboz4yojueFw4v_4yYYfTFo.css" />
+<link rel="stylesheet" href="https://insideclimatenews.org/sites/default/files/advagg_css/css__UCsPArnOMLVJdSVcT1T4hVubj2UQt786nNw0ucROOWU__kTGBA28I3X5oH6t6fyTvF8nS8lEUSSdQTdN-CtvROcw__Xs02u3Ohl30Q-hjB53KKmboz4yojueFw4v_4yYYfTFo.css" />
+<link rel="stylesheet" href="https://insideclimatenews.org/sites/default/files/advagg_css/css__AhTKSIuhEBuvvfNM3WiTm6pOpYxctu1PEQ7Ux1SnSDA__l-_po-i82ltVMVdLYyd3xXpcCqBiZoVBRxXW_kvqCBk__Xs02u3Ohl30Q-hjB53KKmboz4yojueFw4v_4yYYfTFo.css" />
+    <script src="https://insideclimatenews.org/sites/default/files/advagg_js/js__piagDp-OifX3HfM9AznkttTmQIj7A3PeGUH-v4fJC44__-UagLnp8K8-TyKWgKPe65iPqmdqp2zBSKrivrGqEZno__Xs02u3Ohl30Q-hjB53KKmboz4yojueFw4v_4yYYfTFo.js"></script>
+<script src="https://insideclimatenews.org/sites/default/files/advagg_js/js__QYThBQVR8vCPP38pOsklaQ3vzcT2BWkZRRKFj08B9ck__8tpZ0hWW8cp1iTqJ_Cg4V7YtUMXCuO4TgSYij5EX_qU__Xs02u3Ohl30Q-hjB53KKmboz4yojueFw4v_4yYYfTFo.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"icn","theme_token":"EfdnpVLFwtGQ-T8DSL5XoXQMPth0S1oW4SwI53JvxuI","css":{"modules\/system\/system.base.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/fitvids\/fitvids.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/picture\/picture_wysiwyg.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/video_filter\/video_filter.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/libraries\/colorbox\/example1\/colorbox.css":1,"sites\/all\/modules\/custom\/icn_popups\/css\/icn_popups.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/themes\/icn\/layouts\/icn_parallax\/icn_parallax.css":1,"sites\/all\/modules\/node_embed\/plugins\/node_embed\/node_embed.css":1,"sites\/all\/modules\/forward\/forward.css":1,"sites\/all\/themes\/icn\/css\/range_base.css":1,"sites\/all\/themes\/icn\/css\/icn.system.menus.css":1,"sites\/all\/themes\/icn\/css\/theme_styles.css":1,"sites\/all\/themes\/icn\/css\/jquery.jscrollpane.css":1,"sites\/all\/themes\/icn\/css\/print.css":1},"js":{"sites\/all\/modules\/admin_menu\/admin_devel\/admin_devel.js":1,"sites\/all\/modules\/fitvids\/fitvids.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/custom\/icn_popups\/js\/icn_popups.js":1,"sites\/all\/modules\/custom\/icn_panel_styles\/js\/icn-panel-styles.js":1,"sites\/all\/themes\/icn\/js\/skrollr.min.js":1,"sites\/all\/themes\/icn\/js\/skrollr-init.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"sites\/all\/modules\/custom\/icn_social\/js\/icn_social.js":1,"sites\/all\/themes\/icn\/js\/script.js":1,"sites\/all\/themes\/icn\/js\/jquery.mousewheel.js":1,"sites\/all\/themes\/icn\/js\/mwheelIntent.js":1,"sites\/all\/themes\/icn\/js\/jquery.jscrollpane.min.js":1,"sites\/all\/modules\/picture\/picturefill2\/picturefill.min.js":1,"sites\/all\/modules\/picture\/picture.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.8\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/fitvids\/jquery.fitvids.js":1}},"colorbox":{"transition":"elastic","speed":"350","opacity":"0.85","slideshow":false,"slideshowAuto":true,"slideshowSpeed":"2500","slideshowStart":"start slideshow","slideshowStop":"stop slideshow","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","overlayClose":true,"maxWidth":"98%","maxHeight":"98%","initialWidth":"300","initialHeight":"250","fixed":true,"scrolling":false,"mobiledetect":true,"mobiledevicewidth":"480px"},"icn_popups":{"content_path":"\/sites\/all\/modules\/custom\/icn_popups\/content\/"},"fitvids":{"custom_domains":[],"selectors":["body"],"simplifymarkup":1},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":1}});</script>
+  </head>
+  <body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-47976 node-type-article node-promoted"  id="skrollr-body" data-top="" data-bottom="">
+    <div id="skip-link">
+      <a href="#main" class="element-invisible element-focusable" role="link">Skip to main content</a>
+    </div>
+        
+<div class="site-container" data-bottom>
+
+	<header class="site-header">
+
+		<a href="/" class="site-logo"><img src="/sites/all/themes/icn/images/icn-logo.png" alt="Inside Climate News" width="140" height="140"></a>
+
+		<div class="secondary wrap">
+
+              <nav class="secondary-nav">
+  <ul class="menu"><li class="first leaf menu-mlid-3456"><a href="/">Home</a></li>
+<li class="leaf menu-mlid-587"><a href="/about">About</a></li>
+<li class="leaf menu-mlid-665"><a href="/contact">Contact</a></li>
+<li class="leaf menu-mlid-666"><a href="/contact/tip">Tips</a></li>
+<li class="leaf menu-mlid-5579"><a href="/newsletter">Subscribe</a></li>
+<li class="leaf menu-mlid-7607"><a href="/news/25012017/whistleblower-policy-insideclimate-climate-change">Whistleblowers</a></li>
+<li class="leaf menu-mlid-7606"><a href="/about/awards">Awards</a></li>
+<li class="leaf menu-mlid-3455"><a href="/donate">Donate</a></li>
+<li class="leaf menu-mlid-8330"><a href="/about/jobs">Jobs</a></li>
+<li class="last leaf menu-mlid-8990"><a href="/about/membership">Membership</a></li>
+</ul></nav>
+      		</div> <!-- /.secondary -->
+
+		<div class="tagline-row">
+			<div class="site-tagline">
+				<p>A Pulitzer Prize-winning, non-profit, non-partisan news organization dedicated to covering climate change, energy and the environment.</p>
+			</div> <!-- /.site-tagline -->
+			<ul class="social-links">
+				<li class="facebook">
+					<a href="https://www.facebook.com/pages/InsideClimate-News/245371732167183">
+						<svg class="icon">
+							<use xlink:href="#icon-facebook" />
+						</svg>
+					</a>
+				</li>
+				<li class="twitter">
+					<a href="http://twitter.com/insideclimate">
+						<svg class="icon">
+							<use xlink:href="#icon-twitter" />
+						</svg>
+					</a>
+				</li>
+				<li class="rss">
+					<a href="http://insideclimatenews.org/newsletter">
+						<svg class="icon">
+							<use xlink:href="#icon-rss" />
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="primary">
+			<button class="menu-toggle primary-menu-toggle light flat">Menu</button>
+			<div class="menu-holder">
+				<div class="primary-row">
+										  <nav class="primary-nav">
+  <ul class="menu"><li class="first leaf menu-mlid-8269"><a href="/news">News</a></li>
+<li class="expanded menu-mlid-5538"><a href="/investigations">Investigations</a><ul class="menu"><li class="first leaf menu-mlid-20631"><a href="/content/choke-hold">Choke Hold</a></li>
+<li class="leaf menu-mlid-5744"><a href="/content/Exxon-The-Road-Not-Taken">Exxon: The Road Not Taken</a></li>
+<li class="leaf menu-mlid-6074"><a href="/content/dilbit-disaster-inside-biggest-oil-spill-youve-never-heard">The Dilbit Disaster</a></li>
+<li class="leaf menu-mlid-6070"><a href="/content/fracking-eagle-ford-shale-big-oil-bad-air-texas-praire">Big Oil + Bad Air</a></li>
+<li class="leaf menu-mlid-6071"><a href="/content/clean-break-story-germanys-energy-transformation">Clean Break</a></li>
+<li class="leaf menu-mlid-6072"><a href="/news/20131118/bloombergs-hidden-legacy-climate-change-and-future-new-york-city-part-1">Bloomberg&#039;s Hidden Legacy</a></li>
+<li class="leaf menu-mlid-6073"><a href="/news/20140508/keystone-xl-bushs-no-brainer-obamas-dilemma">Keystone & Beyond</a></li>
+<li class="last leaf menu-mlid-5750"><a href="/content/meltdown-terror-top-world-0">Meltdown: Terror at the Top of the World</a></li>
+</ul></li>
+<li class="leaf menu-mlid-5539"><a href="/topics">Topics</a></li>
+<li class="leaf menu-mlid-618"><a href="/todaysclimate">Today&#039;s Climate</a></li>
+<li class="expanded menu-mlid-624"><a href="/cleaneconomywire-headlines">Clean Economy</a><ul class="menu"><li class="first leaf menu-mlid-15314"><a href="/cleaneconomywire-headlines">Clean Economy Wire</a></li>
+<li class="last leaf menu-mlid-15301"><a href="/campaign-archive/clean-economy-weekly">Weekly Newsletter</a></li>
+</ul></li>
+<li class="leaf menu-mlid-5578"><a href="/search_documents">Documents</a></li>
+<li class="last leaf menu-mlid-5542"><a href="/infographics">Infographics</a></li>
+</ul></nav>
+										<form class="site-search" action="/search" method="get">
+						<input class="search" type="search" name="search">
+					</form>
+				</div>
+				<div class="secondary-block">
+                        <nav class="secondary-nav">
+  <ul class="menu"><li class="first leaf menu-mlid-3456"><a href="/">Home</a></li>
+<li class="leaf menu-mlid-587"><a href="/about">About</a></li>
+<li class="leaf menu-mlid-665"><a href="/contact">Contact</a></li>
+<li class="leaf menu-mlid-666"><a href="/contact/tip">Tips</a></li>
+<li class="leaf menu-mlid-5579"><a href="/newsletter">Subscribe</a></li>
+<li class="leaf menu-mlid-7607"><a href="/news/25012017/whistleblower-policy-insideclimate-climate-change">Whistleblowers</a></li>
+<li class="leaf menu-mlid-7606"><a href="/about/awards">Awards</a></li>
+<li class="leaf menu-mlid-3455"><a href="/donate">Donate</a></li>
+<li class="leaf menu-mlid-8330"><a href="/about/jobs">Jobs</a></li>
+<li class="last leaf menu-mlid-8990"><a href="/about/membership">Membership</a></li>
+</ul></nav>
+                    <ul class="social-links">
+            <li class="facebook">
+              <a href="https://www.facebook.com/pages/InsideClimate-News/245371732167183">
+                <svg class="icon">
+                  <use xlink:href="#icon-facebook" />
+                </svg>
+              </a>
+            </li>
+            <li class="twitter">
+              <a href="http://twitter.com/insideclimate">
+                <svg class="icon">
+                  <use xlink:href="#icon-twitter" />
+                </svg>
+              </a>
+            </li>
+            <li class="rss">
+              <a href="http://insideclimatenews.org/newsletter">
+                <svg class="icon">
+                  <use xlink:href="#icon-rss" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+					<form class="site-search" action="/search" method="get">
+						<input class="search" type="search" name="search">
+					</form>
+				</div> <!-- /.secondary-block -->
+			</div> <!-- /.menu-holder -->
+
+		</div> <!-- /.primary -->
+		<div class="topics-bar">
+							<h5>Hot Topics:</h5>
+				  <div id="block-views-latest-on-block-1" class="block block-views">
+
+    
+  <div class="content">
+    <div class="view view-latest-on view-id-latest_on view-display-id-block_1 view-dom-id-cd763ee31c95d16681921325ba9711bf">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="">  
+          <a href="/topic/hurricane"><div class="field field-name-field-short-name field-type-text field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even">Hurricanes </div>
+      </div>
+</div>
+</a>  </li>
+          <li class="">  
+          <a href="/topics/extreme-weather">Extreme Weather</a>  </li>
+          <li class="">  
+          <a href="/tags/exxon-climate-change-investigation"><div class="field field-name-field-short-name field-type-text field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even">Exxon Investigation</div>
+      </div>
+</div>
+</a>  </li>
+          <li class="">  
+          <a href="/tags/choke-hold-project"><div class="field field-name-field-short-name field-type-text field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even">Choke Hold</div>
+      </div>
+</div>
+</a>  </li>
+          <li class="">  
+          <a href="/tags/donald-trump">Donald Trump</a>  </li>
+          <li class="">  
+          <a href="/topics/clean-energy">Clean Energy</a>  </li>
+          <li class="">  
+          <a href="/tags/middle-ground"><div class="field field-name-field-short-name field-type-text field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even">Middle Ground</div>
+      </div>
+</div>
+</a>  </li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+					</div><!-- /.topics-bar -->
+	</header> <!-- /.site-header -->
+
+	  <nav class='breadcrumbs wrap'><ul><li><a href="/">Home</a></li></ul></nav>
+
+
+
+<main id="main" role="main">
+				  <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div class="icn-parallax clearfix panel-display" >
+	<header class="bg-header dark-header-ds wrap page-header article-header parallax-window"  style="background-image: url(&#039;https://insideclimatenews.org/sites/default/files/styles/icn_full_edge_wide/public/ChokeHoldVmocknotext%20%281%29_0.png?itok=1fE2SpPg&#039;)" data-center="background-position: center 0px;" data-top-bottom="background-position: center -100px;" itemscope="" itemtype="http://schema.org/ImageObject">
+	<meta itemprop='contentUrl' content='https://insideclimatenews.org/sites/default/files/styles/icn_full_edge_wide/public/ChokeHoldVmocknotext%20%281%29_0.png?itok=1fE2SpPg' /><meta itemprop='representativeOfPage' content='True' />	<div class="panel-pane pane-custom pane-1"  >
+  
+      
+  
+  <div class="pane-content">
+    <h1 class="page-title">Instrument of Power: How Fossil Fuel Donors Shaped the Anti-Climate Agenda of a Powerful Congressional Committee </h1>
+<p class="page-subtitle">Rep. Lamar Smith has led a strategic attack on climate science using the committee he chairs. Back in Texas, his constituents face the effects of global warming.</p>
+<div class="entry-meta">
+<p class="byline">By Marianne Lavelle , David Hasemyer</p>
+<div class="posted-on">Dec 5, 2017</div>
+</div>  </div>
+
+  
+  </div>
+  </header>
+	<div class="wrap main-content section">
+		<div class="page-content parallax-article">
+			<div class="panel-pane pane-node-body"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="content:encoded"><p>FREDERICKSBURG, Texas—It's midway through fall, and cold has yet to settle over the Eckhardt family orchard. So, Diane Eckhardt waits with rising apprehension.</p>
+<p>Cold is the switch that triggers the growing sequence that by summer has limbs sagging with ripe, juicy peaches. The reliable chill season in Texas Hill Country allowed Eckhardt's grandfather, Otto, to start the family business here in the 1930s.</p>
+<p>But last year, with temperatures the warmest since 1939, Eckhardt's trees produced just 10 percent of their usual yield. And the year before, warm weather reduced production between 60 and 70 percent. Now, Eckhardt worries not only about the next crop, but about the future of a business she hopes will be passed on to her niece and nephews.</p>
+<p>"We know <a href="https://insideclimatenews.org/topic/climate-change">climate change</a> is happening," she said.</p>
+<p><iframe allow="encrypted-media" allowfullscreen="" frameborder="0" gesture="media" height="315" src="https://www.youtube.com/embed/PdNFML479vU?rel=0&amp;showinfo=0" width="560"></iframe></p>
+<p>But while the Eckhardts face that certainty, their congressman sows uncertainty, casting doubt on the consensus science that greenhouse gases are the dominant cause of rising global temperatures, and opposing government action to curb them.</p>
+<p>Sixteen-term Republican Lamar Smith has used his power as chairman of the House Science, Space and Technology Committee for the past five years to do battle on behalf of the fossil fuel industry. Embracing the arguments of a small group of climate contrarians, Smith acknowledges that warming is happening but says more research is needed to determine the amount and causes, and <a href="http://dailysignal.com/2017/07/24/dont-believe-hysteria-carbon-dioxide/">whether it does more good</a> than harm.</p><!-- Begin embedded media --><div class="media media-element-container media-image_right_small"><figure id="file-269817"  itemscope="itemscope" itemtype="http://schema.org/ImageObject" class="file file-image file-image-png">
+          <a href="https://insideclimatenews.org/sites/default/files/styles/colorbox_full/public/EckhardtCard.png?itok=pzpAdVR-" class="colorbox"><img alt="Diane Eckhardt" title="Diane Eckhardt" height="909" width="489" class="media-element file-image-right-small" typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/icn_full_wrap_wide/public/EckhardtCard.png?itok=ghzls0oz" /></a>  </figure>
+</div><!-- End embedded media -->
+<p>Smith's critics say he misrepresents facts, cleverly casts doubt on legitimate studies by claiming they are based on "secret data" and uses his subpoena power to help industry battle state and federal regulators and environmental groups. The result is that a panel with vast jurisdiction over all government non-military science, research and development has become an instrument of attack on mainstream climate science.</p>
+<p>"Anyone stating what the climate will be in 500 years or even at the end of the century is not credible," Smith said at a <a href="https://science.house.gov/legislation/hearings/full-committee-hearing-climate-science-assumptions-policy-implications-and">hearing</a> he chaired in March. "In the field of climate science, there is legitimate concern that scientists are biased in favor of reaching predetermined conclusions. This invariably leads to alarmist findings that are wrongly reported as facts."</p>
+<p>Things weren't always this way. Under both Democratic and moderate Republican leadership, the science committee had educated lawmakers and the public about the threats posed by rising temperatures caused by human activity and the need for decisive action.</p>
+<p>But in <a href="https://insideclimatenews.org/content/choke-hold" target="_blank">a case study of the power of fossil fuel interests to shape government policy</a>, the industry's money and alliances with conservative think tanks and advocacy groups transformed the committee's membership and supported the rise of Smith, son of an old oil and ranching family in South Texas.  </p><!-- Begin embedded media --><div class="media media-element-container media-image_left_small"><figure id="file-269818"  itemscope="itemscope" itemtype="http://schema.org/ImageObject" class="file file-image file-image-png">
+          <a href="https://insideclimatenews.org/content/choke-hold" target="_blank"><img alt="Choke Hold: House Science" title="Choke Hold: House Science" height="282" width="282" class="media-element file-image-left-small" typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/icn_full_wrap_wide/public/BugV.png?itok=LcrQBBEy" /></a>  </figure>
+</div><!-- End embedded media -->
+<p>Today, "we're in total denial," says the highest-ranking Democrat on the panel, fellow Texan Eddie Bernice Johnson. Instead of looking at the evidence and making policy recommendations on climate—as once happened—the committee is "pretending to be oblivious."</p>
+<p>"When you look at the [campaign] contribution list, it becomes very clear" that the forces that oppose regulation are calling the shots, she said.</p>
+<p>Smith, 70, has announced he will retire after his term as chairman ends next year. But many believe his legacy will be lasting. The committee under Smith has "contributed to the sort of diminishment of science in public policy," said Andrew Rosenberg, of the Union of Concerned Scientists, an organization that has been one of Smith's targets. "It has reinforced the view that everything must be partisan, and you've got to choose sides. It sends a message that science is partisan, too."</p>
+<h3>The Science Committee Transformed</h3>
+<p>The House Science Committee held Congress' <a href="https://babel.hathitrust.org/cgi/pt?id=mdp.39015068355620;view=1up;seq=53">first hearings</a> on climate science in 1976, and it resulted in passage of <a href="https://www.govtrack.us/congress/votes/95-1977/h497">bipartisan legislation</a> to establish a National Climate Program Office. Five years later, Al Gore, then a congressman and committee member, co-chaired another set of <a href="https://babel.hathitrust.org/cgi/pt?id=uc1.31210024955054;view=1up;seq=9">hearings</a> on "Carbon Dioxide and Climate: The Greenhouse Effect."  </p>
+<p>With fidelity to its nonpartisan tradition, the committee championed scientists who found themselves under fire during President George W. Bush's administration. The Republican chairman at the time, Sherwood Boehlert of New York, faced off against Bush officials and GOP colleagues on Capitol Hill, armed, he says now, with what he learned about global warming during 24 years on the committee. "I [witnessed] a parade of some of the most distinguished scientists...from around the world testify that climate change is for real, it has serious and negative consequences, and we damn well better do something about it," Boehlert said.</p>
+<p>But by 2013, Republican moderates like Boehlert who accepted climate science were eliminated. Redistricting by both parties—to make red districts redder and blue districts bluer—was partly to blame. But much of the change was due to a systematic effort by conservatives, with significant help from fossil fuel interests that were seeking to stave off policies that might cut into their profits.</p><!-- Begin embedded media --><div class="media media-element-container media-image_centered_medium"><figure id="file-269809"  itemscope="itemscope" itemtype="http://schema.org/ImageObject" class="file file-image file-image-png">
+    <meta itemprop="copyrightYear" content="2017" />
+          <a href="https://insideclimatenews.org/content/infographic-senate-science-committee-disappearing-political-center" target="_blank"><img alt="The Senate Science Committee&#039;s Disappearing Center" title="The Senate Science Committee&#039;s Disappearing Center" height="604" width="648" class="media-element file-image-centered-medium" typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/icn_centered_medium/public/GOPModeratesScatterChart1058px_0.png?itok=nkBbVw7H" /></a>  </figure>
+</div><!-- End embedded media -->
+<p>Helping the effort was the 2010 Supreme Court decision in <em>Citizens United v. the Federal Election Commission,</em> which opened the door to unlimited political spending. The decision empowered hugely wealthy donors like the oil billionaire Koch brothers seeking to shape politics in America. Between 2010 and 2012 alone, individuals and companies in the fossil fuel industry spent an unprecedented $90.5 million to elect friendly Republicans, an increase of 66 percent over the previous two election cycles (compared with $15.7 million they gave to Democrats), according to Center for Responsive Politics data.</p><!-- Begin embedded media --><div class="media media-element-container media-image_right_small"><figure id="file-269815"  itemscope="itemscope" itemtype="http://schema.org/ImageObject" class="file file-image file-image-png">
+          <a href="https://insideclimatenews.org/sites/default/files/styles/colorbox_full/public/BoehlertCard.png?itok=hW14NFH_" class="colorbox"><img alt="Sherwood Boehlert" title="Sherwood Boehlert" height="934" width="489" class="media-element file-image-right-small" typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/icn_full_wrap_wide/public/BoehlertCard.png?itok=k6rmXAlG" /></a>  </figure>
+</div><!-- End embedded media -->
+<p>In the end, nearly a third of the Republicans who sat on the committee in 2006—seven of 24, including Boehlert—were defeated or retired over the next six years in the wake of primary challenges from the right.</p>
+<p>The conservative advocacy group, the Club for Growth, financed many of the challenges. The group has a broad low-tax, less-government agenda, but its victims saw the hand of fossil fuel interests at work.</p>
+<p>"My most enduring heresy was saying that climate change was real," said Bob Inglis of South Carolina, who became convinced of climate reality on a science committee trip to Antarctica. He lost in 2010 to Rep. Trey Gowdy, who was endorsed by the Club for Growth. "It had appeared that I had crossed to the other side and had become unfaithful to the tribe."</p>
+<p>Wayne Gilchrest of Maryland, a science committee Republican defeated in the 2008 primary, believed the conservative activists had a deeper objection than his stand on climate issues. "The foundation upon which their enterprise was built was to select members of Congress that could be told what to do," Gilchrest said. "They wanted a puppet."</p>
+<p>The Club for Growth, which spent between $6 million and $22 million each election cycle between 2004 and 2016, did not have to disclose its donors until it established a Super PAC in 2010. But at least $3 million came into the club from the labyrinth Koch network between 2009 and 2015, according to <a href="https://www.documentcloud.org/documents/4321369-ClubforGrowthcontributionsKochNetworkICN2017.html" target="_blank">the</a><a href="https://www.documentcloud.org/search/Project:%20%22Donors%20to%20Club%20for%20Growth%22"> tax returns </a><a href="https://www.documentcloud.org/documents/4321369-ClubforGrowthcontributionsKochNetworkICN2017.html" target="_blank">of their various nonprofit advocacy groups</a>. And the club's Super PAC disclosures show that its wealthy donors include some heavily invested in the fossil fuel industry and connected to the Koch brothers, like hedge fund manager Paul Singer of Elliott Management, and Quantum Energy, a Houston private equity and venture capital firm specializing in oil and gas.</p>
+<p>Meanwhile, the fossil fuel industry became the biggest contributor to science committee members, according to Center for Responsive Politics data. </p><!-- Begin embedded media --><div class="media media-element-container media-image_centered_medium"><figure id="file-269812"  itemscope="itemscope" itemtype="http://schema.org/ImageObject" class="file file-image file-image-png">
+    <meta itemprop="copyrightYear" content="2017" />
+          <a href="https://insideclimatenews.org/content/house-science-committee-pac-donors-follow-money-chart" target="_blank"><img alt="House Science Committee: Follow the Money" title="House Science Committee: Follow the Money" height="335" width="529" class="media-element file-image-centered-medium" typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/icn_centered_medium/public/LamarSmithPACsChart529px.png?itok=90Nu1kel" /></a>  </figure>
+</div><!-- End embedded media -->
+<p>The oil and gas industry has been Smith's biggest contributor, with $764,000 in donations over the course of his career in Congress. Smith points out that the industry's share is just a small portion of his overall contributions—about 5 percent of the $14 million he has raised since the 1989 election cycle.</p><!-- Begin embedded media --><div class="media media-element-container media-image_centered_medium"><figure id="file-269811"  itemscope="itemscope" itemtype="http://schema.org/ImageObject" class="file file-image file-image-png">
+    <meta itemprop="copyrightYear" content="2017" />
+          <a href="https://insideclimatenews.org/content/lamar-smiths-campaign-contributions-chart" target="_blank"><img alt="Lamar Smith&#039;s Campaign Contributions" title="Lamar Smith&#039;s Campaign Contributions" height="324" width="529" class="media-element file-image-centered-medium" typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/icn_centered_medium/public/LamarSmithDonationsChart529px.png?itok=KzZ4jyyo" /></a>  </figure>
+</div><!-- End embedded media -->
+<p>"I'm supported by a wide variety of individuals and industries, including the energy sector, which employs 400,000 Texans statewide," Smith told InsideClimate News.</p>
+<p>After the 2012 election, with GOP moderates on the science committee wiped out, the House Republican leadership chose Smith from among three climate deniers vying for the chairmanship. He had raised four times more money that election cycle than his competitors, F. James Sensenbrenner of Wisconsin and Dana Rohrabacher of California, and had doled out more than $147,000 to help other Republican candidates.</p>
+<h3>'Secret Science' Charge Returns</h3>
+<p>Even before Smith took over the committee, he co-signed a letter in December 2012 calling on the <a href="https://insideclimatenews.org/topic/epa">Environmental Protection Agency</a> (EPA) to release the "secret data" behind proposed air pollution regulations. On the letter with him was Rep. Andy Harris (R-Md.), a conservative who had unseated Gilchrest and who then chaired the panel's energy subcommittee. "It is likely that the majority of benefits from all federal regulations are grounded in data sets that have never been available to the public," the letter said.</p>
+<p>The "secret science" charge was false. At issue was a large, long-term federally funded study published by Harvard researchers in 1993 showing that fine soot pollution, <span id="docs-internal-guid-f8659b33-2192-54f9-13d3-ee0a01ceb75a">largely from burning fossil fuels,</span> shortened lives. The researchers had obtained personal health information from 22,000 participants on the promise of confidentiality. Fossil fuel interests and advocacy groups they funded rebranded this common health research privacy measure as sinister. In 1997, when the Clinton administration was finalizing the first-ever air quality standards on fine soot, protesters in white lab coats appeared on Capitol Hill holding signs that said, "Harvard, release the data!" The protesters were hired by a group called Citizens for a Sound Economy, which was founded by the Koch brothers and which also received funding from the Exxon Foundation that year.</p><!-- Begin embedded media --><div class="media media-element-container media-image_full"><figure id="file-269822"  itemscope="itemscope" itemtype="http://schema.org/ImageObject" class="file file-image file-image-jpeg with-caption">
+          <img alt="Lamar Smith. Credit: Mark Wilson/Getty Images" title="Lamar Smith. Credit: Mark Wilson/Getty Images" height="584" width="924" class="media-element file-image-full" typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/icn_full_wrap_wide/public/lamar-smith_mark-wilson-getty.jpg?itok=fSlQsFcc" /><figcaption class="field field-name-field-image-caption field-type-text-long field-label-hidden">
+  <div class="field-items">
+          <p>The oil and gas industry has been Rep. Lamar Smith&#039;s biggest campaign contributor. The Texas Republican was first elected to Congress in 1986. Credit: Mark Wilson/Getty Images</p>
+      </div>
+</figcaption>
+  </figure>
+</div><!-- End embedded media -->
+<p>Since that time, hundreds of studies have affirmed that fine soot causes respiratory and cardiovascular disease and death. And a panel jointly funded by the EPA and the auto industry received access to the Harvard study's raw data for a reanalysis in 2001 that validated the original study.</p>
+<p>But <a href="https://www3.epa.gov/ttn/naaqs/standards/pm/s_pm_history.html">16 years after the white lab coat protests</a>, Smith was reviving the "secret science" charge just as the Obama administration was finalizing a plan to tighten the fine soot regulations, a move vehemently opposed by coal-fired power generators and oil refiners.  </p><!-- Begin embedded media --><div class="media media-element-container media-image_right_small"><figure id="file-269814"  itemscope="itemscope" itemtype="http://schema.org/ImageObject" class="file file-image file-image-png">
+          <a href="https://insideclimatenews.org/sites/default/files/styles/colorbox_full/public/SmithCard.png?itok=qh9dBIM1" class="colorbox"><img alt="Rep. Lamar Smith" title="Rep. Lamar Smith" height="593" width="304" class="media-element file-image-right-small" typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/icn_full_wrap_wide/public/SmithCard.png?itok=CgYavc8H" /></a>  </figure>
+</div><!-- End embedded media -->
+<p>Eight months after assuming the chairmanship, Smith slapped the EPA with the first subpoena that the House science committee had issued in 21 years. The <a href="https://science.house.gov/sites/republicans.science.house.gov/files/documents/Subpoena%20link.pdf">subpoena</a> demanded the EPA release data from the Harvard study and a separate American Cancer Society study in sufficient detail "to allow one-to-one mapping of each pollutant and ecological variable to each subject." The EPA worked to obtain the data without personal information, and the agency ultimately released some to Smith, but he was not satisfied. "<a href="https://lamarsmith.house.gov/media-center/in-the-news/what-is-the-epa-hiding-from-the-public">What is EPA Hiding From the Public</a>?" was the title of a Smith op-ed in the <em>Wall Street Journal</em> in June 2014.</p>
+<p>Smith drafted legislation called the <a href="https://www.congress.gov/bill/114th-congress/house-bill/1030">Secret Science Reform Act</a> to require that the EPA base its regulatory decisions only on scientific data that is publicly available and reproducible. Science advocacy groups say the restriction would curb all regulation to protect public health because health research routinely relies on confidential patient information. It also would rule out regulations based on studies of natural disasters or human-caused events—like spills of oil or fracking wastewater—since they could not be reproduced. And it might put at risk EPA's 2009 finding that carbon pollution was an endangerment to health—the underpinning of all Obama administration action on climate change. The bill is "based on a misunderstanding of how science works," said Rush Holt, the CEO of the American Association for the Advancement of Science, at a hearing earlier this year.</p>
+<p>Smith's legislation, which passed the House twice in the Obama era but died in the Senate, was approved by the House again in March with a new name: the HONEST ACT (the Honest and Open New EPA Science Treatment Act of 2017).</p>
+<p>"Our goal has been to rely on good science, the facts and reliable data in an effort to discover the truth," Smith told InsideClimate News<em>, </em>when asked to sum up the role he has tried to play.<em> "</em>It is my responsibility to ensure that federal agencies rely on science that has integrity and is free from political influence."</p>
+<h3>Political Operatives Replace Scientists</h3>
+<p>Smith's first subpoena came only after a contentious debate and party-line vote in the committee. But his powers were greatly expanded in 2015, when the House leadership allowed him unilateral subpoena power. Smith said it was necessary because, under Obama, "federal agencies often stonewalled the committee's constitutional obligations to conduct oversight." He would issue 25 subpoenas over the next two years, against scientists, regulators, environmental groups and even state attorneys general.</p>
+<p>Smith also hired seven staffers from the aggressive House Oversight and Government Reform Committee, which had provided fodder for Republican attacks on the Obama administration with its probes on Benghazi, IRS treatment of conservative groups, solar manufacturer Solyndra's bankruptcy and other issues. "In 2015, it became increasingly apparent that the Obama administration was advancing a one-sided, unconstitutional agenda," Smith told InsideClimate News. "We needed to bring in staff who had strong backgrounds in conducting oversight of government agencies and getting them to answer questions."</p><!-- Begin embedded media --><div class="media media-element-container media-image_centered_medium"><figure id="file-269808"  itemscope="itemscope" itemtype="http://schema.org/ImageObject" class="file file-image file-image-png">
+          <a href="https://insideclimatenews.org/content/infographic-lamar-smith-texas-21st-district-redistricting" target="_blank"><img alt="Feeling Climate Impacts in Texas&#039; 21st District" title="Feeling Climate Impacts in Texas&#039; 21st District" height="431" width="648" class="media-element file-image-centered-medium" typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/icn_centered_medium/public/LamarSmith21stDistrictTexas1058px_0.png?itok=t4TZYBHu" /></a>  </figure>
+</div><!-- End embedded media -->
+<p>The science committee majority staff, which had more than a dozen Ph.D. scientists during the Boehlert era, now was loaded with political operatives like Mark Marin, who had been deputy staff director for Rep. Darrell Issa (R-Calif.) and Joe Brazauskas, who had been a law clerk for the National Mining Association before serving as a counsel on Issa's House Oversight committee.</p>
+<h3>Warming 'Pause': Smith Investigates NOAA</h3>
+<p>In June 2015, Smith and his team targeted research published by scientists from the National Oceanic and Atmospheric Administration (NOAA). The<a href="https://insideclimatenews.org/news/04062015/global-warming-great-hiatus-gets-debunked-NOAA-study"> paper in the peer-reviewed journal <em>Science</em></a> undercut a key talking point of climate science deniers: It found that there had been no pause in global warming over the past two decades.</p><!-- Begin embedded media --><div class="media media-element-container media-image_right_small"><figure id="file-269816"  itemscope="itemscope" itemtype="http://schema.org/ImageObject" class="file file-image file-image-png">
+          <a href="https://insideclimatenews.org/sites/default/files/styles/colorbox_full/public/JohnsonCard.png?itok=b49hkl3i" class="colorbox"><img alt="Rep. Eddie Bernice Johnson" title="Rep. Eddie Bernice Johnson" height="978" width="489" class="media-element file-image-right-small" typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/icn_full_wrap_wide/public/JohnsonCard.png?itok=XuqG7gBP" /></a>  </figure>
+</div><!-- End embedded media -->
+<p>In response to Smith's subpoenas and letters, <a href="https://www.documentcloud.org/documents/2488947-10-27-15-noaa-response-to-committee-subpoena.html">NOAA provided the science committee</a> with its raw data and methodology, and its scientists gave briefings on their research for committee staff. But <a href="https://insideclimatenews.org/news/27102015/noaa-house-science-committee-subpoena-global-warming-hiatus-lamar-smith">Smith wanted the researchers' emails</a>.</p>
+<p>He said an agency whistleblower had alleged that the paper had been rushed to publication despite the concerns and objections of a number of agency employees. The purported whistleblower, a NOAA scientist named John Bates, later said his complaint had been mischaracterized; he disagreed with how the scientists stored and archived their climate data, but he did not dispute the study's findings or allege data manipulation. "<a href="http://www.sciencemag.org/news/2017/02/how-culture-clash-noaa-led-flap-over-high-profile-warming-pause-study">I knew people would misuse this</a>," he told <em>Science</em> magazine's website.</p>
+<p>Eddie Bernice Johnson <a href="https://insideclimatenews.org/news/22112015/ranking-congresswoman-defends-noaa-climate-change-scientists-from-witch-hunt-lamar-smith">fired back at her committee's chairman in a letter</a>: "The only thing you accused NOAA of doing is engaging in climate science—i.e., doing their jobs."</p>
+<p>Smith's NOAA investigation <a href="https://www.aaas.org/news/aaas-leads-coalition-protest-climate-science-inquiry">provoked an unusual rebuke from the American Association for the Advancement of Science</a> and six other major scientific groups, who accused him of chilling scientific inquiry.</p>
+<p>Since the NOAA paper's publication, <a href="https://insideclimatenews.org/news/04052017/global-warming-hiatus-debunked-climate-science">several studies</a> as well as <a href="https://insideclimatenews.org/news/04012017/climate-change-denial-oceans-warming-lamar-smith">a reanalysis of the original NOAA work</a> have affirmed the finding that there has been no hiatus in global warming.</p>
+<p>But Smith continued to accuse the scientists of wrongdoing. In a March hearing, Smith reiterated that the committee heard from whistleblowers that NOAA employees "put their 'thumb on the scale' during the analysis of data." And in an April speech at an annual conference of climate deniers sponsored by the Heartland Institute, Smith said both NOAA and EPA during the Obama administration had been "complicit in furthering a one-sided partisan agenda focused on climate change."</p>
+<p>MIT atmospheric scientist Kerry Emanuel believes he gained insight into Smith and his approach after an exchange a couple of years ago. It began with a discussion on a topic on which they agreed—how the U.S. had fallen behind Europe in numerical weather prediction. Emanuel took the opportunity to give Smith a copy of a primer he had written for non-scientists on climate science and risk.</p><!-- Begin embedded media --><div class="media media-element-container media-image_centered_medium"><figure id="file-269810"  itemscope="itemscope" itemtype="http://schema.org/ImageObject" class="file file-image file-image-png">
+    <meta itemprop="copyrightYear" content="2017" />
+          <a href="https://insideclimatenews.org/content/infographic-quotes-lamar-smith-science" target="_blank"><img alt="Lamar Smith on the Science" title="Lamar Smith on the Science" height="1040" width="529" class="media-element file-image-centered-medium" typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/icn_centered_medium/public/LamarSmithIPCC529px.png?itok=OLalmNKl" /></a>  </figure>
+</div><!-- End embedded media -->
+<p>A few days later, Emanuel got a call from Smith, who wanted to talk about the book. "He struck me as a very astute man," Emanuel said. "Clearly he had read the book very thoroughly or had been thoroughly briefed on it.</p>
+<p>"He proceeded politely to ask sharp questions. Could this be wrong? Could it be not as bad? A lot of the questions were about uncertainty," Emanuel recalled. At first the scientist felt he was making headway with the congressman, a hope that was quashed the next time he heard Smith publicly dismissing climate science. "In hindsight, I think I was unwittingly a coach, helping him armor himself against reasonable arguments."</p>
+<p>"There's nothing stupid about Lamar Smith," said Emanuel. "He's not uniformly anti-science. It's not that he doesn't understand the science. He struck me as a lawyer for the defense, who knows his defendant is guilty, but is bound by law or honor or legal code to defend."</p>
+<h3>Subpoena Power Unleashed</h3>
+<p>Smith's tactics to defend fossil fuel energy created legal worries for the EPA, which was battling the industry in court. Officials feared that the constant document requests by Smith would help industry lawyers obtain otherwise confidential material that could be used against the agency in court.</p>
+<p>In one instance, Smith acted with a like-minded Republican committee chairman, Jason Chaffetz of House Oversight, to demand internal documents on one of the Obama administration's most contentious regulations, intended to protect thousands of waterways and marshlands. After Chaffetz obtained memos showing an interagency dispute over the rule, he released them. EPA's foes, including the oil industry, which would not normally have had access to the records, sought to introduce them in a court challenge to the new clean water regulation. "Once documents have been disclosed and widely disseminated, an agency has waived any deliberative process or other privilege that may have applied," argued North Dakota's attorney general, the lead litigant.</p>
+<p>In letters to Smith, EPA repeatedly raised its concern about the risk of releasing documents in cases involving <a href="https://science.house.gov/sites/republicans.science.house.gov/files/documents/08-27-15%20-%20EPA%20WOTUS%20Letter.pdf">the Clean Water Act</a>, <a href="https://science.house.gov/sites/republicans.science.house.gov/files/documents/Chairman%20Smith%205-6-16.pdf">the regional haze pollution</a> standards, a decision over a controversial copper mine decision in Alaska, and others.</p><!-- Begin embedded media --><div class="media media-element-container media-image_full"><figure id="file-269831"  itemscope="itemscope" itemtype="http://schema.org/ImageObject" class="file file-image file-image-jpeg with-caption">
+          <a href="https://insideclimatenews.org/sites/default/files/styles/colorbox_full/public/lamar-smith-john-holdren_chip-somodevilla-getty.jpg?itok=kCyKgX-X" class="colorbox"><img alt="Rep. Lamar Smith, speaking here with John Holdren, director of the White House Office of Science and Technology Policy under President Barack Obama, strongly opposed the Obama administration&#039;s efforts to reduce power plant emissions. Credit: Chip Somodevi" title="Rep. Lamar Smith, speaking here with John Holdren, director of the White House Office of Science and Technology Policy under President Barack Obama, strongly opposed the Obama administration&#039;s efforts to reduce power plant emissions. Credit: Chip Somodevi" height="616" width="924" class="media-element file-image-full" typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/icn_full_wrap_wide/public/lamar-smith-john-holdren_chip-somodevilla-getty.jpg?itok=z2eNU-if" /></a><figcaption class="field field-name-field-image-caption field-type-text-long field-label-hidden">
+  <div class="field-items">
+          <p>Rep. Lamar Smith, speaking here with John Holdren, director of the White House Office of Science and Technology Policy under President Barack Obama, strongly opposed the Obama administration&#039;s efforts to reduce power plant emissions. Credit: Chip Somodevilla/Getty Images</p>
+      </div>
+</figcaption>
+  </figure>
+</div><!-- End embedded media -->
+<p>Smith's most dramatic rush to the legal defense of the fossil fuel industry was his unprecedented move last year to <a href="https://insideclimatenews.org/news/13072016/lamar-smith-exxon-climate-probes-subpoenas-state-ags-eric-schneiderman-maura-healey">issue subpoenas to two state attorneys general</a> and several nongovernmental advocacy groups over the states' <a href="https://insideclimatenews.org/news/05112015/new-york-attorney-general-eric-schneiderman-subpoena-exxon-climate-documents">climate change fraud investigation of Exxon</a>. He accused the attorneys general of colluding with environmentalists, violating Exxon's free speech rights and chilling private sector science funding.</p>
+<p>New York Attorney General Eric Schneiderman, a Democrat, refused to comply with the subpoena, which he said "oversteps the boundaries of federalism, separation of powers, and the committee's own jurisdiction."</p>
+<p>Smith disagreed. "The science committee has jurisdiction over all non-military, non-medical research and development," he said in the email to InsideClimate News. "We had an obligation to the scientific community and the American people to find out whether the attorneys general have intentionally intimidated researchers who disagree with them."</p>
+<p>Legal experts see another possible outcome of Smith's inquiry. If he were to obtain and make public internal documents like correspondence among the attorneys general—material that Exxon would have trouble obtaining as a litigant—the company could use it in court.</p>
+<p>"It sure looks like he is acting on behalf of Exxon," said Maryland Attorney General Brian Frosh, a Democrat who is part of a coalition supporting the investigation by New York and Massachusetts. "It's hard to understand why he thinks that it's an appropriate role for a congressman and Congress to get involved on behalf of an entity like Exxon. It's not like ExxonMobil is incapable of defending itself."</p>
+<p>And, indeed, even though Smith did not obtain documents, Exxon cited the mere fact of his inquiry to give weight to its effort last year to <a href="https://www.documentcloud.org/documents/4177297-New-York-Sued-11-10.html">derail</a> the probe. Exxon picked up <a href="https://science.house.gov/news/press-releases/smith-subpoenas-ma-ny-attorneys-general-environmental-groups">Smith's argument</a> that the attorneys general were appointing "themselves to decide what is valid and what is invalid regarding climate change." For that reason and on multiple constitutional grounds, Exxon lawyers asked a federal judge in Texas to dismiss the investigations.</p>
+<p>Although the Texas judge declined to rule, he <a href="https://insideclimatenews.org/news/05062017/exxon-climate-change-fraud-investigation-eric-schneiderman-rex-tillerson-exxonmobil">embraced Exxon and Smith's contention</a> that the New York and Massachusetts investigations were intended to "squelch public discourse by a private company that may not toe the same line as these two attorneys general." The case has been transferred to New York federal court, where a judge has yet to rule.</p>
+<h3>Back Home in the 21st District</h3>
+<p>For the most part, Smith hasn't had to address the climate issue back home, even though polls show that a majority of his adult constituents believe human activity is causing global warming and Texas has suffered more severe climate and weather disasters since 1980 than any other state.</p><!-- Begin embedded media --><div class="media media-element-container media-image_full"><figure id="file-269820"  itemscope="itemscope" itemtype="http://schema.org/ImageObject" class="file file-image file-image-jpeg with-caption">
+          <a href="https://insideclimatenews.org/sites/default/files/styles/colorbox_full/public/diane-eckhardt-peach-farm_dave-hasemyer.jpg?itok=VLfGKfPB" class="colorbox"><img alt="Diane Eckhardt&#039;s peach farm. Credit: David Hasemyer/InsideClimate News" title="Diane Eckhardt&#039;s peach farm. Credit: David Hasemyer/InsideClimate News" height="572" width="924" class="media-element file-image-full" typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/icn_full_wrap_wide/public/diane-eckhardt-peach-farm_dave-hasemyer.jpg?itok=5S_fPc69" /></a><figcaption class="field field-name-field-image-caption field-type-text-long field-label-hidden">
+  <div class="field-items">
+          <p>With their peaches at risk from warmer winters, Diane Eckhardt and her family are looking for ways to diversify their Texas farm&#039;s offerings. Credit: David Hasemyer/InsideClimate News</p>
+      </div>
+</figcaption>
+  </figure>
+</div><!-- End embedded media -->
+<p>Only last year did a Democratic opponent, Tom Wakely, try to make climate change a major campaign issue. Smith won with 57 percent of the vote—the first time he had fallen below the 60 percent mark. Boehlert believes voters don't care as urgently about climate change as they do about jobs, health care and the economy. "People don't think the environment touches them dramatically and personally, but it does," he said.</p><!-- Begin embedded media --><div class="media media-element-container media-image_right_medium"><figure id="file-269819"  itemscope="itemscope" itemtype="http://schema.org/ImageObject" class="file file-image file-image-jpeg with-caption">
+          <a href="https://insideclimatenews.org/sites/default/files/styles/colorbox_full/public/diane-eckhardt-nephew_dave-hasemyer.jpg?itok=DvaZgEPE" class="colorbox"><img alt="Diane Eckhardt. Credit: David Hasemyer/InsideClimate News" title="Diane Eckhardt. Credit: David Hasemyer/InsideClimate News" height="675" width="900" class="media-element file-image-right-medium" typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/icn_full_wrap_wide/public/diane-eckhardt-nephew_dave-hasemyer.jpg?itok=ySlsFx-m" /></a><figcaption class="field field-name-field-image-caption field-type-text-long field-label-hidden">
+  <div class="field-items">
+          <p>Diane Eckhardt has seen the impact warming temperatures have on her Texas peach orchard, in Rep. Lamar Smith&#039;s Congressional district. She worries about the business she hopes to pass on to the next generation. Credit: Dave Hasemyer/InsideClimate News</p>
+      </div>
+</figcaption>
+  </figure>
+</div><!-- End embedded media -->
+<p>For Diane Eckhardt, it's hard to ignore what's happening. She kicks up an orange cloud of dust as she walks through her family's orchard at sunset with her 85-year-old father, Donald, and her 9-year-old nephew, Quentin.</p>
+<p>Eckhardt, 43, who has a degree in biology, tries to keep politics and peaches separate. But it's clear she disagrees with policymakers like Smith whose distrust of the science imperils her family business and its future.</p>
+<p>"We have to pay attention to climate science because the science is there," she said. "We have to extend outside of our ideologies to protect what we have."</p></div>
+      </div>
+</div>
+  </div>
+
+  
+  </div>
+		</div>
+	</div>
+	<div class="wrap bottom section">
+		<div class="panel-pane pane-views-panes pane-related-stories-panel-pane-2 col span_1_of_3 widget"  >
+  
+        <h4 class="pane-title widget-title with-border">Related</h4>
+    
+  
+  <div class="pane-content">
+    <div class="view view-related-stories view-id-related_stories view-display-id-panel_pane_2 view-dom-id-938b4ede1b0587724cc7247fe51f67ef">
+        
+  
+  
+      <div class="view-content">
+        <div class="article-block small-image-left">
+      
+          <div class="image-holder"><a href="/news/16112017/fracking-chemicals-safety-epa-health-risks-water-bush-cheney"><img typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/thumbnail_75/public/LeadIlloIVnotext_0.png?itok=JScxScG9" width="75" height="75" alt="Choke Hold: Fracking" title="Choke Hold: Fracking" /></a></div>    
+          <header class="article-header">
+<h5 class="article-title"><a href="/news/16112017/fracking-chemicals-safety-epa-health-risks-water-bush-cheney">Industrial Strength: How the U.S. Government Hid Fracking&#039;s Risks to Drinking Water</a></h5>
+<div class="meta"><p class="byline">By Neela Banerjee</p></div>
+</header>    </div>
+  <div class="article-block small-image-left">
+      
+          <div class="image-holder"><a href="/news/29102017/renewable-energy-ohio-rps-law-fossil-fuel-political-donations-coal"><img typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/thumbnail_75/public/LeadIlloIII-900.png?itok=UJwMeHp7" width="75" height="75" alt="Wind turbines near Convoy, Ohio. Credit: Tom Hart/CC-BY-2.0" title="Wind turbines near Convoy, Ohio. Credit: Tom Hart/CC-BY-2.0" /></a></div>    
+          <header class="article-header">
+<h5 class="article-title"><a href="/news/29102017/renewable-energy-ohio-rps-law-fossil-fuel-political-donations-coal">How Fossil Fuel Allies Are Tearing Apart Ohio&#039;s Embrace of Clean Energy</a></h5>
+<div class="meta"><p class="byline">By Brad Wieners and David Hasemyer</p></div>
+</header>    </div>
+  <div class="article-block small-image-left">
+      
+          <div class="image-holder"><a href="/news/09062017/five-shades-climate-denial-donald-trump-scott-pruitt-rex-tillerson-jobs-uncertainty-white-house"><img typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/thumbnail_75/public/pence-trump-pruitt-zinke-perry_Ron-Sach-pool-getty.jpg?itok=wjfSLuE4" width="75" height="75" alt="Mike Pence, Donald Trump, Scott Pruitt, Ryan Zinke and Rick Perry" title="Mike Pence, Donald Trump, Scott Pruitt, Ryan Zinke and Rick Perry" /></a></div>    
+          <header class="article-header">
+<h5 class="article-title"><a href="/news/09062017/five-shades-climate-denial-donald-trump-scott-pruitt-rex-tillerson-jobs-uncertainty-white-house">5 Shades of Climate Denial, All on Display in the Trump White House</a></h5>
+<div class="meta"><p class="byline">By Marianne Lavelle </p></div>
+</header>    </div>
+  <div class="article-block small-image-left">
+      
+          <div class="image-holder"><a href="/news/02022017/lamar-smith-epa-house-science-committee"><img typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/thumbnail_75/public/GettyImages-578063082.jpg?itok=qVJYcaYG" width="75" height="75" alt="Rep. Lamar Smith has made no secret of his opposition to climate and environmental science" title="Rep. Lamar Smith has been an opponent of the EPA" /></a></div>    
+          <header class="article-header">
+<h5 class="article-title"><a href="/news/02022017/lamar-smith-epa-house-science-committee">Rep. Lamar Smith Launches New Assault on EPA&#039;s &#039;Secret Science&#039;</a></h5>
+<div class="meta"><p class="byline">By David Hasemyer</p></div>
+</header>    </div>
+  <div class="article-block small-image-left">
+      
+          <div class="image-holder"><a href="/news/01032017/exxon-climate-investigation-lamar-smith-state-attorneys-general"><img typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/thumbnail_75/public/GettyImages-609931272.jpg?itok=T8Xbnqrq" width="75" height="75" alt="New York Attorney General Eric Schneiderman is investigating Exxon for potential climate fraud" title="New York Attorney General Eric Schneiderman is investigating Exxon for potential climate fraud" /></a></div>    
+          <header class="article-header">
+<h5 class="article-title"><a href="/news/01032017/exxon-climate-investigation-lamar-smith-state-attorneys-general">State AGs Rally to Defend NY, Mass. Investigations of Exxon From Lamar Smith Subpoenas</a></h5>
+<div class="meta"><p class="byline">By Phil McKenna</p></div>
+</header>    </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+
+<div class="panel-pane pane-custom pane-2 col span_1_of_3"  id="generic-subscribe-block" >
+  
+      
+  
+  <div class="pane-content">
+    <h4 class="with-border">
+Subscribe to InsideClimate News Email Newsletters
+</h4>
+<ul>
+<li>
+<h4>
+Articles & Investigations
+</h4>
+</li>
+<li>
+<h4>
+<span class="tc-today">Today's</span>
+<span class="tc-climate">Climate</span>
+</h4>
+</li>
+<li>
+<h4>
+<span class="ce-clean">Clean</span>
+<span class="ce-economy">Economy</span>
+</h4>
+</li><li>
+<h4>
+Week in Review
+</h4>
+</li>
+</ul>
+<div><a class="button" href="/newsletter">Subscribe</a></div>
+  </div>
+
+  
+  </div>
+
+<div class="panel-pane pane-views-panes pane-author-author-articles-small-pane col span_1_of_3 widget"  >
+  
+        <h4 class="pane-title widget-title with-border">More From The Author</h4>
+    
+  
+  <div class="pane-content">
+    <div class="view view-author view-id-author view-display-id-author_articles_small_pane view-dom-id-277ea2d2ad63723519a3f6afedc496e2">
+        
+  
+  
+      <div class="view-content">
+        <div class="article-block small-image-left">
+      
+          <div class="image-holder"><a href="/news/05122017/lamar-smith-congress-climate-change-fossil-fuel-industry-house-science-committee" class="active"><img typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/thumbnail_75/public/ChokeHoldVmocknotext%20%281%29.png?itok=CpXkO8KJ" width="75" height="75" alt="" /></a></div>    
+          <header class="article-header">
+<h5 class="article-title"><a href="/news/05122017/lamar-smith-congress-climate-change-fossil-fuel-industry-house-science-committee" class="active">Instrument of Power: How Fossil Fuel Donors Shaped the Anti-Climate Agenda of a Powerful Congressional Committee </a></h5>
+<div class="meta"><p class="byline">By Marianne Lavelle , David Hasemyer</p></div>
+</header>    </div>
+  <div class="article-block small-image-left">
+      
+          <div class="image-holder"><a href="/news/13102017/trump-kathleen-hartnett-white-ceq-nominee-climate-change-fossil-fuels-supporter-texas"><img typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/thumbnail_75/public/kathleen-hartnett-white-trump-tower_Drew-Angerer-Getty.jpg?itok=WMbD1VMd" width="75" height="75" alt="Kathleen Hartnett White arrived at Trump Tower last November while then-President-Elect Donald Trump and his transition team considered positions in the administration. Credit: Drew Angerer/Getty Images" title="Kathleen Hartnett White arrived at Trump Tower last November while then-President-Elect Donald Trump and his transition team considered positions in the administration. Credit: Drew Angerer/Getty Images" /></a></div>    
+          <header class="article-header">
+<h5 class="article-title"><a href="/news/13102017/trump-kathleen-hartnett-white-ceq-nominee-climate-change-fossil-fuels-supporter-texas">Trump Pick for Top Environment Post: Carbon Dioxide Is &#039;The Gas of Life&#039;</a></h5>
+<div class="meta"><p class="byline">By Marianne Lavelle </p></div>
+</header>    </div>
+  <div class="article-block small-image-left">
+      
+          <div class="image-holder"><a href="/news/11102017/climate-denial-coal-industry-global-warming-robert-murray-energy"><img typeof="foaf:Image" src="https://insideclimatenews.org/sites/default/files/styles/thumbnail_75/public/murray-pbs_pbs-newshour.png?itok=wZoAfxF2" width="75" height="75" alt="Bob Murray spoke on PBS NewsHour. Credit: PBS NewsHour" title="Bob Murray spoke on PBS NewsHour. Credit: PBS NewsHour" /></a></div>    
+          <header class="article-header">
+<h5 class="article-title"><a href="/news/11102017/climate-denial-coal-industry-global-warming-robert-murray-energy">Coal Boss Takes Climate Change Denial to the Extreme</a></h5>
+<div class="meta"><p class="byline">By Marianne Lavelle </p></div>
+</header>    </div>
+    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <a class="more-articles" href="/author/Marianne Lavelle/articles">More by Marianne Lavelle</a>    </div>
+  
+  
+</div>  </div>
+
+  
+  </div>
+	</div>
+</div>
+  </div>
+</div>
+		</main>
+
+
+  <footer id="footer" class="site-footer" role="contentinfo">
+      <nav class="sub-nav wrap">
+  <ul class="menu"><li class="first leaf menu-mlid-5582"><a href="/about/information-whistleblowers">Whistleblowers</a></li>
+<li class="leaf menu-mlid-5583"><a href="/about/jobs">Jobs &amp; Freelance</a></li>
+<li class="leaf menu-mlid-5580"><a href="/about/privacy-policy">Policies &amp; Legal</a></li>
+<li class="last leaf menu-mlid-5581"><a href="/icnbooks">Our E-Books</a></li>
+</ul></nav><div id="block-icn-panel-panes-icn-donate-keep-alive" class="block block-icn-panel-panes">
+
+    
+  <div class="content">
+    <div class="donate-block wrap">
+  <h2 class="section-title">Keep Environmental Journalism Alive</h2>
+  <a class="button orange" href="/donate">Donate Now</a>
+</div>  </div>
+</div>
+<div class="footer-block wrap">
+<nav class="footer-nav">
+  <ul class="menu"><li class="first leaf menu-mlid-8269"><a href="/news">News</a></li>
+<li class="leaf has-children menu-mlid-5538"><a href="/investigations">Investigations</a></li>
+<li class="leaf menu-mlid-5539"><a href="/topics">Topics</a></li>
+<li class="leaf menu-mlid-618"><a href="/todaysclimate">Today&#039;s Climate</a></li>
+<li class="leaf has-children menu-mlid-624"><a href="/cleaneconomywire-headlines">Clean Economy</a></li>
+<li class="leaf menu-mlid-5578"><a href="/search_documents">Documents</a></li>
+<li class="last leaf menu-mlid-5542"><a href="/infographics">Infographics</a></li>
+</ul></nav>
+</div>  </footer>
+
+</div> <!-- /.site-container -->
+<div class="icn-social"><a class='social-link social-facebook' href='http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Finsideclimatenews.org%2Fnews%2F05122017%2Flamar-smith-congress-climate-change-fossil-fuel-industry-house-science-committee%3Futm_source%3Dfacebook%26utm_medium%3Dsocial'><div class='icon'><svg><use xlink:href='#icon-facebook' /></svg></div></a><a class='social-link social-twitter' href='http://twitter.com/intent/tweet?status=Instrument%20of%20Power:%20How%20Fossil%20Fuel%20Donors%20Shaped%20the%20Anti-Climate%20Agenda%20of%20a%20Powerful%20Congressional%20Committee%20%20https%3A%2F%2Finsideclimatenews.org%2Fnews%2F05122017%2Flamar-smith-congress-climate-change-fossil-fuel-industry-house-science-committee%3Futm_source%3Dtwitter%26utm_medium%3Dsocial'><div class='icon'><svg><use xlink:href='#icon-twitter' /></svg></div></a><a class='social-link-nowindow social-forward colorbox-load forward-page' href='/forward?path=news/05122017/lamar-smith-congress-climate-change-fossil-fuel-industry-house-science-committee&overlay=cbox&width=600&height=600&className=forward-box&scrolling=true&maxWidth=100%25'><div class='icon'><svg><use xlink:href='#icon-forward' /></svg></div></a></div>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+	<symbol id="icon-facebook" viewBox="0 0 9 16">
+		<title>Facebook</title>
+		<path d="M5.62500671,3.69976331 C6.01674824,3.69976331 6.54911495,3.7700759 6.98103511,3.86047779 C7.08148166,3.8805671 7.19197286,3.86047779 7.28237475,3.80020986 C7.37277665,3.73994193 7.43304458,3.63949539 7.44308923,3.53904884 L7.71429491,1.58034115 C7.73438422,1.39953736 7.62389302,1.20868892 7.43304458,1.15846564 C6.72991874,0.957572546 5.96652497,0.857125998 5.17299724,0.857125998 C2.77232473,0.857125998 1.60714477,2.00221665 1.60714477,4.37275519 L1.60714477,5.40735464 L0.381696884,5.40735464 C0.170759132,5.40735464 0,5.57811377 0,5.78905152 L0,7.79798249 C0,8.01896489 0.170759132,8.18972402 0.381696884,8.18972402 L1.60714477,8.18972402 L1.60714477,15.9040189 C1.60714477,16.1149567 1.77790391,16.2857158 1.98884166,16.2857158 L4.50000536,16.2857158 C4.70089846,16.2857158 4.87165759,16.1149567 4.87165759,15.9040189 L4.87165759,8.18972402 L6.90067787,8.18972402 C7.10157097,8.18972402 7.26228544,8.02900955 7.28237475,7.82811645 L7.42299992,5.81918548 C7.43304458,5.70869428 7.39286596,5.60824773 7.32255337,5.52789049 C7.25224079,5.44753326 7.15179424,5.40735464 7.05134769,5.40735464 L4.87165759,5.40735464 L4.87165759,4.52342501 C4.87165759,3.86047779 4.94197018,3.69976331 5.62500671,3.69976331 L5.62500671,3.69976331 Z" id="facebook-ico"></path>
+	</symbol>
+
+	<symbol id="icon-twitter" viewBox="0 0 16 13">
+		<title>Twitter</title>
+		<path d="M14.648455,2.60936381 C14.648455,2.47655115 14.5390798,2.35936351 14.3984547,2.35936351 C14.3203296,2.35936351 13.7812664,2.58592628 13.6406413,2.62498882 C13.8281415,2.40623856 14.2578295,1.74217527 14.2578295,1.46092494 C14.2578295,1.32811228 14.1484544,1.21092464 14.0078292,1.21092464 C13.9687667,1.21092464 13.9218916,1.22654966 13.882829,1.24998719 C13.3515784,1.53905003 12.8437653,1.7656128 12.2500146,1.89061295 C11.6640764,1.32811228 10.8672005,0.999986887 10.046887,0.999986887 C8.31250991,0.999986887 6.89063321,2.41405107 6.89063321,4.15624065 C6.89063321,4.2812408 6.89844572,4.41405346 6.92188325,4.53905361 C5.2031312,4.39061593 3.57031676,3.67186507 2.28906523,2.5234262 C1.97656486,2.24217587 1.71093954,1.937488 1.4296892,1.62498763 C1.36718913,1.55467505 1.31250156,1.53123752 1.21875145,1.53123752 C1.13281385,1.53123752 1.06250127,1.59373759 1.02343872,1.65623767 C0.742188385,2.07030066 0.593750708,2.74217646 0.593750708,3.24217706 C0.593750708,3.96874043 0.843751006,4.67967877 1.31250156,5.24217944 C1.16406389,5.19530439 0.937501118,5.04686671 0.804688459,5.04686671 C0.640625764,5.04686671 0.500000596,5.16405435 0.500000596,5.32811705 C0.500000596,6.42186835 1.10156381,7.43749456 2.02343991,8.00780774 C1.95312733,7.99999523 1.89062725,7.9765577 1.82031467,7.9765577 C1.68750201,7.9765577 1.57812688,8.09374534 1.57812688,8.21874549 C1.57812688,8.24999553 1.58593939,8.27343306 1.5937519,8.30468309 C1.93750231,9.35937185 2.79687833,10.1562478 3.87500462,10.4062481 C2.99219107,10.9531238 1.97656486,11.2343741 0.945313627,11.2343741 C0.710938348,11.2343741 0.476563068,11.1953115 0.250000298,11.1953115 C0.10937513,11.1953115 0,11.3124992 0,11.4453118 C0,11.5312494 0.0468750559,11.601562 0.11718764,11.6562496 C0.320312882,11.8046873 0.57031318,11.9296874 0.79687595,12.0468751 C2.00000238,12.6718758 3.34375399,13.0000012 4.70313061,13.0000012 C8.10938467,13.0000012 11.0234506,11.171874 12.4297023,8.06249531 C12.9375154,6.94530647 13.2343908,5.71874251 13.2109532,4.49217855 L13.2109532,4.23436574 C13.7422039,3.83592777 14.2578295,3.32030215 14.6093924,2.74998897 C14.6328299,2.71092643 14.648455,2.66405137 14.648455,2.60936381 L14.648455,2.60936381 Z" id="twiiter-ico"></path>
+	</symbol>
+
+	<symbol id="icon-google-plus" viewBox="0 0 512 512">
+		<path d="M223.5,82.1c11.8,9.6,36.4,29.7,36.4,68c0,37.3-21.5,54.9-43.1,71.5c-6.7,6.6-14.4,13.6-14.4,24.7
+			c0,11.1,7.7,17.2,13.3,21.7l18.5,14.1c22.6,18.6,43.1,35.8,43.1,70.6c0,47.4-46.7,95.2-135,95.2C67.9,448,32,413.2,32,375.9
+			c0-18.1,9.2-43.8,39.5-61.5c31.8-19.1,75-21.7,98-23.2c-7.2-9.1-15.4-18.7-15.4-34.3c0-8.6,2.6-13.6,5.1-19.7
+			c-5.6,0.5-11.3,1-16.4,1c-54.4,0-85.2-39.8-85.2-79.1c0-23.2,10.8-48.9,32.9-67.5C119.8,68,154.7,64,182.4,64h105.7l-32.8,18.1
+			H223.5z M187,305.9c-4.1-0.5-6.7-0.5-11.8-0.5c-4.6,0-32.3,1-53.9,8c-11.3,4-44.1,16.1-44.1,51.9c0,35.8,35.4,61.5,90.3,61.5
+			c49.3,0,75.4-23.2,75.4-54.4C242.9,346.7,226,333.1,187,305.9 M201.9,210.1c11.8-11.6,12.8-27.7,12.8-36.8
+			c0-36.3-22.1-92.7-64.7-92.7c-13.3,0-27.7,6.5-35.9,16.6c-8.7,10.6-11.3,24.2-11.3,37.3c0,33.8,20,89.7,64.2,89.7
+			C179.8,224.3,193.6,218.2,201.9,210.1"></path>
+		<polygon points="480,142.3 401.7,142.3 401.7,64.1 384,64.1 384,142.3 304.3,142.3 304.3,160.1 384,160.1 384,241 401.7,241 
+			401.7,160.1 480,160.1"></polygon>
+	</symbol>	
+
+	<symbol id="icon-forward" viewBox="0 0 76 54">
+		<path fill="#FFFFFF" d="M4.243,54h67.515L49,31.242l-5.2,5.157c-3.738,2.807-7.859,2.806-11.6,0.001l-0.321-0.279L27,31.242
+			L4.243,54L4.243,54z"/>
+		<polygon fill="#FFFFFF" points="53.242,27 76,49.758 76,4.243 53.242,27 	"/>
+		<polygon fill="#FFFFFF" points="0,4.243 0,49.758 22.757,27 0,4.243 	"/>
+		<path fill="#FFFFFF" d="M35.958,31.716c1.473,1.049,2.61,1.049,4.083,0L71.758,0H4.243L35.958,31.716L35.958,31.716z"/>
+	</symbol>	
+	
+	<symbol id="icon-rss" viewBox="0 0 8 8">
+		<title>RSS</title>
+		<circle cx="2" cy="6" r="1"></circle>
+		<path d="m 1,4 a 3,3 0 0 1 3,3 h 1 a 4,4 0 0 0 -4,-4 z"></path>
+		<path d="m 1,2 a 5,5 0 0 1 5,5 h 1 a 6,6 0 0 0 -6,-6 z"></path>
+	</symbol>
+
+</svg>
+    <script src="https://insideclimatenews.org/sites/default/files/advagg_js/js__CTVUnAL-wBM6tRFq3GqeO-54qBk66O3OMhQJk65JeeA__Ckg9WPQaJkjXj2-0QLPtHFr1lMIoqdSExUO6fC-PDNo__Xs02u3Ohl30Q-hjB53KKmboz4yojueFw4v_4yYYfTFo.js"></script>
+<script src="https://insideclimatenews.org/sites/default/files/advagg_js/js__6sGRO9WNEljQKi3neBENAPiky0XHXarTU1xiTpNVTbM__cV3Cc8VRgvyUTISsV4Eo9ZfDpfNYY6desJRbt5lj9go__Xs02u3Ohl30Q-hjB53KKmboz4yojueFw4v_4yYYfTFo.js"></script>
+<script src="https://insideclimatenews.org/sites/default/files/advagg_js/js__KVwOs8CiYa0Bt8iOvEVgB2mafz_msonWc7vavActezA__6_R381CsH6tQo1Dd7U8_2kotWsmCjIpXSJ1ROZgMQ34__Xs02u3Ohl30Q-hjB53KKmboz4yojueFw4v_4yYYfTFo.js"></script>
+<script>document.createElement( "picture" );</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-2208526-3", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("set", "dimension2", "2017");ga("set", "dimension3", "December");ga('require', 'GTM-NCB27PT');ga("send", "pageview");</script>
+<script src="https://insideclimatenews.org/sites/default/files/advagg_js/js__Dx87WVqe4v5JxdO5NQXWuqi4N2DXrrivAJ5F7KUcBCY__qAl84FcCv2jyN22yFGS5Oc85cjd9zKX6p_cFNLGhe-M__Xs02u3Ohl30Q-hjB53KKmboz4yojueFw4v_4yYYfTFo.js" async="async"></script>
+
+		<script type='text/javascript'>
+			var _sf_async_config={};
+			/** CONFIGURATION START **/
+			_sf_async_config.uid = 60011;
+			_sf_async_config.domain = 'insideclimatenews.org';
+			_sf_async_config.useCanonical = true;
+			//_sf_async_config.sections = 'Change this to your Section name';
+			//_sf_async_config.authors = 'Change this to your Author name';
+			/** CONFIGURATION END **/
+			(function(){
+				function loadChartbeat() {
+					window._sf_endpt=(new Date()).getTime();
+					var e = document.createElement('script');
+					e.setAttribute('language', 'javascript');
+					e.setAttribute('type', 'text/javascript');
+					e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+					document.body.appendChild(e);
+				}
+				var oldonload = window.onload;
+				window.onload = (typeof window.onload != 'function') ?
+				loadChartbeat : function() { oldonload(); loadChartbeat(); };
+			})();
+		</script>
+		
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"96af8704f1","applicationID":"6007429","transactionName":"bgEBZUZYDRFQAkxeWFdLNkNdFkwLXwVdTxlJDBM=","queueTime":0,"applicationTime":19,"atts":"QkYCEw5CHh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
